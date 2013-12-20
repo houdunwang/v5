@@ -95,3 +95,10 @@ MarkdownPad
 ####使用MsysGit
 1. 下载安装MsysGit
 2. 使用
+
+##作业
+1. 下载安装GitHub for windows
+2. 通过GitHubforwindow 下载hdphp与v5
+3. 通过hdphp创建admin应用与index应用
+4. 创建属于你自己的项目（项目名称自己命名）
+
