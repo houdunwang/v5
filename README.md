@@ -1,15 +1,20 @@
-------
-> 2013-12-20日 第一课
-
-
-
-#后盾网V5【威武】课堂
+﻿#后盾网V5【威武】课堂
 ##什么是V5
 1. 通过V5课堂让后盾网“盾友“”的技术更威武
 3. 后盾网国内原创视频最多的培训机构
 4. 唯一可以让学习独立完成项目的培训机构
 5. 唯一可以教会学习独立写框架的培训机构
 6. 后盾网老师是威武的
+ 
+## QQ群
+群1:1071235258
+
+------
+> 2013-12-20日 第一课
+
+
+
+
 
 ##本节课程需要到软件
 Wamp
@@ -17,6 +22,7 @@ Wamp
 ```
 下载地址：http://www.wampserver.com/en/
 ```
+
 Sublime Text
 
 ```
@@ -24,14 +30,17 @@ Sublime Text
 ```
 GitHub for windows
 
+
 ```
 下载地址：http://windows.github.com/
 ```
 MsysGit
 
+
 ```
 下载地址：http://msysgit.googlecode.com/files/Git-1.8.4-preview20130916.exe
 ```
+
 MarkdownPad
 
 ```
@@ -72,3 +81,5 @@ MarkdownPad
 3. 点击“Clone in Desktop“”按钮,这时会自动通过git for windows 软件下载hdphp项目
 
 ####使用MsysGit
+1. 下载安装MsysGit
+2. 使用
