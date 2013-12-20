@@ -28,11 +28,23 @@ Sublime Text
 ```
 下载地址：http://www.sublimetext.com/
 ```
+
 GitHub for windows
 
 
 ```
-下载地址：http://windows.github.com/
+1. 下载地址：http://windows.github.com/
+```
+
+GitHub for windows安装
+
+```
+1. 在github.com上注册帐号
+2. 通过360软件管理等平台安装,microsoft.net framework 4.5
+2. 下载软件http://windows.github.com/
+3. 双击安装
+4. 安装后启动github for windows
+5. 点击log in,使用github帐号登录
 ```
 MsysGit
 
