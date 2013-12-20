@@ -1,0 +1,164 @@
+@CHARSET "UTF-8";
+/**
+ *  图像裁切插件 css样式
+ *  @date 2013-12-06
+ */
+#imageCrop{
+	height:auto;
+	padding:5px;
+	padding-left:10px;
+	overflow:hidden;
+	position:relative;
+	margin:0px auto;
+}
+#imageCrop .init_bj{
+	width:100%;
+	height:100%;
+	background:#FFF;
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:99;
+}
+#imageCrop .loading{
+	width:32px;
+	height:32px;
+	background:url(loading.gif) no-repeat 0px 0px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-top:-16px;
+	margin-left:-16px;
+	z-index:100;
+}
+#imageCrop .adorn{
+	padding:10px;
+	border:1px solid #dedede;
+	box-shadow:0px 0px 5px #dedede;
+	float:left;
+	overflow:hidden;
+}
+#imageCrop .sorce{
+	position:relative;
+	
+}
+#imageCrop .sorce .img{
+	width:100%;
+	height:100%;
+}
+#imageCrop .sorce .img div{
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:0.5;
+	filter:alpha(opacity:50);
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:1px;
+}
+#imageCrop .mark{
+	width:100px;
+	height:100px;
+	position:absolute;
+	z-index:3;
+}
+#imageCrop .mark .img{
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:1;
+}
+#imageCrop  .size_view{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	font-size:10px;
+	font-family:Arial;
+	text-align:center;
+	color:#FFF;
+	position:absolute;
+	left:0px;
+	top:-30px;
+}
+#imageCrop .mark .wireframe{
+	position:relative;
+	width:100%;
+	height:100%;
+	border:1px solid #FFF;
+	margin-left:-1px;
+	margin-top:-1px;
+	z-index:2;
+}
+
+#imageCrop .mark .wireframe div{
+	width:100%;
+	height:100%;
+	position:absolute;
+	background:#FFF;
+	opacity:0;
+	filter:alpha(opacity:0);
+	left:0px;
+	top:0px;
+}
+#imageCrop .mark .wireframe .dot{
+	width:4px;
+	height:4px;
+	display:block;
+	border:1px solid #FFF;
+	position:absolute;
+}
+#dot1{ left:0px;top:0px; margin-left:-3px;margin-top:-3px; cursor:nw-resize;}
+#dot2{ left:50%;top:0px;margin-left:0px;margin-left:-3px;margin-top:-3px;cursor:n-resize;}
+#dot3{ left:100%;top:0px;margin-left:-3px;margin-top:-3px;cursor:ne-resize;}
+#dot4{ left:100%;top:50%;margin-top:-3px;margin-left:-3px;cursor:e-resize;}
+#dot5{ right:-3px;bottom:-3px;margin-top:-3px; cursor:nw-resize;}
+#dot6{ right:50%;bottom:-3px;margin-left:-3px;cursor:n-resize;}
+#dot7{ left:-3px;bottom:-3px;cursor:ne-resize;}
+#dot8{ left:-3px;top:50%;margin-top:-3px; cursor:e-resize;}
+
+#imageCrop .cropList{
+	padding:10px;
+	height:auto;
+	overflow:hidden;
+	margin:0px;
+}
+#imageCrop .cropList .hd_title{
+	width:100%;
+	height:22px;
+	font-size:18px;
+	line-height:22px;
+	text-align:center;
+	color:#333;
+	display:inline-block;
+	border-bottom:1px dashed #DEDEDE;
+	margin:0px;padding:0px;
+}
+#imageCrop .cropList ul{
+	list-style:none;
+	width:100%;
+	height:auto;
+	margin:0px;padding:0px;
+}
+#imageCrop .cropList ul li{
+	width:100%;
+	height:auto;
+	padding:5px;
+	margin:0px;
+}
+#imageCrop .cropList ul li .size{
+	width:100%;
+	text-align:center;
+	line-height:24px;
+	font-size:12px;
+	margin:0px;padding:0px;
+}
+.preview{
+	overflow:hidden;
+	border:1px solid #dedede;
+	box-shadow:0px 0px 3px #dedede;
+	border-radius:5px;
+	position:relative;
+	margin-top:10px;
+	margin:0px auto;
+}

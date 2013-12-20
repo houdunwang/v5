@@ -1,0 +1,167 @@
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo CHARSET;?>">
+<title>后盾HDPHP框架——项目调试</title>
+<style type="text/css">
+    .hd_debug {
+        padding: 10px;
+        margin: 0px;
+        font: 14px / 20px;
+        font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+        clear: both;
+        border: solid 1px #dcdcdc;
+        margin: 20px;
+        background-color: #fff;
+        width: 800px;
+        word-wrap: word-break;
+        word-break: break-word;
+    }
+
+    .hd_debug * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .hd_debug .setup {
+        padding: 5px;
+        border-bottom: solid 1px #dcdcdc;
+    }
+
+    .hd_debug .setup a {
+        text-decoration: none;
+        margin-right: 20px;
+    }
+
+    .hd_debug tr {
+        word-break: break-all;
+    }
+
+    .hd_debug #debug_link {
+        border-bottom: solid 1px #dcdcdc;
+        padding: 10px;
+        margin-top: 0px;
+    }
+
+    .hd_debug #debug_link a {
+        padding: 0px 8px;
+        text-decoration: none;
+    }
+
+    .hd_debug #debug_link a:hover {
+        text-decoration: underline;
+    }
+
+    .hd_debug .debug_server {
+        line-height: 1.5em;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .hd_debug .debug_server a {
+        color: #5d5d5d;
+        text-decoration: none;
+    }
+
+    .hd_debug .debug_server a:hover {
+        color: #5d5d5d;
+        text-decoration: underline;
+    }
+
+    .hd_debug .debug_server address {
+        display: inline;
+    }
+
+    .hd_debug  fieldset {
+        line-height: 1.2em;
+    }
+
+    .hd_debug  a {
+        color: #2F68A5;
+    }
+
+    .hd_debug   table {
+        border-collapse: collapse;
+        border: solid 1px #efefef;
+        overflow: hidden;
+    }
+
+    .hd_debug   table thead td {
+        background-color: #efefef;
+        color: #000;
+        padding: 3px 5px;
+        font-size: 14px;
+    }
+
+    .hd_debug  table tbody td {
+        font-size: 14px;
+        color: #333;
+        padding: 3px;
+        border-bottom: solid 1px #efefef;
+    }
+
+    .hd_debug  fieldset {
+        padding: 10px;
+        font-size: 13px;
+        border: 1px solid #D0D0D0;
+        margin-top: 10px;
+    }
+
+    .hd_debug  legend {
+        padding: 5px;
+    }
+
+    .hd_debug  p {
+        background-color: #666;
+        color: #fff;
+        margin-top: 10px;
+        padding: 3px;
+        font-size: 12px;
+    }
+
+    .hd_debug  h2 {
+        font-size: 15px;
+        font-weight: bold;
+        color: #2F68A5;
+        clear: both;
+        float: none;
+    }
+</style>
+</head>
+<body>
+<div class="hd_debug">
+    <h2>后盾网HD框架-异常处理</h2>
+    <!--错误信息-->
+    <?php if(isset($e['message'])){?>
+    <fieldset>
+        <legend>ERROR</legend>
+        <strong style="color:#333;line-height:1.5em; font-weight: normal">
+            <?php echo $e ['message'];?>
+        </strong>
+    </fieldset>
+    <?php }?>
+    <!--文件载入流程-->
+    <?php if(isset($e['loadfile'])){?>
+    <fieldset>
+        <legend>引导流程</legend>
+        <?PHP
+                if (isset ( $e ['loadfile'] )) {
+                echo $e ['loadfile'];
+                }
+                ?>
+    </fieldset>
+    <?php }?>
+    <?php if(isset($e['database'])){?>
+    <fieldset>
+        <legend>数据库</legend>
+        <?PHP
+                if (isset ( $e ['database'] )) {
+                echo $e ['database'];
+                }
+                ?>
+    </fieldset>
+    <?php }?>
+    <fieldset>
+        <legend>后盾网提示</legend>
+        如有任何困难，请登录<a href="http://www.houdunwang.com" target="_blank">后盾网</a>
+        &nbsp;或&nbsp;<a href="http://bbs.houdunwang.com" target="_blank">后盾论坛</a>
+        &nbsp;也可以&nbsp;<a href="mailto:houdunwangxj@gmail.com">提交HD框架的BUG</a>
+    </fieldset>
+</div>
