@@ -1,5 +1,5 @@
 <?php
 define('DEBUG',true);
 define('APP_PATH','db/');
-require 'hdphp/hdphp/hdphp.php';
+require '../hdphp/hdphp/hdphp.php';
 
