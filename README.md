@@ -32,7 +32,8 @@
 2. 看一下后盾网论坛的正则表达式视频教程
 
 #### 使用软件
-Wamp Navicate Sublime
+- Wamp Navicat Sublime
+- Navicat 下载地址： http://www.xiazaiba.com/html/1846.html
 
 ----
 > #2013-12-27日 第2课
