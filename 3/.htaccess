@@ -1,0 +1,8 @@
+﻿# 开启 URL 重写功能
+RewriteEngine On
+# 请求内容不是目录
+RewriteCond %{REQUEST_FILENAME} !-d
+# 请求内容不是文件
+RewriteCond %{REQUEST_FILENAME} !-f
+# 重写 URL 规则
+RewriteRule ^(.*)$ index.php\/$1 [L]
