@@ -12,6 +12,7 @@ class NewsControl extends Control{
 		if($id){
 			$field = $this->_db->find($id);
 			// $this->assign("field",$field);
+			//http://localhost/v5/3/index.php?c=News&m=content&id=2
 			$this->field = $field;
 			$this->display();
 		}
