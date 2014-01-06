@@ -1,6 +1,0 @@
-CREATE TABLE IF NOT EXISTS  hd_session(
-sessid CHAR(32) PRIMARY KEY NOT NULL default '',
-data TEXT,
-atime INT(10) NOT NULL DEFAULT 0,
-ip CHAR(15) NOT NULL DEFAULT ''
-)CHARSET utf8 ENGINE=myisam;
