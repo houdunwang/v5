@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>后台登录入口</title>
+	<hdjs/>
+	<bootstrap/>
+	<js file='__CONTROL_TPL__/js/js.js'/>
+</head>
+<body>
+<h3>管理员登录</h3>
+<form method='post' class='hd-form'>	
+<table class='table1'>
+	<tr>
+ 		<td class='w100'>帐号</td>
+ 		<td>
+ 			<input type='text' name='username'/>
+ 		</td>
+	</tr>
+	<tr>
+ 		<td>密码</td>
+ 		<td>
+ 			<input type='password' name='password'/>
+ 		</td>
+	</tr>
+	<tr>
+ 		<td>验证码</td>
+ 		<td>
+ 			<input type='text' name='code'/>
+ 			<img src='__CONTROL__/code'/>
+ 			<span id='hd_code'></span>
+ 		</td>
+	</tr>
+	<tr>
+ 		<td colspan='2'>
+ 			<input type='submit' value='登录' class='btn btn-primary'/>
+ 		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
