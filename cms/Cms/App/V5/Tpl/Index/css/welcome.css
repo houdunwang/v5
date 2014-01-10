@@ -1,0 +1,9 @@
+@import "../../../../../static/css/common.css";
+a{
+    color: #666;
+}
+h2{
+    font-size:12px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}

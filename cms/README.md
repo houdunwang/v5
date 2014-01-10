@@ -5,12 +5,11 @@ ID	帐号		密码
 1	admin		xxxx
 2	root		xxxx
 
+define('GROUP_PATH','Cms/');
 
-  1000
-  abc
+Cms/App  (App是放置所有应用的目录)
+Cms/App/V5 （v5应用只管理，后台登录，退出，界面显示）
+通过v5应用登录后台
+Cms/App/V5/Control/LoginControl.class.php/Login
 
-  123
-
-  md5
-
-  80*10    800
+http://localhost/v5/cms/index.php/V5/Login/login

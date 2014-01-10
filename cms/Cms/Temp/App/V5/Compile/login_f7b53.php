@@ -10,7 +10,7 @@
 		HOST = 'http://localhost';
 		ROOT = 'http://localhost/v5/cms';
 		WEB = 'http://localhost/v5/cms/index.php';
-		URL = 'http://localhost/v5/cms/index.php/v5/login/login';
+		URL = 'http://localhost/v5/cms/index.php/V5/Login/login';
 		HDPHP = 'http://localhost/v5/cms/hdphp/hdphp';
 		HDPHPDATA = 'http://localhost/v5/cms/hdphp/hdphp/Data';
 		HDPHPTPL = 'http://localhost/v5/cms/hdphp/hdphp/Lib/Tpl';
@@ -35,7 +35,7 @@
 </head>
 <body>
 <h3>管理员登录</h3>
-<form method='post' class='hd-form'>	
+<form action='http://localhost/v5/cms/index.php/V5/Login/login' method='post' class='hd-form'>	
 <table class='table1'>
 	<tr>
  		<td class='w100'>帐号</td>
