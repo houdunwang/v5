@@ -18,7 +18,7 @@
 		APP = 'http://localhost/v5/cms/index.php/V5';
 		CONTROL = 'http://localhost/v5/cms/index.php/V5/Login';
 		METH = 'http://localhost/v5/cms/index.php/V5/Login/login';
-		GROUP = 'http://localhost/v5/cms/Cms/';
+		GROUP = 'http://localhost/v5/cms/Cms';
 		TPL = 'http://localhost/v5/cms/Cms/App/V5/Tpl';
 		CONTROLTPL = 'http://localhost/v5/cms/Cms/App/V5/Tpl/Login';
 		STATIC = 'http://localhost/v5/cms/Static';
