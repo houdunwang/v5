@@ -2,8 +2,37 @@
 <head>
 	<title>栏目列表</title>
 	<meta charset='utf-8'/>
+	<hdjs/>
 </head>
 <body>
-栏目列表1111
+<div class="menu_list">
+	<ul>
+		 <li><a href="{|U:'index'}"  class="action"> 栏目列表 </a></li>
+		 <li><a href="{|U:'add'}"> 添加顶级栏目 </a></li>
+		 <li><a href="#"> 更新栏目缓存 </a></li>
+	</ul>
+</div>
+<div>
+	<table class='table2'>
+		<thead>
+			<tr>
+				<td class='w50'>CID</td>
+				<td>栏目名称</td>
+				<td class='w150'>操作</td>
+			</tr>
+		</thead>
+		<list from='$category' name="$c">
+		<tr>
+				<td>{$c.cid}</td>
+				<td>{$c.cname}</td>
+				<td>
+					<a href="__CONTROL__&m=add&pid={$c.cid}">添加子栏目</a> |
+					<a href="#">编辑</a> |
+					<a href="#">删除</a>
+				</td>
+			</tr>
+		</list>
+	</table>
+</div>
 </body>
 </html>

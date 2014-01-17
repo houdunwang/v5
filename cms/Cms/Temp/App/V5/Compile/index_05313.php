@@ -31,7 +31,7 @@
             <dl>
                 <dt>常用</dt>
                 <dd>
-                    <a  href="http://localhost/v5/cms/index.php?a=Category&c=Category&m=index">栏目管理</a>
+                    <a  href="<?php echo U('Category/Category/index');?>">栏目管理</a>
                 </dd>
             </dl>
         </div>
