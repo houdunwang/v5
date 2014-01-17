@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>修改栏目</title>
+	<hdjs/>
+	<js file='__CONTROL_TPL__/js/validate.js'/>
+	<js file='__CONTROL_TPL__/js/js.js'/>
+	<css file='__CONTROL_TPL__/css/css.css'/>
+</head>
+<body>
+<div class="menu_list">
+	<ul>
+		 <li><a href="{|U:'index'}" > 栏目列表 </a></li>
+		 <li><a href="#"> 更新栏目缓存 </a></li>
+	</ul>
+</div>
+<div class='title-header'>修改栏目</div>
+<form method='post'  class='hd-form' onsubmit="return hd_submit(this,'{|U:index}')">
+	<input type='hidden' name='cid' value='{$field.cid}'/>
+	<table class='table1'>
+		<tr>
+			<th class='w100'>栏目名称</th>
+			<td>
+				<input type='text' name='cname' class='w200' value='{$field.cname}'/>
+			</td>
+		</tr>
+		<tr>
+			<th class='w100'>父级栏目</th>
+			<td>
+				<select name='pid'>
+					<option value='0'> == 一级栏目 == </option>
+					<list from='$category' name='c'>
+						<option value='{$c.cid}' {$c.selected} {$c.disabled}>{$c._name}</option>
+					</list>
+				</select>
+				<span class='message'>灰色栏目不可选择</span>
+			</td>
+		</tr>
+		<tr>
+			<th class='w100'>关键字</th>
+			<td>
+				<input type='text' name='keywords' class='w300' value='{$field.keywords}'/>
+			</td>
+		</tr>
+		<tr>
+			<th class='w100'>栏目描述</th>
+			<td>
+				<textarea name='description' class='w300 h100'>{$field.keywords}</textarea>
+			</td>
+		</tr>
+	</table>
+	<div class='position-bottom'>
+		<input type='submit' value='确定' class='hd-success'/>
+	</div>
+</form>
+</body>
+</html>

@@ -24,11 +24,11 @@
 		<list from='$category' name="$c">
 		<tr>
 				<td>{$c.cid}</td>
-				<td>{$c.cname}</td>
+				<td>{$c._name}</td>
 				<td>
 					<a href="__CONTROL__&m=add&pid={$c.cid}">添加子栏目</a> |
-					<a href="#">编辑</a> |
-					<a href="#">删除</a>
+					<a href="{|U:edit,array('cid'=>$c['cid'])}">编辑</a> |
+					<a href="javascript:hd_ajax('{|U:del}',{cid:{$c.cid}});">删除</a>
 				</td>
 			</tr>
 		</list>

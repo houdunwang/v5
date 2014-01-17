@@ -57,11 +57,11 @@ if($_index_c>=$_total_c):$hd["list"]["c"]["last"]=true;endif;?>
 
 		<tr>
 				<td><?php echo $c['cid'];?></td>
-				<td><?php echo $c['cname'];?></td>
+				<td><?php echo $c['_name'];?></td>
 				<td>
 					<a href="http://localhost/v5/cms/index.php/Category/Category&m=add&pid=<?php echo $c['cid'];?>">添加子栏目</a> |
-					<a href="#">编辑</a> |
-					<a href="#">删除</a>
+					<a href="<?php echo U(edit,array('cid'=>$c['cid']));?>">编辑</a> |
+					<a href="javascript:hd_ajax('<?php echo U(del);?>',{cid:<?php echo $c['cid'];?>});">删除</a>
 				</td>
 			</tr>
 		<?php $hd["list"]["c"]["first"]=false;

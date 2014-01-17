@@ -14,4 +14,21 @@ class CategoryModel extends Model{
 			return $this->add();
 		}
 	}
+	//修改栏目
+	public function edit_category(){
+		if($this->create()){
+			return $this->save();
+		}
+	}
+	//删除栏目
+	public function del_category(){
+		//要删除栏目id
+		$cid= Q("cid");
+		//判断当前要删除的栏目有没有子栏目
+		if($this->where('pid='.$cid)->find()){
+			$this->error='请先删除子栏目';
+		}else{
+			return $this->del($cid);
+		}
+	}
 }
