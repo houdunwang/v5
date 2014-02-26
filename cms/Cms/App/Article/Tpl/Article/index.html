@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>栏目列表</title>
+	<meta charset='utf-8'/>
+	<hdjs/>
+</head>
+<body>
+<div class="menu_list">
+	<ul>
+		 <li><a href="{|U:'index'}"  class="action"> 文章列表 </a></li>
+		 <li><a href="{|U:'add'}"> 添加文章 </a></li>
+	</ul>
+</div>
+<div>
+	<table class='table2'>
+		<thead>
+			<tr>
+				<td class='w50'>ID</td>
+				<td>标题</td>
+				<td class='w100'>作者</td>
+				<td class='w100'>点击数</td>
+				<td class='w150'>操作</td>
+			</tr>
+		</thead>
+		<list from='$article' name='a'>
+			<tr>
+				<td>{$a.id}</td>
+				<td>{$a.title}</td>
+				<td>{$a.author}</td>
+				<td>{$a.click}</td>
+				<td>
+					<a href="#">查看</a> |
+					<a href="#">编辑</a> |
+					<a href="#">删除</a>
+				</td>
+			</tr>
+		</list>
+	</table>
+	<div class='page1'>
+		{$page}
+	</div>
+</div>
+</body>
+</html>

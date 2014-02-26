@@ -1,0 +1,101 @@
+<html>
+<head>
+	<title>添加文章</title>
+	<hdjs/>
+	<js file='__CONTROL_TPL__/js/validate.js'/>
+	<js file='__CONTROL_TPL__/js/js.js'/>
+</head>
+<body>
+<div class='wrap'>
+<div class="menu_list">
+	<ul>
+		 <li><a href="{|U:'index'}"  class="action"> 文章列表 </a></li>
+		 <li><a href="{|U:'add'}"> 添加文章 </a></li>
+	</ul>
+</div>
+
+<form method='post'  class='hd-form' enctype='multipart/form-data'>
+	<div class="tab">
+		<ul class="tab_menu">
+			<li lab="base">
+              <a> 基本设置 </a>
+			</li>
+			<li lab="ext" class="action">
+              <a>其他设置 </a>
+			</li>
+		</ul>
+		<div class="tab_content">
+			 <div id="base">
+				<table class='table1'>
+					<tr>
+						<th class='w100'>标题</th>
+						<td><input type='text' name='title' class='w300'/></td>
+					</tr>
+					<tr>
+						<th class='w100'>栏目</th>
+						<td>
+							<select name='catid'>
+								<list from='$category' name='c'>
+								<option value='{$c.cid}'>{$c._name}</option>
+								</list>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th class='w100'>缩略图</th>
+						<td><input type='file' name='thumb'/></td>
+					</tr>
+					<tr>
+						<th class='w100'>正文</th>
+						<td>
+							<ueditor name='content'/>
+						</td>
+					</tr>
+				</table>
+			 </div>
+			 <div id="ext">
+				<table class='table1'>
+					<tr>
+						<th class='w100'>关键字</th>
+						<td><input type='text' name='keywords' class='w300'/></td>
+					</tr>
+					<tr>
+						<th>描述</th>
+						<td>
+							<textarea class='w400 h100' name='description'></textarea>
+						</td>
+					</tr>
+					<tr>
+						<th class='w100'>点击数</th>
+						<td><input type='text' name='click' class='w300' value='100'/></td>
+					</tr>
+					<tr>
+						<th class='w100'>来源</th>
+						<td><input type='text' name='source' class='w300' value='后盾网'/></td>
+					</tr>
+					<tr>
+						<th class='w100'>作者</th>
+						<td><input type='text' name='author' class='w300' value='{$hd.session.username}'/></td>
+					</tr>
+					<tr>
+						<th class='w100'>更新时间</th>
+						<td>
+							<input type="text" readonly="readonly" id="updatetime" name="updatetime"
+							value="{|date:'Y/m/d h:i:s'}" class="w150"/>
+							<script>
+								$('#updatetime').calendar({format: 'yyyy/MM/dd HH:mm:ss'});
+						   </script>
+						</td>
+					</tr>
+				</table>
+			 </div>
+		</div>
+	</div>
+	
+	<div class='position-bottom'>
+		<input type='submit' value='确定' class='hd-success'/>
+	</div>
+</form>
+</div>
+</body>
+</html>
