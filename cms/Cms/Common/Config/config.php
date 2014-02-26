@@ -11,5 +11,6 @@ return array(
     'DB_DATABASE'                   => 'v5cms',          //数据库名称
     'DB_PREFIX'                     => 'v5_',          //表前缀
     'DB_BACKUP'                     => ROOT_PATH . 'backup/'.time(), //数据库备份目录
+	'DEFAULT_APP'					=> 'Admin'			//默认访问应用 
 );
 ?>

@@ -31,7 +31,7 @@
 	<ul>
 		 <li><a href="<?php echo U('index');?>"  class="action"> 栏目列表 </a></li>
 		 <li><a href="<?php echo U('add');?>"> 添加顶级栏目 </a></li>
-		 <li><a href="#"> 更新栏目缓存 </a></li>
+		 <li><a href="<?php echo U('update_cache');?>"> 更新栏目缓存 </a></li>
 	</ul>
 </div>
 <div>

@@ -3,17 +3,22 @@
 class CategoryControl extends AuthControl{
 	//数据模型对象
 	private $_db;
+	//目录缓存
+	private $_category;
 	//构造函数
 	public function __init(){
 		$this->_db= K('Category');
+		//栏目缓存数据
+		$this->_category =F("category");
 	}
-    	function index(){
-    		$category = $this->_db->all();
-    		$this->category = Data::tree($category,'cname');
+		//显示栏目列表
+    	public function index(){
+			//向视图分配数据
+    		$this->category =$this->_category;
     		$this->display();
     	}
     	//添加栏目
-    	function add(){
+    	public function add(){
     		if(IS_POST){
     			if($this->_db->add_category()){
     				$this->ajax(array('state'=>1,'message'=>'栏目添加成功'));
@@ -28,9 +33,11 @@ class CategoryControl extends AuthControl{
    	 }
    	 //修改栏目
    	 public function edit(){
+		//打印用户自定义常量
+		//print_const();
    	 	if(IS_POST){
    	 		if($this->_db->edit_category()){
-   	 			$this->ajax(array('state'=>1,'message'=>'栏目修改失败'));
+   	 			$this->ajax(array('state'=>1,'message'=>'栏目修改成功'));
    	 		}else{
     				$this->ajax(array('state'=>0,'message'=>$this->_db->error));
     			}
@@ -67,6 +74,14 @@ class CategoryControl extends AuthControl{
 			$this->ajax(array('state'=>1,'message'=>'删除成功 '));
 		}else{
 			$this->ajax(array('state'=>0,'message'=>$this->_db->error));
+		}
+	}
+	//更新栏目缓存
+	public function update_cache(){
+		if($this->_db->update_cache()){
+			$this->success('更新缓存成功!','index');
+		}else{
+			$this->error('缓存更新失败,请检测缓存目录:'.CACHE_PATH.'写权限','index');
 		}
 	}
 }

@@ -10,7 +10,7 @@
 		HOST = 'http://localhost';
 		ROOT = 'http://localhost/v5/cms';
 		WEB = 'http://localhost/v5/cms/index.php';
-		URL = 'http://localhost/v5/cms/index.php/Category/Category/edit/cid/8';
+		URL = 'http://localhost/v5/cms/index.php/Category/Category/edit/cid/1';
 		HDPHP = 'http://localhost/v5/cms/hdphp/hdphp';
 		HDPHPDATA = 'http://localhost/v5/cms/hdphp/hdphp/Data';
 		HDPHPTPL = 'http://localhost/v5/cms/hdphp/hdphp/Lib/Tpl';
@@ -32,7 +32,7 @@
 <div class="menu_list">
 	<ul>
 		 <li><a href="<?php echo U('index');?>" > 栏目列表 </a></li>
-		 <li><a href="#"> 更新栏目缓存 </a></li>
+		 <li><a href="<?php echo U('update_cache');?>"> 更新栏目缓存 </a></li>
 	</ul>
 </div>
 <div class='title-header'>修改栏目</div>
