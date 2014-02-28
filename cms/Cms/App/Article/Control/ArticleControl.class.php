@@ -1,34 +1,34 @@
-<?php
+ï»¿<?php
 /**
-* ÎÄÕÂ¹ÜÀí
+* æ–‡ç« ç®¡ç†
 * @author houdunwang.com
 */
 class ArticleControl extends AuthControl{
-	//Ä£ÐÍ
+	//æ¨¡åž‹
 	private $_db;
-	//À¸Ä¿»º´æ
+	//æ ç›®ç¼“å­˜
 	private $_category;
-	//¹¹Ôìº¯Êý
+	//æž„é€ å‡½æ•°
 	public function __init(){
 		$this->_db= K('Article');
-		//À¸Ä¿»º´æ
+		//æ ç›®ç¼“å­˜
 		$this->_category= F("category");
 	}
-	//ÏÔÊ¾ÎÄÕÂÁÐ±í
+	//æ˜¾ç¤ºæ–‡ç« åˆ—è¡¨
 	public function index(){
 		$page = new Page($this->_db->count(),1,1);
 		$this->page= $page->show(2);
 		$this->article= $this->_db->limit($page->limit())->all();
 		$this->display();
 	}
-	//Ìí¼ÓÎÄÕÂ
+	//æ·»åŠ æ–‡ç« 
 	public function add(){
 		if(IS_POST){
-			//Í¨¹ýÄ£°åÍê³ÉÎÄÕÂµÄÌí¼Ó
+			//é€šè¿‡æ¨¡æ¿å®Œæˆæ–‡ç« çš„æ·»åŠ 
 			if($this->_db->add_article()){
-				$this->success('Ìí¼Ó³É¹¦','index');
+				$this->success('æ·»åŠ æˆåŠŸ','index');
 			}else{
-				$this->error('ÎÄÕÂÌí¼ÓÊ§°Ü',$this->_db->error);
+				$this->error('æ–‡ç« æ·»åŠ å¤±è´¥',$this->_db->error);
 			}
 		}else{
 			$this->category= $this->_category;
