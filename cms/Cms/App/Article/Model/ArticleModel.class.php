@@ -1,30 +1,30 @@
-ï»¿<?php
+<?php
 class ArticleModel extends Model{
-	//æ–‡ç« æ“ä½œè¡¨
+	//ÎÄÕÂ²Ù×÷±í
 	public $table ='article';
-	//è‡ªåŠ¨å®Œæˆï¼ˆç»™å­—æ®µèµ‹å€¼ï¼‰
+	//×Ô¶¯Íê³É£¨¸ø×Ö¶Î¸³Öµ£©
 	public $auto=array(
-		//æ–‡ç« å‘è¡¨æ—¶é—´å­—æ®µå¤„ç†ï¼ˆåªåœ¨æ·»åŠ æ–‡ç« æ—¶å¤„ç†ï¼‰
+		//ÎÄÕÂ·¢±íÊ±¼ä×Ö¶Î´¦Àí£¨Ö»ÔÚÌí¼ÓÎÄÕÂÊ±´¦Àí£©
 		array('addtime','time','function',2,1),
-		//èŽ·å¾—æ–‡ç« çš„å‘å¸ƒè€…ç®¡ç†å‘˜ID
+		//»ñµÃÎÄÕÂµÄ·¢²¼Õß¹ÜÀíÔ±ID
 		array('admin_id','get_adminid','method',2,3),
-		//èŽ·å¾—æ–‡ç« çš„å‘å¸ƒè€…åç§°
+		//»ñµÃÎÄÕÂµÄ·¢²¼ÕßÃû³Æ
 		array('author','get_author','method',2,3),
 	);
-	//èŽ·å¾—æ–‡ç« çš„å‘å¸ƒè€…ç®¡ç†å‘˜ID
+	//»ñµÃÎÄÕÂµÄ·¢²¼Õß¹ÜÀíÔ±ID
 	public function get_adminid(){
 		return session('aid');
 	}
-	//èŽ·å¾—æ–‡ç« çš„å‘å¸ƒè€…åç§°
+	//»ñµÃÎÄÕÂµÄ·¢²¼ÕßÃû³Æ
 	public function get_author(){
 		return empty($_POST['author'])?session('username'):$_POST['author'];
 	}
-	//æ·»åŠ æ–‡ç« 
+	//Ìí¼ÓÎÄÕÂ
 	public function add_article(){
 		if($this->create()){
-			//å¦‚æžœæœ‰ä¸Šä¼ çš„å›¾ç‰‡æ•°æ®æ—¶æ‰è¿›è¡Œç¼©ç•¥å›¾ä¸Šä¼ å¤„ç†
+			//Èç¹ûÓÐÉÏ´«µÄÍ¼Æ¬Êý¾ÝÊ±²Å½øÐÐËõÂÔÍ¼ÉÏ´«´¦Àí
 			if(!empty($_FILES['thumb']['name'])){
-				//æ–‡ç« ç¼©ç•¥å›¾ä¸Šä¼ å¤„ç†
+				//ÎÄÕÂËõÂÔÍ¼ÉÏ´«´¦Àí
 				$upload = new Upload('upload/article/'.date("Y/m/d"));
 				$file = $upload->upload();
 				$this->data['thumb']=$file[0]['path'];

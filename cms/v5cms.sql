@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost
-Source Server Version : 50524
+Source Server Version : 50612
 Source Host           : localhost:3306
 Source Database       : v5cms
 
 Target Server Type    : MYSQL
-Target Server Version : 50524
+Target Server Version : 50612
 File Encoding         : 65001
 
-Date: 2014-01-17 20:36:33
+Date: 2014-02-28 17:45:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -50,11 +50,14 @@ CREATE TABLE `v5_article` (
   `updatetime` int(10) DEFAULT NULL COMMENT '更新时间',
   `title` char(100) DEFAULT NULL COMMENT '标题',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of v5_article
 -- ----------------------------
+INSERT INTO `v5_article` VALUES ('1', '1', '', '', '<p>吐出了大多数人的心声</p>', '100', 'upload/article/2014/02/21/95601392991549.jpg', '1', '后盾网', 'admin', '1392991549', '2014', '来听听后盾毕业学员对后盾网的真实评价');
+INSERT INTO `v5_article` VALUES ('2', '1', '', '', '<p>这么猛的一个料，必须沙发！</p>', '100', 'upload/article/2014/02/21/21641392991699.jpg', '1', '后盾网', 'admin', '1392991699', '2014', '后盾网中秋香山登高活动视频曝光啦');
+INSERT INTO `v5_article` VALUES ('3', '1', '', '', '<p>从头看到尾，就是没看见老孙呀</p>', '100', 'upload/article/2014/02/21/7251392992199.jpg', '1', '后盾网', 'admin', '1392992199', '2014', '从头看到尾，就是没看见老孙呀');
 
 -- ----------------------------
 -- Table structure for v5_category
@@ -67,8 +70,9 @@ CREATE TABLE `v5_category` (
   `keywords` varchar(80) DEFAULT NULL COMMENT '关键字',
   `description` varchar(255) DEFAULT NULL COMMENT '描述',
   PRIMARY KEY (`cid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of v5_category
 -- ----------------------------
+INSERT INTO `v5_category` VALUES ('1', 'V5课堂', '0', 'php', 'php');

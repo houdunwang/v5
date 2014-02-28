@@ -23,6 +23,8 @@
 		CONTROLTPL = 'http://localhost/v5/cms/Cms/App/Article/Tpl/Article';
 		STATIC = 'http://localhost/v5/cms/Static';
 		PUBLIC = 'http://localhost/v5/cms/Cms/App/Article/Tpl/Public';
+		HISTORY = 'http://localhost/v5/cms/index.php/Article/Article/index';
+		HTTPREFERER = 'http://localhost/v5/cms/index.php/Article/Article/index';
 </script>
 	<script type="text/javascript" src="http://localhost/v5/cms/Cms/App/Article/Tpl/Article/js/validate.js"></script>
 	<script type="text/javascript" src="http://localhost/v5/cms/Cms/App/Article/Tpl/Article/js/js.js"></script>

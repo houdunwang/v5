@@ -11,7 +11,7 @@
 		HOST = 'http://localhost';
 		ROOT = 'http://localhost/v5/cms';
 		WEB = 'http://localhost/v5/cms/index.php';
-		URL = 'http://localhost/v5/cms/index.php/Article/Article/index/page/3';
+		URL = 'http://localhost/v5/cms/index.php/Article/Article/index';
 		HDPHP = 'http://localhost/v5/cms/hdphp/hdphp';
 		HDPHPDATA = 'http://localhost/v5/cms/hdphp/hdphp/Data';
 		HDPHPTPL = 'http://localhost/v5/cms/hdphp/hdphp/Lib/Tpl';
@@ -24,6 +24,8 @@
 		CONTROLTPL = 'http://localhost/v5/cms/Cms/App/Article/Tpl/Article';
 		STATIC = 'http://localhost/v5/cms/Static';
 		PUBLIC = 'http://localhost/v5/cms/Cms/App/Article/Tpl/Public';
+		HISTORY = 'http://localhost/v5/cms/index.php/Admin/Index/index';
+		HTTPREFERER = 'http://localhost/v5/cms/index.php/Admin/Index/index';
 </script>
 </head>
 <body>
