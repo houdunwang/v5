@@ -1,4 +1,7 @@
 #后盾网V5【威武】课堂
+#通过Git获得V5代码
+1. http://git.oschina.net/houdunwang/v5 (推荐）  
+2. https://github.com/houdunwangxj/v5
 ##什么是V5
 1. 通过V5课堂让后盾网“盾友“”的技术更威武
 3. 后盾网国内原创视频最多的培训机构
