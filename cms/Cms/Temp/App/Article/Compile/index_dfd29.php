@@ -24,8 +24,8 @@
 		CONTROLTPL = 'http://localhost/v5/cms/Cms/App/Article/Tpl/Article';
 		STATIC = 'http://localhost/v5/cms/Static';
 		PUBLIC = 'http://localhost/v5/cms/Cms/App/Article/Tpl/Public';
-		HISTORY = 'http://localhost/v5/cms/index.php/Admin/Index/index';
-		HTTPREFERER = 'http://localhost/v5/cms/index.php/Admin/Index/index';
+		HISTORY = 'http://localhost/v5/cms/index.php/Article/Article/edit';
+		HTTPREFERER = 'http://localhost/v5/cms/index.php/Article/Article/edit';
 </script>
 </head>
 <body>
@@ -65,7 +65,7 @@ if($_index_a>=$_total_a):$hd["list"]["a"]["last"]=true;endif;?>
 				<td><?php echo $a['click'];?></td>
 				<td>
 					<a href="#">查看</a> |
-					<a href="#">编辑</a> |
+					<a href="<?php echo U(edit,array('id'=>$a['id']));?>">编辑</a> |
 					<a href="#">删除</a>
 				</td>
 			</tr>

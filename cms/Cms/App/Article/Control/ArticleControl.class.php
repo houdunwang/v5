@@ -1,39 +1,60 @@
-<?php
+ï»¿<?php
 /**
-* ÎÄÕÂ¹ÜÀí
+* æ–‡ç« ç®¡ç†
 * @author houdunwang.com
 */
 class ArticleControl extends AuthControl{
-	//Ä£ĞÍ
+	//æ¨¡å‹
 	private $_db;
-	//À¸Ä¿»º´æ
+	//æ ç›®ç¼“å­˜
 	private $_category;
-	//¹¹Ôìº¯Êı
+	//æ„é€ å‡½æ•°
 	public function __init(){
 		$this->_db= K('Article');
-		//À¸Ä¿»º´æ
+		//æ ç›®ç¼“å­˜
 		$this->_category= F("category");
 	}
-	//ÏÔÊ¾ÎÄÕÂÁĞ±í
+	//æ˜¾ç¤ºæ–‡ç« åˆ—è¡¨
 	public function index(){
-		$page = new Page($this->_db->count(),1,1);
+		$page = new Page($this->_db->count(),10);
 		$this->page= $page->show(2);
 		$this->article= $this->_db->limit($page->limit())->all();
 		$this->display();
 	}
-	//Ìí¼ÓÎÄÕÂ
+	//æ·»åŠ æ–‡ç« 
 	public function add(){
 		if(IS_POST){
-			//Í¨¹ıÄ£°åÍê³ÉÎÄÕÂµÄÌí¼Ó
+			//é€šè¿‡æ¨¡æ¿å®Œæˆæ–‡ç« çš„æ·»åŠ 
 			if($this->_db->add_article()){
-				$this->success('Ìí¼Ó³É¹¦','index');
+				$this->success('æ·»åŠ æˆåŠŸ','index');
 			}else{
-				$this->error('ÎÄÕÂÌí¼ÓÊ§°Ü',$this->_db->error);
+				$this->error('æ–‡ç« æ·»åŠ å¤±è´¥',$this->_db->error);
 			}
 		}else{
 			$this->category= $this->_category;
 			$this->display();
 		}
+	}
+	//ä¿®æ”¹æ–‡ç« 
+	public function edit(){
+		$id = Q("id",NULL,'intval');
+		//å¿…é¡»ä¼ é€’ä¿®æ”¹æ–‡ç« çš„id
+		if(!$id)$this->error('å‚æ•°ä¼ é€’é”™è¯¯!');
+
+		if(IS_POST){
+			//å°†ä¿®æ”¹æ•°æ®å†™å…¥è¡¨
+			if($this->_db->edit_article()){
+				$this->success('ä¿®æ”¹æˆåŠŸ','index');
+			}else{
+				$this->error('æ–‡ç« ä¿®æ”¹å¤±è´¥',$this->_db->error);
+			}
+		}else{
+			$field = $this->_db->find($id);
+			$this->field= $field;
+			$this->category = $this->_category;
+			$this->display();
+		}
+
 	}
 }
 

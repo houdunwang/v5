@@ -1,35 +1,57 @@
-<?php
+ï»¿<?php
 class ArticleModel extends Model{
-	//ÎÄÕÂ²Ù×÷±í
+	//æ–‡ç« æ“ä½œè¡¨
 	public $table ='article';
-	//×Ô¶¯Íê³É£¨¸ø×Ö¶Î¸³Öµ£©
+	//è‡ªåŠ¨å®Œæˆï¼ˆç»™å­—æ®µèµ‹å€¼ï¼‰
 	public $auto=array(
-		//ÎÄÕÂ·¢±íÊ±¼ä×Ö¶Î´¦Àí£¨Ö»ÔÚÌí¼ÓÎÄÕÂÊ±´¦Àí£©
+		//æ–‡ç« å‘è¡¨æ—¶é—´å­—æ®µå¤„ç†ï¼ˆåªåœ¨æ·»åŠ æ–‡ç« æ—¶å¤„ç†ï¼‰
 		array('addtime','time','function',2,1),
-		//»ñµÃÎÄÕÂµÄ·¢²¼Õß¹ÜÀíÔ±ID
+		//æ·»åŠ æ–‡ç« æ—¶è®¾ç½®æ›´æ–°æ—¶é—´
+		array('updatetime','time','function',2,1),
+		//è·å¾—æ–‡ç« çš„å‘å¸ƒè€…ç®¡ç†å‘˜ID
 		array('admin_id','get_adminid','method',2,3),
-		//»ñµÃÎÄÕÂµÄ·¢²¼ÕßÃû³Æ
+		//è·å¾—æ–‡ç« çš„å‘å¸ƒè€…åç§°
 		array('author','get_author','method',2,3),
 	);
-	//»ñµÃÎÄÕÂµÄ·¢²¼Õß¹ÜÀíÔ±ID
+	//è·å¾—æ–‡ç« çš„å‘å¸ƒè€…ç®¡ç†å‘˜ID
 	public function get_adminid(){
 		return session('aid');
 	}
-	//»ñµÃÎÄÕÂµÄ·¢²¼ÕßÃû³Æ
+	//è·å¾—æ–‡ç« çš„å‘å¸ƒè€…åç§°
 	public function get_author(){
 		return empty($_POST['author'])?session('username'):$_POST['author'];
 	}
-	//Ìí¼ÓÎÄÕÂ
+	//æ·»åŠ æ–‡ç« 
 	public function add_article(){
 		if($this->create()){
-			//Èç¹ûÓĞÉÏ´«µÄÍ¼Æ¬Êı¾İÊ±²Å½øĞĞËõÂÔÍ¼ÉÏ´«´¦Àí
+			//å¦‚æœæœ‰ä¸Šä¼ çš„å›¾ç‰‡æ•°æ®æ—¶æ‰è¿›è¡Œç¼©ç•¥å›¾ä¸Šä¼ å¤„ç†
 			if(!empty($_FILES['thumb']['name'])){
-				//ÎÄÕÂËõÂÔÍ¼ÉÏ´«´¦Àí
+				//æ–‡ç« ç¼©ç•¥å›¾ä¸Šä¼ å¤„ç†
 				$upload = new Upload('upload/article/'.date("Y/m/d"));
 				$file = $upload->upload();
 				$this->data['thumb']=$file[0]['path'];
 			}
 			return $this->add();
+		}
+	}
+	//ä¿®æ”¹æ–‡ç« 
+	public function edit_article(){
+		if($this->create()){
+			/**
+			 * ä¿®æ”¹å†…å®¹å›¾ç‰‡ 
+			 * å¦‚æœ$_FILES['thumb']['name']ä¸ºç©ºï¼Œæ²¡ä¸Šä¼ å›¾ï¼ˆè¿˜ç”¨æ—§çš„ï¼‰
+			 */
+			//å¦‚æœæœ‰ä¸Šä¼ çš„å›¾ç‰‡æ•°æ®æ—¶æ‰è¿›è¡Œç¼©ç•¥å›¾ä¸Šä¼ å¤„ç†
+			if(!empty($_FILES['thumb']['name'])){
+				//æ–‡ç« ç¼©ç•¥å›¾ä¸Šä¼ å¤„ç†
+				$upload = new Upload('upload/article/'.date("Y/m/d"));
+				$file = $upload->upload();
+				$this->data['thumb']=$file[0]['path'];
+				//åˆ é™¤æ—§çš„ç¼©ç•¥å›¾
+				$thumb= $this->where("id=".Q("id"))->getField('thumb');
+				is_file($thumb) and unlink($thumb);
+			}	
+			return $this->save();
 		}
 	}
 }
