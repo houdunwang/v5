@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if(!defined("HDPHP_PATH"))exit;C("SHOW_NOTICE",FALSE);?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -20,17 +20,17 @@
         #_time{color:#F57E1D;font-size:12px;padding:3px;}
     </style>
     <script type="text/javascript">
-        window.setTimeout("{$url}",{$time}*1000);
+        window.setTimeout("<?php echo $url;?>",<?php echo $time;?>*1000);
     </script>
 </head>
 <body>
 <div class="_prompt">
     <h2>操作成功</h2>
     <div>
-        <p>{$msg}&nbsp&nbsp&nbsp&nbsp</p>
-                <span><span id="_time">{$time}</span>秒钟后将进行
-                    <a href="javascript:{$url}">跳转</a>
-                    也可以<a href="__ROOT__">返回首页</a></span>
+        <p><?php echo $msg;?>&nbsp&nbsp&nbsp&nbsp</p>
+                <span><span id="_time"><?php echo $time;?></span>秒钟后将进行
+                    <a href="javascript:<?php echo $url;?>">跳转</a>
+                    也可以<a href="http://localhost/v5/cms">返回首页</a></span>
     </div>
 </div>
 <script type="text/javascript">

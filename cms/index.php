@@ -1,4 +1,5 @@
 <?php
+define("GROUP_TEMPLATE" ,'cms/Common/Template/');
 //开启调试模式
 define('DEBUG',true);
 //设置应用组目录

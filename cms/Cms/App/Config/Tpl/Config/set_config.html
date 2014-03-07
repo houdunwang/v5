@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <hdjs/>
+    </head>
+    <body>
+    	<div class='wrap'>
+		<div class='title-header'>
+			网站配置
+		</div>
+		<form  class='hd-form' method='post'>
+			<table class='table1'>
+				<list from="$config" name='c'>
+				<tr>
+					<th class='w100'>
+					{$c.title}
+					</th>
+					<td class='w200'>
+						{$c.html}
+					</td>
+					<td>
+						{$c.message}
+					</td>
+					<td>
+						{ $hd.config.{$c.name} }
+					</td>
+				</tr>
+			</list>
+			</table>
+		
+		<div class='position-bottom'>
+			<input type="submit" value='确定' class='hd-success'>
+		</div>
+		</form>	
+    	</div>
+    </body>
+</html>
