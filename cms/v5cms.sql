@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50612
 File Encoding         : 65001
 
-Date: 2014-02-28 21:22:37
+Date: 2014-03-07 23:32:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -79,3 +79,28 @@ CREATE TABLE `v5_category` (
 -- ----------------------------
 INSERT INTO `v5_category` VALUES ('1', 'V5课堂', '0', 'php', 'php');
 INSERT INTO `v5_category` VALUES ('2', 'PHP学习', '0', 'PHP学习', 'PHP学习');
+
+-- ----------------------------
+-- Table structure for v5_config
+-- ----------------------------
+DROP TABLE IF EXISTS `v5_config`;
+CREATE TABLE `v5_config` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `title` char(100) NOT NULL DEFAULT '',
+  `name` char(30) NOT NULL DEFAULT '',
+  `value` char(100) NOT NULL DEFAULT '',
+  `show_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1 文本框    2  单选框',
+  `message` varchar(255) NOT NULL DEFAULT '',
+  `option` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of v5_config
+-- ----------------------------
+INSERT INTO `v5_config` VALUES ('1', '网站名称', 'webname', '后盾网V5课堂-每周五晚7：30与你在一起', '1', '网站名称', '');
+INSERT INTO `v5_config` VALUES ('2', 'ICP', 'icp', '京ICP备12048441号-3', '1', 'ICP', '');
+INSERT INTO `v5_config` VALUES ('3', 'QQ', 'qq', '1455067020', '1', 'QQ', '');
+INSERT INTO `v5_config` VALUES ('4', '站长邮箱', 'email', 'houdunwangxj@gmail.com', '1', '站长邮箱', '');
+INSERT INTO `v5_config` VALUES ('5', '网站开头', 'web_status', '1', '2', '网站开头', '1|开启,0|关闭');
+INSERT INTO `v5_config` VALUES ('6', '网站关闭提示', 'close_message', '网站升级中...，请1小时后访问，感谢您的支持，你的支持是我们前进的动力！！！！', '3', '网站关闭提示', '');
