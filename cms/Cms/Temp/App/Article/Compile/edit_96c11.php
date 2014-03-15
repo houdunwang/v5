@@ -10,7 +10,7 @@
 		HOST = 'http://localhost';
 		ROOT = 'http://localhost/v5/cms';
 		WEB = 'http://localhost/v5/cms/index.php';
-		URL = 'http://localhost/v5/cms/index.php/Article/Article/edit/id/1';
+		URL = 'http://localhost/v5/cms/index.php/Article/Article/edit/id/9';
 		HDPHP = 'http://localhost/v5/cms/hdphp/hdphp';
 		HDPHPDATA = 'http://localhost/v5/cms/hdphp/hdphp/Data';
 		HDPHPTPL = 'http://localhost/v5/cms/hdphp/hdphp/Lib/Tpl';

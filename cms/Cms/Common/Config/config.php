@@ -11,7 +11,7 @@ $config =  array(
     'DB_DATABASE'                   => 'v5cms',          //数据库名称
     'DB_PREFIX'                  => 'v5_',          //表前缀
     'DB_BACKUP'                 => ROOT_PATH . 'backup/'.time(), //数据库备份目录
-    'DEFAULT_APP'		=> 'Admin',			//默认访问应用 
+    'DEFAULT_APP'		=> 'Index',			//默认访问应用 
      'TPL_ERROR'                     => GROUP_TEMPLATE.'error.html',     //错误信息模板
     'TPL_SUCCESS'                   => GROUP_TEMPLATE.'success.html',   //正确信息模板
 );

@@ -24,8 +24,8 @@
 		CONTROLTPL = 'http://localhost/v5/cms/Cms/App/Article/Tpl/Article';
 		STATIC = 'http://localhost/v5/cms/Static';
 		PUBLIC = 'http://localhost/v5/cms/Cms/App/Article/Tpl/Public';
-		HISTORY = 'http://localhost/v5/cms/index.php/Article/Article/edit';
-		HTTPREFERER = 'http://localhost/v5/cms/index.php/Article/Article/edit';
+		HISTORY = 'http://localhost/v5/cms/index.php/Admin/Index/index';
+		HTTPREFERER = 'http://localhost/v5/cms/index.php/Admin/Index/index';
 </script>
 </head>
 <body>
