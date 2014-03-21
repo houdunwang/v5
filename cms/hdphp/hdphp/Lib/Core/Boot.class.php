@@ -261,6 +261,7 @@ final class Boot
             HDPHP_DRIVER_PATH . 'Db/Db.class.php', //数据处理基类
             HDPHP_DRIVER_PATH . 'Db/DbFactory.class.php', //数据工厂类
             HDPHP_DRIVER_PATH . 'Db/DbInterface.class.php', //数据接口类
+            HDPHP_DRIVER_PATH . 'Db/DbMysqli.class.php', //Mysqli驱动类
             HDPHP_DRIVER_PATH . 'Model/Model.class.php', //模型基类
             HDPHP_DRIVER_PATH . 'Model/RelationModel.class.php', //关联模型类
             HDPHP_DRIVER_PATH . 'Model/ViewModel.class.php', //视图模型类

@@ -52,7 +52,9 @@ class ViewTag
         'jsconst' => array("block" => 0), //定义JS常量
         'define' => array("block" => 0),
         'bootstrap' => array('block' => 0),
+        'less' => array('block' => 0),
         "hdjs" => array("block" => 0),
+        "validate" => array("block" => 0),
         "slide" => array("block" => 0),
         "cal" => array("block" => 0)
     );
@@ -418,7 +420,7 @@ class ViewTag
         };';
         if ($style == 2) {
             $str .= 'options_' . $name . '.items=[
-            "fontname", "fontsize", "|", "forecolor", "hilitecolor", "bold", "italic", "underline",
+            "source","code","image","fullscreen","|","forecolor", "bold", "italic", "underline",
             "removeformat", "|", "justifyleft", "justifycenter", "justifyright", "insertorderedlist",
             "insertunorderedlist", "|", "emoticons", ' . $imageupload . ' "link"];';
         }
@@ -640,22 +642,6 @@ class ViewTag
         return '<?php }else{ ?>';
     }
 
-    //bootstrap
-    public function _bootstrap($attr, $content)
-    {
-        $str = '';
-        $str .= '<link href="__HDPHP_EXTEND__/Org/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">';
-        $str .= '<script src="__HDPHP_EXTEND__/Org/bootstrap/js/bootstrap.min.js"></script>';
-        $str .= '
-  <!--[if lte IE 6]>
-  <link rel="stylesheet" type="text/css" href="__HDPHP_EXTEND__/Org/bootstrap/ie6/css/bootstrap-ie6.css">
-  <![endif]-->
-  <!--[if lte IE 7]>
-  <link rel="stylesheet" type="text/css" href="__HDPHP_EXTEND__/Org/bootstrap/ie6/css/ie.css">
-  <![endif]-->';
-        return $str;
-    }
-
     //设置js常量
     public function _jsconst($attr, $content)
     {
@@ -669,17 +655,34 @@ class ViewTag
         return $str;
     }
 
+    //bootstrap
+    public function _bootstrap($attr, $content)
+    {
+        $str = '';
+        $str .= "<link href='__HDPHP_EXTEND__/Org/bootstrap/css/bootstrap.min.css' rel='stylesheet' media='screen'>\n";
+        $str .= "<script src='__HDPHP_EXTEND__/Org/bootstrap/js/bootstrap.min.js'></script>";
+        $str .= '
+                <!--[if lte IE 6]>
+                <link rel="stylesheet" type="text/css" href="__HDPHP_EXTEND__/Org/bootstrap/ie6/css/bootstrap-ie6.css">
+                <![endif]-->';
+        $str .= '
+                <!--[if lt IE 9]>
+                <script src="__HDPHP_EXTEND__/Org/bootstrap/js/html5shiv.min.js"></script>
+                <script src="__HDPHP_EXTEND__/Org/bootstrap/js/respond.min.js"></script>
+                <![endif]-->';
+        return $str;
+    }
+
+    //less
+    public function _less($attr, $content)
+    {
+        return "<script src='__HDPHP_EXTEND__/Org/Less/less-1.5.0.min.js'></script>\n";
+    }
+
     //js轮换版
     public function _slide($attr, $content)
     {
-        //是否引入jquery
-        $jquery = isset($attr['jquery']) ? intval($attr['jquery']) : 1;
-        $php = '';
-        if ($jquery == 1) {
-            $php .= "<script type='text/javascript' src='__HDPHP__/../hdjs/jquery-1.8.2.min.js'></script>\n";
-
-        }
-        return $php.'<script src="__HDPHP__/../hdjs/js/slide.js"></script>';
+        return "<script src='__HDPHP__/../hdjs/js/slide.js'></script>\n";
     }
 
     //jquery
@@ -691,27 +694,18 @@ class ViewTag
     //日历
     public function _cal($attr, $content)
     {
-        //是否引入jquery
-        $jquery = isset($attr['jquery']) ? intval($attr['jquery']) : 1;
-        $php = '';
-        if ($jquery == 1) {
-            $php .= "<script type='text/javascript' src='__HDPHP__/../hdjs/jquery-1.8.2.min.js'></script>\n";
-
-        }
-        return $php."<script src='__HDPHP__/../hdjs/org/cal/lhgcalendar.min.js'></script>\n";
+        return "<script src='__HDPHP__/../hdjs/org/cal/lhgcalendar.min.js'></script>\n";
     }
 
-    //HdUi
+    //hdjs
     public function _hdjs($attr, $content)
     {
-        $bootstrap = isset($attr['bootstrap']) ? $attr['bootstrap'] : false;
         $php = '';
         $php .= "<script type='text/javascript' src='__HDPHP__/../hdjs/jquery-1.8.2.min.js'></script>\n";
         $php .= "<link href='__HDPHP__/../hdjs/css/hdjs.css' rel='stylesheet' media='screen'>\n";
         $php .= "<script src='__HDPHP__/../hdjs/js/hdjs.js'></script>\n";
-        $php .= "<script src='__HDPHP__/../hdjs/js/slide.js'></script>\n";
-        $php.="<script src='__HDPHP__/../hdjs/org/cal/lhgcalendar.min.js'></script>\n";
-        $php .= $bootstrap ? $this->_bootstrap(null, null) : "";
+        $php .= $this->_slide(null, null);
+        $php .= $this->_cal(null, null);
         $php .= $this->_jsconst(null, null);
         return $php;
     }

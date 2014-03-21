@@ -36,6 +36,7 @@ if (isset($_GET['fetch'])) {
 $upload = new upload($imgSavePathConfig[0], '', intval($_GET['uploadsize']));
 $title = htmlspecialchars($_POST['pictitle'], ENT_QUOTES);
 $file = $upload->upload();
+$file = $file[0];
 if (!$file) {
     echo "{'title':'" . $upload->error . "','state':'" . $upload->error . "'}";
 } else {

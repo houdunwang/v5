@@ -204,6 +204,8 @@ function import($class = null, $base = null, $ext = ".class.php")
             $base = APP_PATH . '../' . $info[0] . '/';
             $class = substr_replace($class, '', 0, strlen($info[0]) + 1);
         }
+    } else {
+        $base = str_replace('.', '/', $base);
     }
     if (substr($base, -1) != '/')
         $base .= '/';
@@ -282,10 +284,12 @@ function control($control, $method = NULl, $args = array())
  * @param string $value 值
  * @return mixed
  */
-function session($name, $value = '')
+function session($name = '', $value = '')
 {
-    //session初始化
-    if (is_array($name)) {
+
+    if ($name === '') {
+        return $_SESSION;
+    } elseif (is_array($name)) {
         //关闭session自启动
         ini_set('session.auto_start', 0);
         //session_name
@@ -323,7 +327,7 @@ function session($name, $value = '')
         if (C("SESSION_AUTO_START")) {
             session_start();
         }
-    } elseif ($value === "") {
+    } elseif ($value === '') {
         if ('[pause]' == $name) { // 暂停
             session_write_close();
         } elseif ('[start]' == $name) { //开启
@@ -351,6 +355,33 @@ function session($name, $value = '')
     } else { //设置session
         $_SESSION[$name] = $value;
     }
+}
+
+/**
+ * 获得浏览器版本
+ */
+function browser_info()
+{
+    $agent = strtolower($_SERVER["HTTP_USER_AGENT"]);
+    $browser = null;
+    if (strstr($agent, 'msie 9.0')) {
+        $browser = 'msie9';
+    } else if (strstr($agent, 'msie 8.0')) {
+        $browser = 'msie8';
+    } else if (strstr($agent, 'msie 7.0')) {
+        $browser = 'msie7';
+    } else if (strstr($agent, 'msie 6.0')) {
+        $browser = 'msie6';
+    } else if (strstr($agent, 'firefox')) {
+        $browser = 'firefox';
+    } else if (strstr($agent, 'chrome')) {
+        $browser = 'chrome';
+    } else if (strstr($agent, 'safari')) {
+        $browser = 'safari';
+    } else if (strstr($agent, 'opera')) {
+        $browser = 'opera';
+    }
+    return $browser;
 }
 
 /**
@@ -395,7 +426,8 @@ function cookie($name, $value = "", $option = array())
     }
     $name = $config['prefix'] . $name;
     if ('' === $value) {
-        return isset($_COOKIE[$name]) ? json_decode(MAGIC_QUOTES_GPC ? stripslashes($_COOKIE[$name]) : $_COOKIE[$name]) : null; // 获取指定Cookie
+        // 获取指定Cookie
+        return isset($_COOKIE[$name]) ? json_decode(MAGIC_QUOTES_GPC ? stripslashes($_COOKIE[$name]) : $_COOKIE[$name]) : null;
     } else {
         if (is_null($value)) {
             setcookie($name, '', time() - 3600, $config['path'], $config['domain']);
@@ -854,7 +886,6 @@ function rand_str($len = 6)
         $str .= substr($data, mt_rand(0, strlen($data) - 1), 1);
     return $str;
 }
-
 
 /**
  * 加密方法

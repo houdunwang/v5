@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>网站新闻 -  绿黑色物流网站设计G </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>{$field.cname}</title>
 <meta content="网站新闻, " name="keywords" />
 <meta content="绿黑色物流网站设计G的网站新闻列表信息。" name="description" />
-<link rel="stylesheet" type="text/css" href="__TEMPLATE__/css/css1.css" />
+<link rel="stylesheet" type="text/css" href="__TEMPLATE__/static/css/css1.css" />
 </head>
 <body >
 <!--顶部-->
@@ -21,24 +21,14 @@
 		<div class="clearfix sitenav">
 			<div class="clearfix menu-main"><ul id="menuSitenav" class="clearfix">
 <li class="first-item">
-     <a href="/" class="home"><span>首页</span></a>
+     <a href="__ROOT__" class="home"><span>首页</span></a>
 </li>
-                                <li >
-                <a href="/page/gongsijieshao" target="_self"><span>公司介绍</span></a>                                </li>
-                                <li >
-                <a href="/products" target="_self"><span>产品管理</span></a>                                </li>
-                                <li >
-                <a href="/articles" target="_self"><span>网站新闻</span></a>                                </li>
-                                <li >
-                <a href="/jobs" target="_self"><span>人才招聘</span></a>                                </li>
-                                <li >
-                <a href="/books" target="_self"><span>留言系统</span></a>                                </li>
-                                <li >
-                <a href="/links" target="_self"><span>友情链接</span></a>                                </li>
-                                <li >
-                <a href="/downs" target="_self"><span>下载专区</span></a>                                </li>
-                                <li  class="last-item">
-                <a href="/page/lianxiwomen" target="_self"><span>联系我们</span></a>                                </li>
+                                <channel type='top'>
+                <li >
+                	<a href="{$field.url}" target="_self">
+                	<span>{$field.cname}</span></a>                                
+                </li>
+</channel>
                 </ul></div>	
 		</div>
 	</div>      
@@ -62,7 +52,7 @@
 						<div id='articles-list' class="block first-block">
 				<div class="block-head">
 					<div class="head-inner">
-						<h2 class="title">网站新闻</h2>
+						<h2 class="title">{$field.cname}</h2>
 											</div>
 				</div>
 				<div class="block-content clearfix">
@@ -75,33 +65,21 @@
 						</tr>
 						</thead>
 						<tbody>
-												<tr>
-							<td class="title"><span class="catalog">[ <a href="/articles/meitibaodao/index.html" title="媒体报道">媒体报道</a> ]</span> <a href="/articles/meitibaodao/73640.html" target="_blank" title="初识集装箱干燥剂"><span class="style1">初识集装箱干燥剂</span></a></td>
-							<td>2013-12-24</td>
+							<pagelist row='2'>
+							<tr>
+							<td class="title">
+								<span class="catalog">[ <a href="" title="媒体报道">{$field.cname}</a> ]</span> 
+								<a href=""><span class="style1">{$field.title}</span></a></td>
+							<td>{$field.addtime|date:'Y-m-d',@@}</td>
 						</tr>
-												<tr>
-							<td class="title"><span class="catalog">[ <a href="/articles/meitibaodao/index.html" title="媒体报道">媒体报道</a> ]</span> <a href="/articles/meitibaodao/73639.html" target="_blank" title="进出口必须了解的提单知识"><span class="style1">进出口必须了解的提单知识</span></a></td>
-							<td>2013-12-24</td>
-						</tr>
-												<tr>
-							<td class="title"><span class="catalog">[ <a href="/articles/meitibaodao/index.html" title="媒体报道">媒体报道</a> ]</span> <a href="/articles/meitibaodao/73638.html" target="_blank" title="舱单新规定"><span class="style1">舱单新规定</span></a></td>
-							<td>2013-12-24</td>
-						</tr>
-												<tr>
-							<td class="title"><span class="catalog">[ <a href="/articles/meitibaodao/index.html" title="媒体报道">媒体报道</a> ]</span> <a href="/articles/meitibaodao/73637.html" target="_blank" title="走进防城港 弄潮北部湾"><span class="style1">走进防城港 弄潮北部湾</span></a></td>
-							<td>2013-12-24</td>
-						</tr>
-												<tr>
-							<td class="title"><span class="catalog">[ <a href="/articles/meitibaodao/index.html" title="媒体报道">媒体报道</a> ]</span> <a href="/articles/meitibaodao/73636.html" target="_blank" title="广西北部湾打造国际航运枢纽和港口物流中心"><span class="style1">广西北部湾打造国际航运枢纽和港口物流中心</span></a></td>
-							<td>2013-12-24</td>
-						</tr>
+					</pagelist>
 												</tbody>
 					</table>
 										</div>
 					<div class="pager clearfix">
 <div class="list">
 	
-	<span nolinkClass="pager-nolink" class="pager-nolink"><span>上一页</span></span>		 <span class="pager-current"><span>1</span></span>  <a href="/articles/index/page:2" class="pager-item" link_type="cms_front"><span>2</span></a>		<a href="/articles/index/page:2" nolinkClass="pager-nolink" class="pager-item"><span>下一页</span></a>	
+	<pagenum style='1'/>
 	
 </div>
 </div>
@@ -117,32 +95,24 @@
     </div>    <div class="block-content clearfix">
     	<div class="item-list">
 	    <ul class="clearfix">
+	    	<channel type='son' cid='4'>
 			    					    		<li>
-			    		<a title="国内新闻" href="/articles/guoneixinwen/index.html">国内新闻</a>
-			    					    		</li>			    		<li>
-			    		<a title="国际新闻" href="/articles/guojixinwen/index.html">国际新闻</a>
-			    					    		</li>			    		<li>
-			    		<a title="公司新闻" href="/articles/gongsixinwen/index.html">公司新闻</a>
-			    					    		</li>			    		<li>
-			    		<a title="媒体报道" href="/articles/meitibaodao/index.html">媒体报道</a>
-			    					    		</li></ul>    	</div>
+			    		<a title="{$field.cname}" href="{$field.url}">{$field.cname}</a>
+			    					    		</li>	
+			    					    		</channel>		</ul>    	</div>
     </div>
     <div class="block-foot"><div><div>-</div></div></div></div><div class="block last-block block-articles  list-240" id="block-articles-109061" rel="109061">    <div class="block-head">    <div class="head-inner">
 	    	<h2 class="title">最新文章</h2><div class="links"><a class="more" href="/articles">更多</a></div>    </div>
     </div>    <div class="block-content clearfix">
     	<div class="item-list">
 	    <ul class="clearfix">
+	    	<arclist row='5' type='new'>
 			    					    		<li>
-			    		<a title="初识集装箱干燥剂" href="/articles/meitibaodao/73640.html">初识集装箱干燥剂</a>
-			    					    		</li>			    		<li>
-			    		<a title="进出口必须了解的提单知识" href="/articles/meitibaodao/73639.html">进出口必须了解的提单知识</a>
-			    					    		</li>			    		<li>
-			    		<a title="舱单新规定" href="/articles/meitibaodao/73638.html">舱单新规定</a>
-			    					    		</li>			    		<li>
-			    		<a title="走进防城港 弄潮北部湾" href="/articles/meitibaodao/73637.html">走进防城港 弄潮北部湾</a>
-			    					    		</li>			    		<li>
-			    		<a title="广西北部湾打造国际航运枢纽和港..." href="/articles/meitibaodao/73636.html">广西北部湾打造国际航运枢纽和港...</a>
-			    					    		</li></ul>    	</div>
+			    		<a title="初识集装箱干燥剂" href="/articles/meitibaodao/73640.html">{$field.title}</a>
+			    					    		</li>	
+			    					    		</arclist>		    		
+
+			    					    	</ul>    	</div>
     </div>
     <div class="block-foot"><div><div>-</div></div></div></div>		</div></div>
 	</div>

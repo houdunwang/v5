@@ -26,7 +26,7 @@ class DbMysql extends Db
     function connectDb()
     {
         if (!(self::$isConnect)) {
-            $link = mysql_connect(C("DB_HOST"), C("DB_USER"), C("DB_PASSWORD"));
+            $link = mysql_connect(C("DB_HOST"), C("DB_USER"), C("DB_PASSWORD"),true,131072);
             if (!$link) {
                 return false;
             } else {

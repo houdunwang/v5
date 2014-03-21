@@ -25,24 +25,15 @@
 		<div class="clearfix sitenav">
 			<div class="clearfix menu-main"><ul id="menuSitenav" class="clearfix">
 <li class="first-item">
-     <a href="/" class="home"><span>首页</span></a>
+     <a href="__ROOT__" class="home"><span>首页</span></a>
 </li>
-                                <li >
-                <a href="/page/gongsijieshao" target="_self"><span>公司介绍</span></a>                                </li>
-                                <li >
-                <a href="/products" target="_self"><span>产品管理</span></a>                                </li>
-                                <li >
-                <a href="/articles" target="_self"><span>网站新闻</span></a>                                </li>
-                                <li >
-                <a href="/jobs" target="_self"><span>人才招聘</span></a>                                </li>
-                                <li >
-                <a href="/books" target="_self"><span>留言系统</span></a>                                </li>
-                                <li >
-                <a href="/links" target="_self"><span>友情链接</span></a>                                </li>
-                                <li >
-                <a href="/downs" target="_self"><span>下载专区</span></a>                                </li>
-                                <li  class="last-item">
-                <a href="/page/lianxiwomen" target="_self"><span>联系我们</span></a>                                </li>
+<channel type='top'>
+                <li >
+                	<a href="{$field.url}" target="_self">
+                	<span>{$field.cname}</span></a>                                
+                </li>
+</channel>
+                                
                 </ul></div>	
 		</div>
 	</div>      
@@ -104,17 +95,12 @@
     </div>    <div class="block-content clearfix">
     	<div class="item-list">
 	    <ul class="clearfix">
+	    	<channel type='son' cid='4'>
 			    					    		<li>
-			    		<a title="海铁联运" href="/products/haitielianyun/index.html">海铁联运</a>
-			    					    		</li>			    		<li>
-			    		<a title="码头作业" href="/products/matouzuoye/index.html">码头作业</a>
-			    					    		</li>			    		<li>
-			    		<a title="集装箱定舱" href="/products/jizhuangxiangdingcang/index.html">集装箱定舱</a>
-			    					    		</li>			    		<li>
-			    		<a title="优质的仓储服务" href="/products/youzhidecangchufuwu/index.html">优质的仓储服务</a>
-			    					    		</li>			    		<li>
-			    		<a title="海陆联运" href="/products/hailulianyun/index.html">海陆联运</a>
-			    					    		</li></ul>    	</div>
+			    		<a title="海铁联运" href="{$field.url}">{$field.cname}</a>
+			    					    		</li>
+		</channel>
+			    					    	</ul>    	</div>
     </div>
     <div class="block-foot"><div><div>-</div></div></div></div><div class="block last-block block-diy list-270" id="block-diy-109068" rel="109068">
     <div class="block-head">

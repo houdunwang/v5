@@ -22,8 +22,10 @@ class Encry {
     static private $auth_key; //加密key
     static private $code = array(); //位运算种子
 
-    //生成加密KEY
-
+    /**
+     * 生成加密KEY
+     * @param $key
+     */
     static private function createKey($key) {
         $key = is_null($key) ? C("AUTH_KEY") : $key;
         self::$auth_key = md5($key . $_SERVER['HTTP_USER_AGENT']);
@@ -31,8 +33,10 @@ class Encry {
 
     /**
      * 位加密或解密
-     * @param string $string  加密或解密内容
-     * @param int $type         类型:1加密 2解密
+     * @param $string 加密或解密内容
+     * @param $type 类型:1加密 2解密
+     * @param $key
+     * @return mixed|string
      */
     static private function cry($string, $type, $key) {
         self::createKey($key);
@@ -71,8 +75,9 @@ class Encry {
 
     /**
      * 加密方法
-     * @param string $data    加密字符串
-     * @param string $key         密钥
+     * @param string $data 加密字符串
+     * @param null $key 密钥
+     * @return mixed|string
      */
     static public function encrypt($data, $key = null) {
         return self::cry(serialize($data), 1, $key);
@@ -80,8 +85,9 @@ class Encry {
 
     /**
      * 解密方法
-     * @param string $string  解密字符串
-     * @param string $key     密钥
+     * @param string $data 解密字符串
+     * @param null $key
+     * @return mixed
      */
     static public function decrypt($data, $key = null) {
         return unserialize(self::cry($data, 2, $key));

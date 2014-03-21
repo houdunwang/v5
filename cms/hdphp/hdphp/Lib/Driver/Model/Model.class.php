@@ -38,7 +38,7 @@ class Model
      * @param array $param 参数
      * @param null $driver 驱动
      */
-    public function __construct($table = null, $full = false,$driver = null,$param=array())
+    public function __construct($table = null, $full = false, $driver = null, $param = array())
     {
         if (method_exists($this, "__init")) {
             $this->__init($param);
@@ -62,6 +62,15 @@ class Model
                 Log::write("数据库连接出错了请检查配置文件中的参数");
             }
         }
+    }
+
+    /**
+     * 定义模型错误
+     * @param $error 错误信息
+     */
+    public function error($error)
+    {
+        $this->error = $error;
     }
 
     //设置操作表

@@ -8,20 +8,20 @@ return array(
     'HTML_PATH'                     => 'h',         //静态HTML保存目录
     'DEBUG_SHOW'                    => TRUE,        //为TRUE时显示DEBUG信息否则显示按钮
     'LANGUAGE'                      => '',          //语言包
-    'AUTH_KEY'                      => 'houdunwang',//验证key
-    'CHECK_FILE_CASE'               => FALSE,      //windows区分大小写
-    'AUTO_LOAD_FILE'                => array(),          //自动加载应用Lib目录或应用组Common/Lib目录下的文件
-    'FILTER_FUNCTION'               => array('htmlspecialchars','strip_tags'), //过滤函数会在Q()函数等中使用
+    'AUTH_KEY'                      => 'HouDunWang',//加密Key(如果使用建议定期更换AUTH_KEY)
+    'CHECK_FILE_CASE'               => FALSE,       //windows区分大小写
+    'AUTO_LOAD_FILE'                => array(),     //自动加载应用Lib目录或应用组Common/Lib目录下的文件
+    'FILTER_FUNCTION'               => array('htmlspecialchars','strip_tags'), //过滤函数会在Q(),date_format()等函数中使用
     /********************************数据库********************************/
     'DB_DRIVER'                     => 'mysqli',    //数据库驱动
-    'DB_CHARSET'                    => 'utf8',     //数据库字符集
+    'DB_CHARSET'                    => 'utf8',      //数据库字符集
     'DB_HOST'                       => '127.0.0.1', //数据库连接主机  如127.0.0.1
     'DB_PORT'                       => 3306,        //数据库连接端口
     'DB_USER'                       => 'root',      //数据库用户名
     'DB_PASSWORD'                   => '',          //数据库密码
     'DB_DATABASE'                   => '',          //数据库名称
     'DB_PREFIX'                     => '',          //表前缀
-    'DB_BACKUP'                     => ROOT_PATH . 'backup/', //数据库备份目录
+    'DB_BACKUP'                     => 'backup/',   //数据库备份目录
     /********************************表单TOKEN令牌********************************/
     'TOKEN_ON'                      => FALSE,       //令牌状态
     'TOKEN_NAME'                    => '__TOKEN__', //令牌的表单name
@@ -39,7 +39,10 @@ return array(
     'SESSION_AUTO_START'            => TRUE,        //自动开启SESSION
     'SESSION_TYPE'                  => '',          //引擎:mysql,memcache,redis
     'SESSION_NAME'                  => 'hd_sid',    //session_name
-    'SESSION_OPTIONS'               =>array(),      //session处理参数，配置复杂，请查看手册获得帮助
+    'SESSION_OPTIONS'               =>array(//session配置复杂，请查看手册获得帮助
+                                            'table'=>'session',
+                                            'expire'=>'3600'
+                                      ),
     /********************************COOKIE********************************/
     'COOKIE_EXPIRE'                 => 0,           // Coodie有效期
     'COOKIE_DOMAIN'                 => '',          // Cookie有效域名
@@ -93,11 +96,11 @@ return array(
     'UPLOAD_EXT_SIZE'               => array('jpg' => 5000000, 'jpeg' => 5000000, 'gif' => 5000000,
                                     'png' => 5000000, 'bmg' => 5000000, 'zip' => 5000000,
                                     'txt' => 5000000, 'rar' => 5000000, 'doc' => 5000000), //上传类型与大小
-    'UPLOAD_PATH'                   => ROOT_PATH . 'upload/', //上传路径
-    'UPLOAD_IMG_DIR'                => '',       //图片上传目录名
-    'UPLOAD_IMG_RESIZE_ON'          => FALSE,        //上传图片缩放处理,超过以下值系统进行缩放
-    'UPLOAD_IMG_MAX_WIDTH'          => 1000,     //上传图片宽度超过此值，进行缩放
-    'UPLOAD_IMG_MAX_HEIGHT'         => 1000,     //上传图片高度超过此值，进行缩放
+    'UPLOAD_PATH'                   => 'upload/',   //上传路径
+    'UPLOAD_IMG_DIR'                => '',          //图片上传目录名
+    'UPLOAD_IMG_RESIZE_ON'          => FALSE,       //上传图片缩放处理,超过以下值系统进行缩放
+    'UPLOAD_IMG_MAX_WIDTH'          => 1000,        //上传图片宽度超过此值，进行缩放
+    'UPLOAD_IMG_MAX_HEIGHT'         => 1000,        //上传图片高度超过此值，进行缩放
     /********************************图像水印处理********************************/
     'WATER_ON'                      => TRUE,           //开关
     'WATER_FONT'                    => HDPHP_PATH . 'Data/Font/font.ttf',   //水印字体
@@ -152,14 +155,14 @@ return array(
     'EDITOR_WIDTH'                  => '100%',      //编辑器高度
     'EDITOR_HEIGHT'                 => 300,         //编辑器高度
     'EDITOR_FILE_SIZE'              => 2000000,     //上传图片文件大小
-    'EDITOR_SAVE_PATH'          => ROOT_PATH . 'upload/editor/', //文件储存目录
+    'EDITOR_SAVE_PATH'              => 'upload/editor/', //文件储存目录
 
     /********************************RBAC权限控制********************************/
     'RBAC_TYPE'                     => 1,           //1时时认证｜2登录认证
     'RBAC_SUPER_ADMIN'              => 'super_admin', //超级管理员SESSION名
     'RBAC_USERNAME_FIELD'           => 'username',  //用户名字段
     'RBAC_PASSWORD_FIELD'           => 'password',  //密码字段
-    'RBAC_AUTH_KEY'                 => 'uid',      //用户SESSION名
+    'RBAC_AUTH_KEY'                 => 'uid',       //用户SESSION名
     'RBAC_NO_AUTH'                  => array(),     //不需要验证的控制器或方法如:array('index/index')表示index控制器的index方法不需要验证
     'RBAC_USER_TABLE'               => 'user',      //用户表
     'RBAC_ROLE_TABLE'               => 'role',      //角色表

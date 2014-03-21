@@ -1,5 +1,5 @@
 ﻿<?php
-class ArticleModel extends Model{
+class ArticleModel extends ViewModel{
 	//文章操作表
 	public $table ='article';
 	//自动完成（给字段赋值）
@@ -12,6 +12,12 @@ class ArticleModel extends Model{
 		array('admin_id','get_adminid','method',2,3),
 		//获得文章的发布者名称
 		array('author','get_author','method',2,3),
+	);
+	public $view=array(
+		'category'=>array(
+			'type'=>INNER_JOIN,
+			'on'=>'article.catid=category.cid'
+		)
 	);
 	//获得文章的发布者管理员ID
 	public function get_adminid(){

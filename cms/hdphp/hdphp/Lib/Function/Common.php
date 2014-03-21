@@ -703,21 +703,26 @@ function extension_exists($ext)
 /**
  * 调用标签函数
  * @param $tag 标签名
- * @param $attr 属性
- * @param $content 内容
+ * @param array $attr 属性
+ * @param string $content 内容
  * @return bool
  */
 function tag($tag, $attr = array(), $content = "")
 {
     $tag = "_" . $tag;
-    $tagClass = array(); //标签库类
-    $tags = C('TPL_TAGS'); //加载扩展标签库
-    if (!empty($tags) && is_array($tags)) { //如果配置文件中存在标签定义
-        foreach ($tags as $k) { //加载其他模块或应用中的标签库
-            $arr = explode('.', $k); //如果拆分后大于1的为其他模块或应用的标签定义
-
+    //标签库类
+    $tagClass = array();
+    //加载扩展标签库
+    $tags = C('TPL_TAGS');
+    //如果配置文件中存在标签定义
+    if (!empty($tags) && is_array($tags)) {
+        //加载其他模块或应用中的标签库
+        foreach ($tags as $k) {
+            //如果拆分后大于1的为其他模块或应用的标签定义
+            $arr = explode('.', $k);
             if (import($k)) {
-                $tagClass[] = array_pop($arr); //压入标签库类
+                //压入标签库类
+                $tagClass[] = array_pop($arr);
             }
         }
     }

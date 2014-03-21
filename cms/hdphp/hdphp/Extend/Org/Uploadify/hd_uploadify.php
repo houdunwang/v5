@@ -35,7 +35,7 @@ if ($file) {
     $data['stat'] = 1;
     $data['url'] = __ROOT__ . '/' . $file[0]['path'];
     $data['path'] = $file[0]['path'];
-    $data['name'] = $file[0]['name'];
+    $data['name'] = $file[0]['filename'];
     $data['isimage'] = in_array(strtolower($file[0]['ext']), array("gif", "png", "jpeg", "jpg")) ? 1 : 0;
     $data['thumb'] = array(); //缩略图文件
     if (isset($_POST['hdphp_upload_thumb'])) {

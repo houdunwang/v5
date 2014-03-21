@@ -23,8 +23,8 @@ final class ViewHd extends View
 
     public $vars = array(); //模板变量
     public $const = array(); //系统常量如__WEB__$const['WEB'];
-    public $tplFile; //模版文件
-    public $compileFile; //编译文件
+    public $tplFile = null; //模版文件
+    public $compileFile = null; //编译文件
 
     /**
      * 模板显示
@@ -38,39 +38,52 @@ final class ViewHd extends View
      */
     public function display($tplFile = null, $cacheTime = null, $cachePath = null, $contentType = "text/html", $charset = "", $show = true)
     {
-        $this->tplFile = $this->getTemplateFile($tplFile);
-        if (!$this->tplFile) return;
-        $this->compileFile = COMPILE_PATH . basename($this->tplFile, C("TPL_FIX")) . '_' . substr(md5(APP . CONTROL . METHOD), 0, 5) . '.php';
-        if (DEBUG) {
-            Debug::$tpl[] = array(basename($this->tplFile), $this->compileFile); //记录模板编译文件
-        }
-        //缓存时间设置
-        $cacheTime = is_int($cacheTime) ? $cacheTime : intval(C("CACHE_TPL_TIME"));
-        $content = false;
-        $cachePath = $cachePath ? $cachePath : CACHE_PATH;
-        if ($cacheTime >= 0) {
-            $content = S($_SERVER['REQUEST_URI'], false, $cacheTime, array("dir" => $cachePath, "Driver" => "File"));
-        }
 
+        //缓存文件名
+        $cacheName = md5($_SERVER['REQUEST_URI']);
+        //内容
+        $content = null;
+        if ($cacheTime >= 0) {
+            $content = S($cacheName, false, $cacheTime, array("dir" => $cachePath, 'zip'=>false,"Driver" => "File"));
+        }
         //缓存失效
         if (!$content) {
-            if ($this->compileInvalid($tplFile)) { //编译文件失效
+            //获得模板文件
+            $this->tplFile = $this->getTemplateFile($tplFile);
+            //模板文件不存在
+            if (!$this->tplFile) return;
+            //编译文件
+            $this->compileFile = COMPILE_PATH . basename($this->tplFile, C("TPL_FIX")) . '_' . substr(md5(APP . CONTROL . METHOD), 0, 5) . '.php';
+            //记录模板编译文件
+            if (DEBUG) {
+                Debug::$tpl[] = array(basename($this->tplFile), $this->compileFile);
+            }
+            //缓存时间
+            $cacheTime = is_int($cacheTime) ? $cacheTime : intval(C("CACHE_TPL_TIME"));
+            //缓存路径
+            $cachePath = $cachePath ? $cachePath : CACHE_PATH;
+            //编译文件失效（不存在或过期）
+            if ($this->compileInvalid($tplFile)) {
+                //执行编译
                 $this->compile();
             }
             $_CONFIG = C();
             $_LANGUAGE = L();
-            if (!empty($this->vars)) { //加载全局变量
+            //加载全局变量
+            if (!empty($this->vars)) {
                 extract($this->vars);
             }
             ob_start();
             include($this->compileFile);
             $content = ob_get_clean();
+            //创建缓存
             if ($cacheTime >= 0) {
-                is_dir(CACHE_PATH) || dir_create(CACHE_PATH); //创建缓存目录
-                S($_SERVER['REQUEST_URI'], $content, $cacheTime, array("dir" => $cachePath, "Driver" => "File")); //写入缓存
+                //创建缓存目录
+                is_dir(CACHE_PATH) || dir_create(CACHE_PATH);
+                //写入缓存
+                S($cacheName, $content, $cacheTime, array("dir" => $cachePath,'zip'=>false, "Driver" => "File"));
             }
         }
-
         if ($show) {
             $charset = strtoupper(C("CHARSET")) == 'UTF8' ? "UTF-8" : strtoupper(C("CHARSET"));
             if (!headers_sent()) {

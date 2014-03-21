@@ -2,23 +2,24 @@
 <head>
 	<title>后台登录入口</title>
 	<hdjs/>
-	<bootstrap/>
 	<js file='__CONTROL_TPL__/js/js.js'/>
 </head>
 <body>
+	<div class='title-header'>
 <h3>管理员登录</h3>
+</div>
 <form action='__METH__' method='post' class='hd-form'>	
 <table class='table1'>
 	<tr>
  		<td class='w100'>帐号</td>
  		<td>
- 			<input type='text' name='username'/>
+ 			<input type='text' name='username' class='w200'/>
  		</td>
 	</tr>
 	<tr>
  		<td>密码</td>
  		<td>
- 			<input type='password' name='password'/>
+ 			<input type='password' name='password' class='w200'/>
  		</td>
 	</tr>
 	<tr>
@@ -31,7 +32,7 @@
 	</tr>
 	<tr>
  		<td colspan='2'>
- 			<input type='submit' value='登录' class='btn btn-primary'/>
+ 			<input type='submit' value='登录' class='hd-success'/>
  		</td>
 	</tr>
 </table>

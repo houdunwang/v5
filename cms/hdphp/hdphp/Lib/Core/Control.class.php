@@ -25,7 +25,7 @@ abstract class Control
      * @var view
      * @access private
      */
-    private $view = null;
+    protected $view = null;
     //事件参数
     protected $options = array();
 

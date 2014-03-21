@@ -125,15 +125,14 @@ class SessionMysql
     //关闭SESSION
     public function close()
     {
-        //关闭SESSION
-        if (mt_rand(1, 100) == 1) {
-            $this->gc();
-        }
+        $this->gc();
         //关闭数据库连接
         mysql_close($this->link);
         return true;
     }
 
+    function __destruct()
+    {
+        // TODO: Implement __destruct() method.
+    }
 }
-
-?>
