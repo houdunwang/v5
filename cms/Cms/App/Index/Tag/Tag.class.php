@@ -30,6 +30,7 @@ class Tag{
 		\$result = \$db->where(\$where)->limit(\$page->limit())->all();
 		if(\$result):
 			foreach(\$result as \$field):
+				\$field['url']=U('article',array('id'=>\$field['id']));
 				\$field['caturl']=U('channel',array('cid'=>\$field['cid']));
 		;?>
 str;
@@ -128,6 +129,7 @@ str;
 		\$result= \$db->limit($row)->all();
 		if(\$result):
 		foreach(\$result as \$field):
+			\$field['url'] =U('article',array('id'=>\$field['id']));
 			\$field['title'] = mb_substr(\$field['title'], 0,$titlelen,'utf8');
 			\$field['thumb']="__ROOT__/".\$field['thumb'];
 		;?>

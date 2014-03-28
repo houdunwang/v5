@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>初识集装箱干燥剂 -  绿黑色物流网站设计G </title>
 <meta content=",网站新闻,网站新闻 " name="keywords" />
 <meta content="" name="description" />
-<link rel="stylesheet" type="text/css" href="__TEMPLATE__/css/css1.css" />
+<link rel="stylesheet" type="text/css" href="__TEMPLATE__/static/css/css1.css" />
 </head>
 <body >
 <!--顶部-->
@@ -77,16 +77,19 @@
 				</div>
 				<div class="block-content clearfix">
 					<div class="article-head">
-						<h1 class="title">初识集装箱干燥剂</h1>
+						<h1 class="title">{$hdcms.title}</h1>
 						<div class="meta">
-							<span class="item">分类：媒体报道</span>
-							<span class="item">作者：<span class="yellow"></span></span>
-							<span class="item">来源：</span>
-							<span class="item">发布：<span class="grey">2013-12-24</span></span>
+							<span class="item">分类：{$hdcms.cname}</span>
+							<span class="item">作者：{$hdcms.author}<span class="yellow"></span></span>
+							<span class="item">来源：{$hdcms.source}</span>
+							<span class="item">发布：<span class="grey">{$hdcms.addtime|date:'Y-m-d',@@}</span></span>
+							<span class="item">点击：<span class="grey">
+<script type='text/javascript' src='__CONTROL__&m=update_click&id={$hdcms.id}'></script>
+							</span></span>
 						</div>
 					</div>
 										<div class="article-content clearfix" style="padding-top:20px;">
-						随着世界经济的迅速发展，国际间的贸易往来日趋频繁，集装箱海洋运输因其成本优势成了国际贸易领域最重要的货运方式。集装箱远洋运输或储存过程中，货柜往往会经历海洋高湿气候及较大的昼夜温差变化。白天锁闭在货柜内的富含水汽的高温空气，在夜间由于温度降低，水汽达到饱和，水蒸汽就结露凝结成水珠，这就是俗称的&nbsp;“集装箱雾雨”。这种液态的水会对集装箱内货物或货物的外包装产生严重的影响。目前国际上普遍采用在集装箱内放置集装箱干燥剂来有效的控制露点、吸收空气中的水份、降低货柜的湿度，从而防止凝露的产生。一般情况下，集装箱处于不断变化的动态环境当中，集装箱本身形成了一个比较特殊的环境。因而在集装箱干燥剂类型选用、作用评估等方面与常规干燥剂应当区别对待。&nbsp;					</div>
+						{$hdcms.content}			</div>
 					<div class="pages2"></div>
 				</div>
 				<div class="block-foot"><div><div>-</div></div></div>
@@ -99,32 +102,23 @@
     </div>    <div class="block-content clearfix">
     	<div class="item-list">
 	    <ul class="clearfix">
+			    					    		<channel type='son' cid='4'>
 			    					    		<li>
-			    		<a title="国内新闻" href="/articles/guoneixinwen/index.html">国内新闻</a>
-			    					    		</li>			    		<li>
-			    		<a title="国际新闻" href="/articles/guojixinwen/index.html">国际新闻</a>
-			    					    		</li>			    		<li>
-			    		<a title="公司新闻" href="/articles/gongsixinwen/index.html">公司新闻</a>
-			    					    		</li>			    		<li>
-			    		<a title="媒体报道" href="/articles/meitibaodao/index.html">媒体报道</a>
-			    					    		</li></ul>    	</div>
+			    		<a title="{$field.cname}" href="{$field.url}">{$field.cname}</a>
+			    					    		</li>	
+			    					    		</channel>
+			    					    	</ul>    	</div>
     </div>
     <div class="block-foot"><div><div>-</div></div></div></div><div class="block last-block block-articles  list-240" id="block-articles-109061" rel="109061">    <div class="block-head">    <div class="head-inner">
 	    	<h2 class="title">最新文章</h2><div class="links"><a class="more" href="/articles">更多</a></div>    </div>
     </div>    <div class="block-content clearfix">
     	<div class="item-list">
 	    <ul class="clearfix">
+			    					    		<arclist row='5' type='new'>
 			    					    		<li>
-			    		<a title="初识集装箱干燥剂" href="/articles/meitibaodao/73640.html">初识集装箱干燥剂</a>
-			    					    		</li>			    		<li>
-			    		<a title="进出口必须了解的提单知识" href="/articles/meitibaodao/73639.html">进出口必须了解的提单知识</a>
-			    					    		</li>			    		<li>
-			    		<a title="舱单新规定" href="/articles/meitibaodao/73638.html">舱单新规定</a>
-			    					    		</li>			    		<li>
-			    		<a title="走进防城港 弄潮北部湾" href="/articles/meitibaodao/73637.html">走进防城港 弄潮北部湾</a>
-			    					    		</li>			    		<li>
-			    		<a title="广西北部湾打造国际航运枢纽和港..." href="/articles/meitibaodao/73636.html">广西北部湾打造国际航运枢纽和港...</a>
-			    					    		</li></ul>    	</div>
+			    		<a title="初识集装箱干燥剂" href="{$field.url}">{$field.title}</a>
+			    					    		</li>
+			    					    	</arclist></ul>    	</div>
     </div>
     <div class="block-foot"><div><div>-</div></div></div></div>		</div></div>
 	</div>

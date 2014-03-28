@@ -16,7 +16,8 @@ $config =  array(
     'TPL_SUCCESS'                   => GROUP_TEMPLATE.'success.html',   //正确信息模板
     'ROUTE'=>array(
             //栏目列表页url地址
-            '/^list(\d+).html$/'    =>'Index/Index/Channel/cid/#1'
+            '/^list(\d+).html$/'    =>'Index/Index/Channel/cid/#1',
+            '/^(\d+).html$/'    => 'Index/Index/Article/id/#1'
     ),
 );
 return array_merge($config,require 'data/config/config.inc.php');
