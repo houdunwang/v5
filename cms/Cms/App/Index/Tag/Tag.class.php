@@ -4,7 +4,8 @@ class Tag{
 		'arclist'=>array('block'=>1,'level'=>3),
 		'channel'=>array('block'=>1,'level'=>3),
 		'pagelist'=>array('block'=>1,'level'=>3),
-		'pagenum'=>array('block'=>0)
+		'pagenum'=>array('block'=>0),
+		'pagenext'=>array('block'=>0)
 	);
 
 	/**
@@ -30,7 +31,7 @@ class Tag{
 		\$result = \$db->where(\$where)->limit(\$page->limit())->all();
 		if(\$result):
 			foreach(\$result as \$field):
-				\$field['url']=U('article',array('id'=>\$field['id']));
+				\$field['url']=U('article',array('cid'=>\$field['catid'],'id'=>\$field['id']));
 				\$field['caturl']=U('channel',array('cid'=>\$field['cid']));
 		;?>
 str;
@@ -129,13 +130,46 @@ str;
 		\$result= \$db->limit($row)->all();
 		if(\$result):
 		foreach(\$result as \$field):
-			\$field['url'] =U('article',array('id'=>\$field['id']));
+			\$field['url'] =U('article',array('cid'=>\$field['catid'],'id'=>\$field['id']));
 			\$field['title'] = mb_substr(\$field['title'], 0,$titlelen,'utf8');
 			\$field['thumb']="__ROOT__/".\$field['thumb'];
 		;?>
 str;
 		$php.=$content;
 		$php.="<?php endforeach;endif;?>";
+		return $php;
+	}
+	/**
+	 * 上一篇、下一篇标签
+	 * @param  [type] $attr    [description]
+	 * @param  [type] $content [description]
+	 * @return [type]          [description]
+	 */
+	public function _pagenext($attr,$content){
+		$pre = isset($attr['pre'])?$attr['pre']:'上一篇：';
+		$next = isset($attr['next'])?$attr['next']:'下一篇：';
+		$php=<<<str
+		<?php 
+		\$db = M("article");
+		\$cid = Q('cid',null,'intval');
+		\$id = Q("id",null,'intval'); 
+		\$result= \$db->where("id<\$id AND catid=\$cid")->order("id DESC")->find();
+		//上一篇 
+		if(\$result){
+			echo '$pre <a href="#">'.\$result['title'].'</a>';
+		}else{
+			echo ' $pre  没有了...';
+		}
+
+		\$result= \$db->where("id>\$id AND catid=\$cid")->order("id ASC")->find();
+
+		if(\$result){
+			echo '&nbsp;&nbsp;&nbsp; $next <a href="#">'.\$result['title'].'</a>';
+		}else{
+			echo '&nbsp;&nbsp;&nbsp; $next 没有了';
+		}
+		?>
+str;
 		return $php;
 	}
 }

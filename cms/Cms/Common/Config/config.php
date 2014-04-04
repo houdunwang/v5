@@ -17,7 +17,7 @@ $config =  array(
     'ROUTE'=>array(
             //栏目列表页url地址
             '/^list(\d+).html$/'    =>'Index/Index/Channel/cid/#1',
-            '/^(\d+).html$/'    => 'Index/Index/Article/id/#1'
+            '/^(\d+)_(\d+).html$/'    => 'Index/Index/Article/cid/#1/id/#2'
     ),
 );
 return array_merge($config,require 'data/config/config.inc.php');
