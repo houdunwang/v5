@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>环境检测</title>
+        <hdjs/>
+    </head>
+    <body>
+    	<div class='title-header'>目录检测</div>
+    	<table class="table1">
+    		<list from="$dir" name='d'>
+    			<tr>
+    				<th class='w200'>{$d}</th>
+    				<td>
+    					<?php echo is_writeable($d)?'<span class="success">On</span>':'<span class="error">Off</span>';?>
+    				</td>
+    			</tr>
+    		</list>
+    	</table>
+    	<br/>
+    	<div class='title-header'>函数检测</div>
+    	<table class="table1">
+    		<list from="$functions" name='d'>
+    			<tr>
+    				<th class='w200'>{$d}</th>
+    				<td>
+    					<?php echo function_exists($d)?'<span class="success">On</span>':'<span class="error">Off</span>';?>
+    				</td>
+    			</tr>
+    		</list>
+    	</table>
+    	<div class='position-bottom'>
+    	<a href="javascript:;" url="{|U:'set_db'}" class='hd-success' onclick='check(this);'>下一步</a>
+    	<a href="{|U:'index'}" class='hd-cancel'>上一步</a>
+    </div>
+    <script>
+    	function check(obj){
+    		if($('.error').length>0){
+    			alert("安装环境不通过!");
+    			return false;
+    		}
+    		//通过时，跳转到下一步
+    		var url = $(obj).attr('url');
+    		location.href=url;
+    	}
+    </script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>设置数据库参数</title>
+        <hdjs/>
+        <js file="__CONTROL_TPL__/js/set_db.js"/>
+    </head>
+    <body>
+    	<div class='wrap'>
+    	<form class='hd-form' method="post">
+    		<div class='title-header'>数据库参数</div>
+		<table class='table1'>
+			<tr>
+				<th class='w100'>主机</th>
+				<td>
+					<input type="text" name="DB_HOST" value="localhost">
+				</td>
+			</tr>
+			<tr>
+				<th class='w100'>端口</th>
+				<td>
+					<input type="text" name="DB_PORT" value="3306" >
+				</td>
+			</tr>
+			<tr>
+				<th class='w100'>帐号</th>
+				<td>
+					<input type="text" name="DB_USER" value="root">
+				</td>
+			</tr>
+			<tr>
+				<th class='w100'>密码</th>
+				<td>
+					<input type="text" name="DB_PASSWORD" >
+				</td>
+			</tr>
+			<tr>
+				<th class='w100'>数据库</th>
+				<td>
+					<input type="text" name="DB_DATABASE" value="baidu">
+				</td>
+			</tr>
+			<tr>
+				<th class='w100'>表前缀</th>
+				<td>
+					<input type="text" name="DB_PREFIX" value="v5_">
+				</td>
+			</tr>
+		</table>
+		<br/>
+		<div class='title-header'>管理员帐号</div>
+		<table class='table1'>
+			<tr>
+				<th class='w100'>帐号</th>
+				<td>
+					<input type="text" name="username" value="admin">
+				</td>
+			</tr>
+			<tr>
+				<th class='w100'>密码</th>
+				<td>
+					<input type="text" name="password" value="admin888">
+				</td>
+			</tr>
+		</table>
+		<div class='position-bottom'>
+		<button type="submit" class='hd-success' >下一步</button>
+    		<a href="{|U:'check'}" class='hd-cancel'>上一步</a>
+    	</div>
+    	</form>
+    </div>
+    </body>
+</html>

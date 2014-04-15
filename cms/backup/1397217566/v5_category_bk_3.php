@@ -1,0 +1,11 @@
+<?php if(!defined('HDPHP_PATH'))EXIT;
+$db->exe("REPLACE INTO ".$db_prefix."category (`cid`,`cname`,`pid`,`keywords`,`description`) VALUES('1','V5课堂','0','php','php')");
+$db->exe("REPLACE INTO ".$db_prefix."category (`cid`,`cname`,`pid`,`keywords`,`description`) VALUES('2','PHP学习','0','PHP学习','PHP学习')");
+$db->exe("REPLACE INTO ".$db_prefix."category (`cid`,`cname`,`pid`,`keywords`,`description`) VALUES('3','办公室','0','办公室','办公室')");
+$db->exe("REPLACE INTO ".$db_prefix."category (`cid`,`cname`,`pid`,`keywords`,`description`) VALUES('4','产品展示','0','产品展示','产品展示')");
+$db->exe("REPLACE INTO ".$db_prefix."category (`cid`,`cname`,`pid`,`keywords`,`description`) VALUES('5','海铁联运','4','海铁联运','海铁联运')");
+$db->exe("REPLACE INTO ".$db_prefix."category (`cid`,`cname`,`pid`,`keywords`,`description`) VALUES('6','码头作业','4','码头作业','码头作业')");
+$db->exe("REPLACE INTO ".$db_prefix."category (`cid`,`cname`,`pid`,`keywords`,`description`) VALUES('7','集装箱定舱','4','集装箱定舱','集装箱定舱')");
+$db->exe("REPLACE INTO ".$db_prefix."category (`cid`,`cname`,`pid`,`keywords`,`description`) VALUES('8','优质的仓储服务','4','优质的仓储服务','优质的仓储服务')");
+$db->exe("REPLACE INTO ".$db_prefix."category (`cid`,`cname`,`pid`,`keywords`,`description`) VALUES('9','海陆联运','4','海陆联运','海陆联运')");
+$db->exe("REPLACE INTO ".$db_prefix."category (`cid`,`cname`,`pid`,`keywords`,`description`) VALUES('10','后盾视频','4','后盾网视频','后盾网视频')");

@@ -21,8 +21,8 @@
 				<td>{$d.name}</td>
 				<td>{$d.filemtime|date:"Y-m-d H:i:s",@@}</td>
 				<td>
-					<a href="{|U:edit,array('cid'=>$c['cid'])}">还原</a> |
-					<a href="javascript:hd_ajax('{|U:del}',{cid:{$c.cid}});">删除</a>
+					<a href="{|U:recovery,array('dir'=>$d['name'])}">还原</a> |
+					<a href="{|U:del,array('dir'=>$d['name'])}">删除</a>
 				</td>
 			</tr>
 		</list>
