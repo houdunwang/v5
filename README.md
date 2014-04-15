@@ -17,7 +17,7 @@
 > 
 >HDPHP官网： [http://www.hdphp.com ](http://www.hdphp.com "HDPHP官网")
 >
-![后盾网  人人做后盾](http://www.hdphp.com/preview/houdunwang.jpg)
+![后盾网  人人做后盾](http://www.hdphp.com/houdunwang.jpg)
 
  
 ## QQ群
