@@ -1,0 +1,149 @@
+@import "../../../../../static/css/common.css";
+/*列表页flag样式*/
+tr td span.flag {
+    color: #E32428;
+    margin-left: 3px;
+}
+
+input#title {
+    background: url("../img/ruler.gif") #ffffff repeat-x 0px 13px;
+}
+
+/*左侧栏目*/
+div.category_list {
+    width: 150px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: solid 3px #cccccc;
+    padding: 15px;
+}
+
+div.category_list ul#browser li.open {
+
+}
+
+/*搜索框*/
+div.search {
+    border: 1px solid #FFBE7A;
+    background: none repeat scroll 0 0 #FFFCED;
+    line-height: 20px;
+    padding: 8px 10px;
+}
+div.category_list em {
+    font-style: normal;
+    padding-right: 5px;
+}
+
+div.category_list em.active {
+    background: #FFE6B0;
+    border: 1px solid #FFB951;
+
+}
+
+div.category_list ul#browser li.cat_tree_top {
+    /*background: url("../../../../../../data/static/js/treeview/images/treeview-default.gif") no-repeat scroll 0px -20px;*/
+}
+
+div.category_list ul#browser div.tree_top {
+    background: url("../js/treeview/images/application_side_expand.png") no-repeat scroll 0px 0px;
+    cursor: pointer;
+    float: left;
+    height: 16px;
+    /*margin-left: -16px;*/
+    width: 16px;
+    margin-right: 3px;
+}
+
+div.category_list ul#browser span.file {
+    background: url(../js/treeview/images/add_content.gif) no-repeat 0px 5px;
+}
+
+div.category_list ul#browser li.open div.hitarea {
+    background-position: -64px -25px;
+}
+
+div.category_list ul#browser li.open ul {
+    display: block;
+}
+
+div.category_list ul#browser li span {
+    display: inline-block;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+div.category_list ul#browser li.open span.folder {
+    background-image: url(../js/treeview/images/folder.gif);
+}
+
+div.category_list ul#browser li.c_close {
+
+}
+
+div.category_list ul#browser li.c_close span.folder {
+    background-image: url(../js/treeview/images/folder-closed.gif);
+}
+
+div.category_list ul#browser li.c_close div.hitarea {
+    background-position: -80px -3px;
+}
+
+div.category_list ul#browser li.c_close ul {
+    display: none;
+}
+
+div.category_list .treeview ul {
+    background: none;
+}
+
+/*右侧内容显示区*/
+div.con {
+    position: absolute;
+    left: 182px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+/*发表文章*/
+
+div.content_left {
+    border: 1px solid #C2D1D8;
+    overflow: hidden;
+}
+
+div.content_right {
+    border: 1px solid #C2D1D8;
+    width: 210px;
+    float: right;
+    margin-left: 6px;
+    overflow: hidden;
+    padding-bottom: 6px;
+}
+
+#thumb {
+    margin-bottom: 5px;
+}
+
+/*图片上传列表*/
+fieldset.img_list {
+    background-color: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+fieldset.img_list legend {
+    background-color: #F9F9F9;
+    border: 1px solid #D8D8D8;
+    font-weight: 700;
+    padding: 3px 8px;
+}
+
+div.picList ul li {
+    margin-bottom: 5px;
+}

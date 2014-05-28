@@ -1,0 +1,58 @@
+<?php if(!defined('HDPHP_PATH'))exit;
+return array (
+  0 => 
+  array (
+    'uid' => '3',
+    'nid' => '27',
+    'title' => '修改个人信息',
+    'app_group' => 'Hdcms',
+    'app' => 'Admin',
+    'control' => 'Personal',
+    'method' => 'edit_info',
+    'param' => '',
+    'comment' => '',
+    'state' => '1',
+    'type' => '2',
+    'pid' => '29',
+    'list_order' => '100',
+    'is_system' => '0',
+    'favorite' => '0',
+  ),
+  1 => 
+  array (
+    'uid' => '3',
+    'nid' => '28',
+    'title' => '修改密码',
+    'app_group' => 'Hdcms',
+    'app' => 'Admin',
+    'control' => 'Personal',
+    'method' => 'edit_password',
+    'param' => '',
+    'comment' => '',
+    'state' => '1',
+    'type' => '2',
+    'pid' => '29',
+    'list_order' => '100',
+    'is_system' => '0',
+    'favorite' => '0',
+  ),
+  2 => 
+  array (
+    'uid' => '3',
+    'nid' => '4',
+    'title' => '管理内容',
+    'app_group' => 'Hdcms',
+    'app' => 'Admin',
+    'control' => 'Content',
+    'method' => 'index',
+    'param' => '',
+    'comment' => '',
+    'state' => '1',
+    'type' => '2',
+    'pid' => '2',
+    'list_order' => '10',
+    'is_system' => '0',
+    'favorite' => '1',
+  ),
+);
+?>

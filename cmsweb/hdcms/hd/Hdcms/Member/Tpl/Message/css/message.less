@@ -1,0 +1,77 @@
+@import "../../Public/css/member-common.less"; 
+
+//回复消息 
+
+form {
+  p {
+    padding: 10px;
+    border: solid 1px #dcdcdc;
+    margin-top: 20px;
+    background: #F3F3F3;
+    border-radius: 5px;
+  }
+  table {
+    width: 100%;
+    td {
+      height: 30px;
+      textarea {
+        border: solid 1px #dcdcdc;
+        padding: 3px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+//消息列表
+div#message {
+  clear: both;
+  margin-top: 20px;
+  div.user {
+    height: auto;
+    overflow: hidden;
+    margin-top:10px;
+    div.icon {
+      float: left;
+      margin-right: 10px;
+      border:solid 1px #dcdcdc;
+      padding:2px;
+    }
+    p {
+      width: 500px;
+      padding: 20px;
+      border: solid 1px #dcdcdc;
+      border-radius: 8px;
+      background: #f6f6f6;
+      color: #666;
+      font-family: @font-family;
+      float: left;
+      margin-right: 15px;
+      box-shadow: 0px 3px 6px #f3f3f3;
+      font-size:14px;
+    }
+
+  }
+  div.from {
+    height: auto;
+    overflow: hidden;
+    p {
+      width: 500px;
+      padding: 20px;
+      border: solid 1px #dcdcdc;
+      border-radius: 8px;
+      background: #EEF7FE;
+      color: #666;
+      font-family: @font-family;
+      float: right;
+      margin-right: 15px;
+      box-shadow: 0px 3px 6px #f3f3f3;
+      font-size:14px;
+    }
+    div.icon {
+      float: right;
+      border:solid 1px #dcdcdc;
+      padding:2px;
+    }
+  }
+}

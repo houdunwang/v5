@@ -1,0 +1,100 @@
+/*列表页flag样式*/
+tr td span.flag {
+	color: #E32428;
+	margin-left: 3px;
+}
+
+input#title {
+	background: url("../img/ruler.gif") #ffffff repeat-x 0px 13px;
+}
+
+/*搜索框*/
+div.search {
+	border: 1px solid #FFBE7A;
+	background: none repeat scroll 0 0 #FFFCED;
+	line-height: 20px;
+	padding: 8px 10px;
+}
+
+table tr td p {
+	line-height: 1.5em !important;
+}
+/*发表文章*/
+div.content_left {
+	border: 1px solid #C2D1D8;
+	overflow: hidden;
+}
+
+div.content_right {
+	border: 1px solid #C2D1D8;
+	width: 200px;
+	float: right;
+	margin-left: 6px;
+	overflow: hidden;
+	padding-bottom: 6px;
+}
+
+#thumb {
+	margin-bottom: 5px;
+}
+
+/*编辑器底部（关于编辑器属性的设置）*/
+div.editor_set {
+	margin-top: 5px;
+}
+/*-------------自定义多图上传-------------*/
+fieldset.img_list {
+	background-color: #FFFFFF;
+	border: 1px solid #D8D8D8;
+	padding: 10px;
+	margin-bottom: 8px;
+}
+
+fieldset.img_list legend {
+	background-color: #F9F9F9;
+	border: 1px solid #D8D8D8;
+	font-weight: 700;
+	padding: 3px 8px;
+}
+div.fileList ul li {
+	margin-bottom: 5px;
+	float: left;
+	margin: 10px;
+}
+div.picList ul li {
+	margin-bottom: 5px;
+	float: left;
+	margin: 10px;
+	width: 154px;
+	height: 173px;
+	overflow: hidden;
+}
+div.picList ul li div.img {
+	position: relative;
+	width: 150px;
+	height: 135px;
+	overflow: hidden;
+	border: solid 2px #dcdcdc;
+}
+div.picList ul li div.img img {
+	height: 135px;
+	min-width: 150px;
+}
+div.picList ul li div.img a {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 14px;
+	background: #006DCC;
+	color: #fff;
+	border: solid 1px #999;
+}
+div.picList ul li div.img a:hover {
+	background: #03565E;
+}
+div.picList ul li input{
+	width:138px;
+}

@@ -1,0 +1,184 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+input {
+    box-shadow: none;
+    vertical-align: middle;
+    font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div.header {
+    height: 80px;
+    margin: 35px auto 5px;
+    position: relative;
+    width: 960px;
+    background: url("../img/logo.png") no-repeat;
+}
+
+div.header div.links {
+    font-family: Arial, Tahoma, "hiragino sans gb", Helvetica;
+    float: right;
+    font-size: 12px;
+    line-height: 1.5em;
+    color: #666666;
+    margin-top: 30px;
+}
+
+div.header div.links a {
+    color: #666666;
+    margin: 0 5px;
+}
+
+div.header div.links a:hover {
+    color: #000;
+}
+
+div.main {
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 70px;
+    width: 1030px;
+}
+
+div.main div.pics {
+    float: left;
+    background: url("../img/login_bg.jpg");
+    width: 590px;
+    height: 355px;
+}
+
+div.main div.login {
+    float: right;
+    height: 355px;
+    border: 2px solid #EEEEEE;
+    margin: 0 auto;
+    position: relative;
+    width: 418px;
+}
+
+div.main div.login div.title {
+    color: #333333;
+    cursor: default;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 22px;
+    left: 80px;
+    position: relative;
+    top: 30px;
+}
+
+div.main div.login div.web_login {
+    padding-bottom: 65px;
+    position: relative;
+    width: 418px;
+    overflow: hidden;
+    position: relative;
+}
+
+div.main div.login div.web_login div#error_tips {
+    background: none repeat scroll 0 0 #F9F5C7;
+    border: 1px solid #DAD699;
+    border-radius: 2px 2px 2px 2px;
+    bottom: -2px;
+    padding: 5px;
+    display: none;
+    text-align: left;
+    position: absolute;
+    top:0px;height:18px;
+}
+div.main div.login div.web_login div#error_tips span.error_logo {
+    background: url("../img/icon_3.png") no-repeat scroll 0 -162px rgba(0, 0, 0, 0);
+    height: 18px;
+    left: 3px;
+    position: absolute;
+    width: 18px;
+    font-size: 12px;
+}
+div.main div.login div.web_login div#error_tips span.err_m {
+    color: #434343;
+    display: inline-block;
+    padding-left: 20px;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+div.main div.login div.tips {
+    height: 6px;
+    margin: 0 auto;
+    position: relative;
+    width: 270px;
+    z-index: 11;
+}
+
+
+div.main div.login div.login_form {
+    margin: 0 auto;
+    width: 272px;
+    position: relative;
+    padding-top: 28px;
+    margin-top:10px;
+}
+
+div.main div.login div.login_form div.input {
+    height: 55px;
+}
+
+div.main div.login div.login_form div.inputOuter {
+    /*background: url("../img/icon_3.png") no-repeat scroll -1px -1px rgba(0, 0, 0, 0);*/
+    height: 42px;
+    width: 272px;
+
+}
+
+div.main div.login div.login_form div.inputOuter input {
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 16px;
+    height: 18px;
+    ime-mode: disabled;
+    left: 2px;
+    line-height: 18px;
+    padding: 11px 0 11px 10px;
+    position: relative;
+    top: 2px;
+    width: 250px;
+}
+
+div.main div.login div.login_form div.inputOuter input.inputFocus {
+    color: #000;
+}
+
+div.main div.login div.login_form div.verifyimgArea {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+div.main div.login div.login_form div.verifyimgArea a {
+    font-family: Tahoma, Verdana, Arial, "宋体";
+    color: #000;
+    padding: 15px 0px 0px 15px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+div.main div.login div.login_form div.verifyimgArea a:hover {
+    text-decoration: underline;
+}
+
+input.btn2 {
+    background: url("../img/icon_3.png") no-repeat scroll 0 -90px rgba(0, 0, 0, 0);
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    width: 115px;
+}

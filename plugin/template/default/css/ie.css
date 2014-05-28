@@ -1,0 +1,47 @@
+article.container {
+  z-index: 1000;
+  position: relative;
+}
+article.container nav form div.form-group {
+  float: left;
+  margin-right: 5px;
+}
+article.container nav form input {
+  padding: 0px;
+  margin: 0px;
+  width: 200px;
+}
+div.message {
+  width: 1140px;
+}
+div.content div.row div.col-md-8 {
+  float: left;
+  padding: 0px;
+  width: 740px;
+}
+div.content div.row div.col-md-8 article.top ul {
+  padding: 0px;
+  margin: 0px;
+}
+div.content div.row div.col-md-8 article.top ul li {
+  padding: 0px;
+  margin: 0px;
+}
+div.content div.row div.col-md-4 {
+  float: right;
+  padding: 0px;
+}
+a.publish {
+  padding: 6px 0px !important;
+  width: 200px;
+}
+div.next-article {
+  clear: both;
+}
+div.next-article p {
+  width: 45% !important;
+}
+div.related ul li {
+  width: 45% !important;
+}
+/*# sourceMappingURL=ie.css.map */

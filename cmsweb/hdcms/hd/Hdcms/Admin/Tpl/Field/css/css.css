@@ -1,0 +1,8 @@
+table.table1 tr th{
+	text-align: right;
+}
+span.notice{
+	display: block;
+	color:#999;
+	font-weight: normal;
+}

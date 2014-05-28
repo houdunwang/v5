@@ -1,0 +1,10 @@
+<FilesMatch "\.(bak|sql|lib)$">
+    order deny,allow
+    deny from all
+</FilesMatch>
+
+RewriteEngine On
+RewriteRule ^admin$      admin\.php [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule  ^(.*)$ index.php\/$1 [L]

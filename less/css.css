@@ -1,0 +1,13 @@
+div#d1 ul li {
+  border: solid 1px #f00f00;
+}
+div#d1 ul li a {
+  display: block;
+  padding: 3px 10px;
+  background: #f00f00;
+  color: #fff;
+}
+div#d1 ul li a:hover {
+  background: #666;
+}
+/*# sourceMappingURL=css.css.map */

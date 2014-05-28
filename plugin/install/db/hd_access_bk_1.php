@@ -1,0 +1,12 @@
+<?php if(!defined('HDPHP_PATH'))EXIT;
+$db->exe("REPLACE INTO ".$db_prefix."access (`rid`,`nid`) VALUES('2','187')");
+$db->exe("REPLACE INTO ".$db_prefix."access (`rid`,`nid`) VALUES('2','186')");
+$db->exe("REPLACE INTO ".$db_prefix."access (`rid`,`nid`) VALUES('2','185')");
+$db->exe("REPLACE INTO ".$db_prefix."access (`rid`,`nid`) VALUES('2','184')");
+$db->exe("REPLACE INTO ".$db_prefix."access (`rid`,`nid`) VALUES('2','13')");
+$db->exe("REPLACE INTO ".$db_prefix."access (`rid`,`nid`) VALUES('2','180')");
+$db->exe("REPLACE INTO ".$db_prefix."access (`rid`,`nid`) VALUES('2','4')");
+$db->exe("REPLACE INTO ".$db_prefix."access (`rid`,`nid`) VALUES('2','2')");
+$db->exe("REPLACE INTO ".$db_prefix."access (`rid`,`nid`) VALUES('2','1')");
+$db->exe("REPLACE INTO ".$db_prefix."access (`rid`,`nid`) VALUES('3','184')");
+$db->exe("REPLACE INTO ".$db_prefix."access (`rid`,`nid`) VALUES('3','13')");

@@ -1,0 +1,1123 @@
+/* ====================================================================================
+/* ===================================--|基本CSS|--====================================
+/* ====================================================================================
+/* .-----------------------------------------------------------------------------------
+/* |  Software: [HDJS framework]
+/* |   Version: 2013.07
+/* |      Site: http://www.hdphp.com
+/* |-----------------------------------------------------------------------------------
+/* |    Author: 向军 <houdunwangxj@gmail.com>
+/* | Copyright (c) 2012-2013, http://houdunwang.com. All Rights Reserved.
+/* |-----------------------------------------------------------------------------------
+/* |   License: http://www.apache.org/licenses/LICENSE-2.0
+/* '-----------------------------------------------------------------------------------*/
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.h {
+    display: none;
+}
+
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}
+
+body, input, button, select, textarea {
+    font-family: Arial;
+}
+
+li {
+    vertical-align: middle;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+
+}
+
+.hide {
+    display: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle
+}
+
+iframe {
+    width: 100%;
+    border: none;
+}
+
+.star {
+    color: #E22226;
+    font-size: 12px;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+th, td, input, label {
+    vertical-align: middle;
+}
+
+td a {
+    color: #266AAE;
+}
+
+div.line {
+    height: 3px;
+    border-bottom: solid 1px #E6E6E6;
+}
+
+/* ====================================================================================
+/* ===================================--|表单|--========================================
+/* ====================================================================================*/
+
+.hd-form input[type="text"], .hd-form input[type="password"], .hd-form input[type="file"], .hd-form textarea {
+    box-shadow: 2px 2px 2px #F0F0F0 inset;
+}
+
+.hd-form select {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 2px #F0F0F0 inset;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.hd-form select, .hd-form textarea, .hd-form input[type="text"], .hd-form input[type="password"] {
+    color: #555555;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 30px;
+    margin: 0px;
+    padding: 0px 6px;
+    vertical-align: middle;
+    border-radius: 0px;
+    box-shadow: 2px 2px 2px #F0F0F0 inset !important;
+    border: 2px solid #DDDDDD;
+    background-color: #FFFFFF;
+}
+
+.hd-form textarea {
+    line-height: 20px;
+}
+
+.hd-form option {
+    padding: 4px 6px;
+}
+
+.hd-form input[type='text']:focus, .hd-form input[type='password']:focus, .hd-form textarea:focus {
+    background: #fffbde;
+    outline: 1px solid #51B4FF;
+    box-shadow: none !important;
+    border: solid 2px #51B4FF;
+}
+
+.hd-form input[type="file"], .hd-form input[type="text"], .hd-form input[type="password"] {
+    height: 28px;
+}
+
+.hd-form select {
+    padding: 3px 3px 0px;
+}
+
+/* ====================================================================================
+/* ===================================--|TAB面板|--====================================
+/* ====================================================================================*/
+div.tab {
+    clean: both;
+    position: relative;
+}
+
+div.tab ul.tab_menu {
+    width: 100%;
+    clean: both;
+    height: 28px;
+    position: relative;
+    z-index: 100;
+}
+
+div.tab ul.tab_menu li {
+    float: left;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+div.tab ul.tab_menu li a {
+    display: block;
+    background-color: #fff;
+    color: #555555;
+    line-height: 20px;
+    margin-right: 3px;
+    padding: 3px 10px 2px;
+    border: solid 1px #DCE3ED;
+    border-bottom: solid 1px #fff;
+    font-size: 12px;
+}
+
+div.tab ul.tab_menu li a.action {
+    border: solid 1px #009CAE;
+    background: #009CAE;
+    color: #fff;
+}
+
+div.tab ul.tab_menu li a:hover {
+    text-decoration: none;
+}
+
+div.wrap {
+    background: #f3f3f3;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px 10px 45px 10px;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+/**内容块**/
+div.tab_content {
+    position: relative;
+    top: 0px;
+    z-index: 1;
+}
+
+div.tab_content div.hd_tab_content_div {
+    width: 98%;
+    clean: both;
+    border-top: solid 2px #009CAE;
+    height: auto;
+    overflow: hidden;
+    display: none;
+    padding: 0px;
+    margin-top: -1px;
+}
+
+div.tab_content div.action {
+    display: block;
+}
+
+/*菜单列表*/
+div.menu_list {
+    background: url("../img/tr_border.png") repeat-x scroll 0 bottom rgba(0, 0, 0, 0);
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+div.menu_list ul li {
+    list-style: none;
+    height: 33px;
+    float: left;
+}
+
+div.menu_list ul li a {
+    color: #666666;
+    text-align: center;
+    display: block;
+    line-height: 30px;
+    padding: 0px 20px;
+}
+
+div.menu_list ul li a:hover {
+    border-bottom: solid 2px #666;
+    text-decoration: none;
+}
+
+div.menu_list ul li a.action {
+    color: #266AAE;
+    border-bottom: solid 2px #266AAE;
+}
+
+/*表格菜单*/
+div.title-header {
+    background: none repeat scroll 0 0 #E6E6E6;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #DDDDDD;
+    color: #666666;
+    font-size: 12px;
+    padding: 5px 9px;
+}
+
+/* ====================================================================================
+/* ===================================--|帮助|--====================================
+/* ====================================================================================*/
+
+div.help {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #666;
+    font-weight: normal;
+    line-height: 2em;
+}
+
+div.help ul li {
+    height: 18px;
+    font-size: 12px;
+    color: #666;
+    list-style-type: circle;
+    margin-left: 10px;
+}
+
+div.help p {
+    height: 20px;
+}
+
+div.help p a:hover {
+    text-decoration: underline;
+}
+
+/* ====================================================================================
+/* ===================================--|表格Table1|--====================================
+/* ====================================================================================*/
+table.table1 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.table1 tr, table.table1 th, table.table1 td {
+    background: url("../img/tr_border.png") repeat-x scroll 0 bottom rgba(0, 0, 0, 0);
+    vertical-align: middle;
+    padding: 8px 15px;
+}
+
+table.table1 tr th {
+    text-align: left;
+    background-color: #F8F8F8;
+    border-right: 1px solid #E5E3E3;
+    font-weight: bold;
+    color: #666;
+    line-height: 24px;
+    padding: 7px 10px 9px;
+    vertical-align: middle;
+}
+
+table.table1 tr td {
+    color: #666;
+}
+
+table.table1 tr.header {
+    background: #eef3f6;
+}
+
+table.table1 tr:hover {
+    background: #eaeff2;
+}
+
+/***************************table2表格************************/
+table.table2 {
+    border: none;
+    color: #666;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.table2 tr:hover {
+    background: #eaeff2;
+}
+
+table.table2 thead th, table.table2 thead td {
+    background: none repeat scroll 0 0 #E6E6E6;
+    border-top: 1px solid #cccccc;
+    border-bottom: solid 1px #5AA020;
+    overflow: hidden;
+}
+
+table.table2 tr, table.table2 th, table.table2 td {
+    background: url("../img/tr_border.png") repeat-x scroll 0 bottom rgba(0, 0, 0, 0);
+    height: 20px;
+    padding: 5px 8px;
+}
+
+/***************************table3表格************************/
+table.table3 {
+    width: 100%;
+}
+
+table.table3 {
+    border: none;
+    background: none;
+}
+
+table.table3 tr {
+
+}
+
+table.table3 tr td {
+    padding: 5px 8px;
+}
+
+table.table3 tr th {
+    width: 100px;
+}
+
+table.table3 thead tr td {
+    background: #eee;
+    color: #333;
+}
+
+/* ====================================================================================
+/* ===================================--|按钮button|--==================================
+/* ====================================================================================*/
+
+/*按钮样式2*/
+.btn1, .btn2 {
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 12px;
+    height: 25px;
+    overflow: hidden;
+    box-shadow: none;
+    vertical-align: middle;
+    padding: 0px 10px 0px;
+    display: inline-block;
+    text-align: center;
+    text-indent: 0px;
+    line-height: 2em;
+    margin-right: 10px;
+    box-shadow: none !important;
+}
+
+.btn1 {
+    margin-right: 10px;
+    background: #4BAED4;
+}
+
+.btn1:hover, .btn2:hover {
+    background: #96ca33;
+    text-decoration: none;
+}
+
+.btn2 {
+    margin-right: 10px;
+    background: #aaa;
+}
+
+.btn2:hover {
+    background: #999;
+}
+
+.btn3 {
+    margin-right: 10px;
+    text-align: center;
+    display: inline-block;
+    border: solid 1px #999;
+    cursor: pointer;
+    padding: 3px 6px;
+    background: -moz-linear-gradient(top, #fff, #dcdcdc);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#dcdcdc));;
+}
+
+.btn3:hover {
+    background: -moz-linear-gradient(top, #fff, #bbbbbb);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#bbbbbb));;
+}
+
+/* ====================================================================================
+/* ===================================--|尺寸|--========================================
+/* ====================================================================================*/
+.w30 {
+    width: 30px !important;
+}
+
+.w40 {
+    width: 40px !important;
+}
+
+.w50 {
+    width: 50px !important;
+}
+
+.w60 {
+    width: 60px !important;
+}
+
+.w70 {
+    width: 70px !important;
+}
+
+.w80 {
+    width: 80px !important;
+}
+
+.w90 {
+    width: 90px !important;
+}
+
+.w100 {
+    width: 100px !important;
+}
+
+.w120 {
+    width: 120px !important;
+}
+
+.w150 {
+    width: 150px !important;
+}
+
+.w180 {
+    width: 180px !important;
+}
+
+.w200 {
+    width: 200px !important;
+}
+
+.w250 {
+    width: 250px !important;
+}
+
+.w300 {
+    width: 300px !important;
+}
+
+.w350 {
+    width: 350px !important;
+}
+
+.w400 {
+    width: 400px !important;
+}
+
+.w450 {
+    width: 450px !important;
+}
+
+.w500 {
+    width: 500px !important;
+}
+
+.w550 {
+    width: 550px !important;
+}
+
+.w600 {
+    width: 600px !important;
+}
+
+.w650 {
+    width: 650px !important;
+}
+
+.w700 {
+    width: 700px !important;
+}
+
+.w750 {
+    width: 750px !important;
+}
+
+.w800 {
+    width: 800px !important;
+}
+
+.w850 {
+    width: 850px !important;
+}
+
+.h30 {
+    height: 30px !important;
+}
+
+.h40 {
+    height: 40px !important;
+}
+
+.h50 {
+    height: 50px !important;
+}
+
+.h60 {
+    height: 60px !important;
+}
+
+.h70 {
+    height: 70px !important;
+}
+
+.h80 {
+    height: 80px !important;
+}
+
+.h90 {
+    height: 90px !important;
+}
+
+.h100 {
+    height: 100px !important;
+}
+
+.h120 {
+    height: 120px !important;
+}
+
+.h150 {
+    height: 150px !important;
+}
+
+.h180 {
+    height: 180px !important;
+}
+
+.h200 {
+    height: 200px !important;
+}
+
+.h250 {
+    height: 250px !important;
+}
+
+.h300 {
+    height: 300px !important;
+}
+
+.h350 {
+    height: 350px !important;
+}
+
+.h400 {
+    height: 400px !important;
+}
+
+.h450 {
+    height: 450px !important;
+}
+
+.h500 {
+    height: 500px !important;
+}
+
+.h600 {
+    height: 600px !important;
+}
+
+/* ====================================================================================
+/* ===================================--|分页|--========================================
+/* ====================================================================================*/
+div.page1 {
+    margin-top: 20px;
+    margin-left: 10px;
+    float: right;
+    color: #666;
+}
+
+/*当前页*/
+div.page1 strong, div.page1 a {
+    padding: 3px 10px;
+    display: block;
+    float: left;
+    border: solid 1px #dcdcdc;
+    margin-right: 5px;
+    font-size: 12px;
+
+}
+
+div.page1 strong {
+
+}
+
+/**上一页与下一页失效状态*/
+div.page1 span.close {
+    padding: 3px 10px;
+    display: block;
+    float: left;
+    font-size: 12px;
+    border: solid 1px #dcdcdc;
+    margin-right: 5px;
+    color: #ccc;
+    cursor: no-drop;
+}
+
+div.page1 strong {
+    display: block;
+    font-size: 12px;
+    float: left;
+    background: none repeat scroll 0 0 #488FCF !important;
+    border-color: #2470B5 #488FCF #488FCF;
+    color: #FFFFFF !important;
+}
+
+div.page1 a {
+    color: #333;
+    float: left;
+    display: block;
+
+}
+
+div.page1 a:hover {
+    background: none repeat scroll 0 0 #488FCF !important;
+    border-color: #2470B5 #488FCF #488FCF;
+    color: #FFFFFF !important;
+}
+
+div.page1 span.count {
+    font-size: 12px;
+    float: left;
+    display: block;
+    margin-right: 5px;
+    padding: 3px 10px;
+}
+
+.message {
+    background-color: #999999;
+    border-radius: 3px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 14px;
+    margin-left: 15px;
+    padding: 2px 4px;
+    /*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);*/
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+.position-bottom {
+    position: fixed;
+    background: none repeat scroll 0 0 #F0F0F0;
+    border-top: solid 1px #aaa;
+    bottom: 0;
+
+    left: 0;
+    overflow: hidden;
+    padding: 8px 30px 10px;
+    right: 0;
+    text-align: left;
+    z-index: 100;
+}
+
+/*****************文字导航*******************/
+div.menu {
+    border-bottom: solid 1px #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+div.menu a {
+    color: #666;
+    font-size: 12px;
+    display: inline-block;
+    padding: 3px 5px;
+}
+
+div.menu a:hover {
+    background: #a0a0a0;
+    color: #fff;
+}
+
+div.menu a.action {
+    background: #a0a0a0;
+    color: #fff;
+}
+
+div.menu span {
+    font-size: 12px;
+    color: #ccc;
+    position: relative;
+    display: inline-block;
+    padding: 0px 6px;
+    top: -1px;
+}
+
+/***********简单信息框******************/
+div#hd_dialog_message_bg {
+    background: #f3f3f3;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1000;
+
+}
+
+div#hd_dialog_message {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    margin-left: -80px;
+    z-index: 2000;
+    padding: 20px;
+    text-align: center;
+    width: 160px;
+    font-size: 14px;
+    color: #666;
+    background-color: #F6F6F6;
+    border: solid 1px #03565E;
+    box-shadow: 0px 3px 26px #333;
+}
+
+/***********模态弹出框******************/
+div.hd-modal {
+    width: 650px;
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+    position: absolute;
+    z-index: 999;
+    border: solid 1px #03565E;
+    box-shadow: 0px 3px 26px #333;
+}
+
+div.hd-modal-bg {
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background: #f3f3f3;
+    z-index: 900;
+}
+
+div.hd-modal div.hd-modal-title {
+    height: 35px;
+    background: #F6F6F6;
+    border-bottom: solid 1px #999;
+    color: #666;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 35px;
+    text-indent: 20px;
+}
+
+div.hd-modal div.hd-modal-title button.close {
+    margin-top: 2px;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    cursor: pointer;
+    padding: 0;
+    color: #000000;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 25px;
+    opacity: 0.2;
+    text-shadow: 0 1px 0 #FFFFFF;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.hd-modal div.content {
+    padding: 0px;
+    overflow: auto;
+}
+
+div.hd-modal div.hd-modal-footer {
+    background-color: #F5F5F5;
+    border-top: 1px solid #DDDDDD;
+    box-shadow: 0 1px 0 #FFFFFF inset;
+    margin-bottom: 0;
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 8px 15px;
+    overflow: hidden;
+}
+
+div.hd-modal-message {
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+}
+
+div.hd-modal-message strong {
+    text-indent: -9999px;
+    display: block;
+    float: left;
+    height: 62px;
+    width: 65px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+div.hd-modal-message span {
+    font-size: 14px;
+    margin-top: 30px;
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
+div.hd-modal-message strong.success {
+    background: url(../img/face.png) 0px 0px no-repeat;
+}
+
+div.hd-modal-message strong.notice {
+    background: url(../img/ico.png) -2px -405px no-repeat;
+    height: 35px;
+    width: 35px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+div.hd-modal-message div.error {
+    background: none;
+}
+
+div.hd-modal-message strong.error {
+    background: url(../img/face.png) 0px 0px no-repeat;
+}
+
+/*确定按钮*/
+.hd-success {
+    display: inline-block;
+    margin-right: 20px;
+    background-color: #006DCC;
+    background-image: linear-gradient(to bottom, #0088CC, #0044CC);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-image: none;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 3px 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.hd-success:hover {
+    background-position: 0 30px;
+}
+
+/*关闭按钮*/
+.hd-cancel {
+    background-color: #F5F5F5;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3;
+    border-image: none;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 3px 12px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+}
+
+.hd-cancel-small {
+    background-color: #F5F5F5;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3;
+    border-image: none;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 3px 6px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+}
+
+.hd-cancel:hover, .hd-cancel:focus {
+    background-position: 0 -115px;
+}
+
+/**********弹出对话框**************/
+div.dialog {
+    width: 330px;
+    height: 110px;
+    overflow: hidden;
+    background: #fff;
+    border: solid 1px #03565E;
+    border-radius: 0px;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    margin-left: -150px;
+    box-shadow: 0px 3px 26px #333;
+    z-index: 9999;
+}
+
+div.dialog_bg {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #f3f3f3;
+    z-index: 2000;
+}
+
+div.dialog h2#dialog_title {
+    background: #F6F6F6;
+    margin-bottom: 0;
+    margin-top: 0px;
+    height: 30px;
+    overflow: hidden;
+    color: #666;
+    font-size: 14px;
+    line-height: 35px;
+    text-indent: 20px;
+    top: 0px;
+    position: absolute;
+    width: 330px;
+    border-bottom: solid 1px #999;
+}
+
+div.dialog div.close {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    height: 21px;
+    width: 21px;
+    line-height: 21px;
+    text-align: center;
+    z-index: 1000;
+    color: #fff;
+}
+
+div.dialog div.close a {
+    color: #aaaaaa;
+    font-family: Helvetica, STHeiti;
+    font-size: 18px;
+    height: 21px;
+    line-height: 21px;
+    padding: 0;
+    right: 4px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+    top: 0px;
+    width: 21px;
+}
+
+div.dialog div.close a:hover {
+    color: #999;
+    text-decoration: none;
+}
+
+div.dialog div.con {
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 20px;
+    text-align: left;
+    margin-top: 15px;
+    left: 0px;
+    top: 30px;
+}
+
+div.dialog div.success {
+    background: none;
+    position: absolute;
+    top: 30px;
+}
+
+div.dialog strong {
+    text-indent: -9999px;
+    display: block;
+    float: left;
+    height: 62px;
+    width: 65px;
+    margin-top: -6px;
+}
+
+div.dialog div.con span {
+    float: left;
+    text-indent: 8px;
+}
+
+div.dialog div.success strong {
+    background: url(../img/face.png) 0px 0px no-repeat;
+}
+
+div.dialog div.error {
+    position: absolute;
+    top: 30px;
+    background: none;
+}
+
+div.dialog div.error strong {
+    background: url(../img/face.png) -65px 0px no-repeat;
+}
+
+/* ====================================================================================
+/* ===================================--|验证提示信息|--========================================
+/* ====================================================================================*/
+
+.validation {
+    font-size: 12px;
+    color: #999999;
+    display: inline-block;
+    text-indent: 5px;
+    line-height: 25px;
+}
+
+.validate-message {
+    background: url(../img/msg_bg.png) 3px -293px no-repeat;
+    font-size: 12px;
+    color: #999999;
+    display: inline-block;
+    text-indent: 25px;
+    line-height: 25px;
+    margin-left: 5px;
+}
+
+.validate-success {
+    font-size: 12px;
+    color: #999999;
+    display: inline-block;
+    background: url(../img/msg_bg.png) 3px -247px no-repeat;
+    text-indent: 28px;
+    line-height: 25px;
+    margin-left: 5px;
+}
+
+.input-error {
+    background-color: #FFE7E7;
+    box-shadow: none;
+}
+
+.validate-error {
+    font-size: 12px;
+    color: #999999;
+    display: inline-block;
+    background: url(../img/msg_bg.png) 3px -47px no-repeat;
+    text-indent: 28px;
+    margin-left: 5px;
+    line-height: 25px;
+}

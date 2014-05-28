@@ -1,0 +1,17 @@
+/*列表页flag样式*/
+tr td span.flag {
+    color: #E32428;
+    margin-left: 3px;
+}
+
+input#title {
+    background: url("../img/ruler.gif") #ffffff repeat-x 0px 13px;
+}
+
+/*搜索框*/
+div.search {
+    border: 1px solid #FFBE7A;
+    background: none repeat scroll 0 0 #FFFCED;
+    line-height: 20px;
+    padding: 8px 10px;
+}

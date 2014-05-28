@@ -1,0 +1,230 @@
+//------------------------变量
+//灰色 
+@gray: #666; 
+//白色
+@white: #ffffff;
+//蓝色
+@blue: #428BCA;
+//绿色
+@green: #56AF45;
+//红色
+@red: #D9534F;
+//背景灰色
+@bgcolor: #EEEEEE;  
+//背景灰色
+@bgcolor-gray: #454545;
+//背景浅蓝色
+@bgcolor-blue: #F8FCFE;
+@border-gray: #e4e4e4;
+@font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+body {
+  background: #fcfcfc;
+}
+
+header {  
+    background: #fcfcfc;
+  padding-bottom:10px;
+  h1 {
+    width: 960px;
+    margin: 0px auto;
+    padding-bottom: 10px;
+    background: url("../../Public/images/member-logo.png") no-repeat left bottom;
+    text-indent: -9999em;
+  }
+}
+
+nav.top-menu {
+  background: #357EBD;
+  height: 40px;
+  div.nav {
+    width: 960px;
+    a {
+      display: inline-block;
+      height: 40px;
+      color: #fff;
+      font-family: @font-family;
+      font-size: 16px;
+      line-height: 40px;
+      width: 100px;
+      text-align: center;
+      text-decoration: none;
+      &:hover {
+        background:#488FCF;
+      }
+    }
+  }
+}
+
+article.main {
+  margin-top: 20px;
+  border: 1px solid @border-gray;
+  padding: 0px;
+  width: 960px;
+  min-height: 550px;
+  overflow: hidden;
+  position: relative;
+  bottom: 0px;
+  section.menu {
+    background: #FBFBFB;
+    border-right: solid 1px @border-gray;
+    width: 200px;
+    padding-left: 10px;
+    position: absolute;
+    bottom: 0px;
+    top:0px;
+    div.user {
+      background: #FBFBFB;
+      padding: 10px;
+      color: @gray;
+      font-size: 12px;
+      font-family: @font-family;
+      img {
+        border: solid 2px @border-gray;
+        cursor: pointer;
+      }
+      p {
+        padding: 0px;
+        margin: 0px;
+        color: #666;
+      }
+      p.nickname {
+        color: #333333;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 10px;
+        &.nickname {
+          font-weight: bold;
+        }
+      }
+      p.edit-nickname {
+        color: #0a9d00;
+        cursor: pointer;
+        span {
+          background: url("../images/edit_nickname.png");
+          display: inline-block;
+          width: 12px;
+          height: 13px;
+          line-height: 15px;
+          margin-right: 2px;
+          vertical-align: middle;
+        }
+      }
+    }
+    nav {
+      margin-top: 20px;
+      a {
+        display: block;
+        border-bottom: solid 1px @bgcolor-gray;
+        font-family: @font-family;
+        height: 35px;
+        font-size: 14px;
+        color: #333333;
+        border-bottom: 1px solid #ebebeb;
+        text-decoration: none;
+        line-height: 30px;
+        margin: 0px 10px;
+        &:hover {
+          color: @green;
+        }
+      }
+    }
+  }
+
+}
+//右侧块
+//文章列表
+article.main {
+  section.article {
+    float: left;
+    width: 750px;
+    padding: 25px;
+    margin-left:210px;
+    header {
+      border-bottom: 1px solid #dadada;
+      padding-bottom: 4px;
+      width: 100%;
+      h2 {
+        border-bottom: 3px solid #40b50e;
+        padding-bottom: 3px;
+        color: #333;
+        display: inline;
+        font-family: 'Microsoft YaHei';
+        font-size: 16px;
+        a.send {
+          float: right;
+          font-size: 14px;
+          text-decoration: none;
+          font-family: @font-family;
+          margin-right: 15px;
+          font-weight: 700;
+          color: #666;
+          &:hover {
+            color: #37A508;
+          }
+        }
+        span {
+          font-size: 12px;
+          color: #666;
+        }
+      }
+    }
+    ul {
+      clear: both;
+      padding: 0px;
+      li {
+        height: auto;
+        overflow: hidden;
+        list-style: none;
+        margin: 0px;
+        padding: 10px;
+        border-bottom: 1px solid #f6f6f6;
+        &:hover {
+          background: @bgcolor-blue;
+        }
+        div.article {
+          float: left;
+          width: 500px;
+          a {
+            display: block;
+            text-decoration: none;
+            font-family: @font-family;
+          }
+          a.title {
+            color: #4f8e48;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+          }
+          a.category {
+            font-size: 12px;
+            color: @gray;
+          }
+          span.time {
+            color: #999;
+            font-size: 12px;
+          }
+        }
+        div.right-action {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+//底部
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: @gray;
+  margin-top: 20px;
+  line-height: 20px;
+  a {
+    display: inline-block;
+    padding: 0px 10px;
+    color: #666;
+  }
+}
+div.page1{
+  margin:0px !important;
+}

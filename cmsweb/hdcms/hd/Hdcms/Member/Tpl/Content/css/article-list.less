@@ -1,0 +1,82 @@
+@import "../../Public/css/member-common.less"; 
+
+//文章列表
+article.main {
+  height:550px;
+  section.article {   
+    float: left;
+    width: 750px;
+    padding: 25px;
+    header {
+      border-bottom: 1px solid #dadada;
+      padding-bottom: 4px;
+      width: 100%;
+      h2 {
+        border-bottom: 3px solid #40b50e;
+        padding-bottom: 3px;
+        color: #333;
+        display: inline;
+        font-family: 'Microsoft YaHei';
+        font-size: 16px;
+        a.send {
+          float: right;
+          font-size: 14px;
+          text-decoration: none;
+          font-family: @font-family;
+          margin-right: 15px;
+          font-weight: 700;
+          color: #666;
+          &:hover {
+            color: #37A508;
+          }
+        }
+        span {
+          font-size: 12px;
+          color: #666;
+        }
+      }
+    }
+    ul {
+      clear: both;
+      padding: 0px;
+      li {
+        height: auto;
+        overflow: hidden;
+        list-style: none;
+        margin: 0px;
+        padding: 10px;
+        border-bottom: 1px solid #f6f6f6;
+        &:hover {
+          background: @bgcolor-blue;
+        }
+        div.article {
+          float: left;
+          width: 500px;
+          a {
+            display: block;
+            text-decoration: none;
+            font-family: @font-family;
+          }
+          a.title {
+            color: #357EBD;
+            font-weight: 200;
+            margin-bottom: 5px;
+            font-size: 14px;
+
+          }
+          a.category {
+            font-size: 12px;
+            color: @gray;
+          }
+          span.time {
+            color: #999;
+            font-size: 12px;
+          }
+        }
+        div.right-action {
+          float: right;
+        }
+      }
+    }
+  }
+}

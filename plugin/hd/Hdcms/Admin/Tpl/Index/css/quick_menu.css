@@ -1,0 +1,88 @@
+div#quick_menu {
+    height: 40px;
+    background: #EEEEEE;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+    -moz-box-sizing: padding-box;
+    background: url("../img/quick_menu_bg.png") repeat scroll 0 0 rgba(242, 242, 242, 0.98);
+    border-top: 1px solid #D8D8D8;
+    bottom: 0;
+    padding-top: 0px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+div#quick_menu div.set {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 8px;
+}
+
+div#quick_menu div.set a {
+    font-size: 14px;
+    color: #0A5AA1;
+    padding: 3px 0px;
+    display: block;
+    font-weight: bold;
+}
+
+div#quick_menu div.menu {
+    float: left;
+}
+div#quick_menu div.bottom-menu{
+    padding-top: 8px;
+}
+div#quick_menu div.bottom-menu a {
+    float: left;
+    display: block;
+    color: #3C3C3C;
+    font-family: Microsoft YaHei, Simsum, serif;
+    font-size: 12px;
+    margin-right: 15px;
+    padding: 3px 8px;
+}
+
+div#quick_menu div.bottom-menu a.action {
+    color: #fff;
+    border-radius: 3px;
+    background: #aaaaaa;
+}
+
+div#quick_menu div.quick-hide {
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0);
+    display: inline-block;
+    line-height: 25px;
+    position: relative;
+    height: 40px;
+}
+
+div#quick_menu div.quick-hide a {
+    font-weight: bold;
+    display: block;
+}
+
+div#show_quick_menu {
+    width: 30px;
+    height: 30px;
+    background: url("../img/quick_menu_bg.png") repeat scroll 0 0 rgba(242, 242, 242, 0.98);
+    color:#333;
+    position: fixed;
+    right: -15px;
+    bottom: 5px;
+    border-radius: 30px;border:solid 1px #666;
+    cursor: pointer;
+    line-height: 2.5em;
+    text-align: center;
+    box-shadow: 0px 0px 5px #dcdcdc;
+    display: none;
+}
+div#show_quick_menu:hover{
+    background: #999;
+    color:#fff;
+}

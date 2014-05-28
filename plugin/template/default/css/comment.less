@@ -1,0 +1,223 @@
+/*评论样式*/
+@font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+div.hd-comment { 
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  div.title {
+    background: #F7F7F7; 
+    padding: 10px;
+    img {
+      width: 36px;
+      height: 36px;
+      margin-right: 5px;
+    }
+  }
+  div.publish {
+    height: auto;
+    overflow: hidden;
+    padding: 10px;
+    border-bottom: solid 1px #f2f2f2;
+    textarea {
+      border: 1px solid #D9D9D9;
+      width: 100%;
+      height: 80px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 20px;
+      color: #555555;
+      border-radius: 0;
+      vertical-align: middle;
+      padding: 5px 6px 3px;
+    }
+    input.comment-submit {
+      background: #357EBD;
+      color: #fff;
+      height: 30px;
+      float: right;
+      display: inline-block;
+      padding: 6px 12px 4px;
+      margin-bottom: 0;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      border: 0;
+      border-radius: 0;
+      opacity: 0.9;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/*评论列表*/
+div.hd-comment-list {
+  height: auto;
+  overflow: hidden;
+  padding: 10px;
+  clear: both;
+  ul.children {
+    li {
+      border-left: solid 4px #f3f3f3;
+      margin-left: 45px;
+      border-bottom: none !important;
+      background: #FBFBFB;
+    }
+  }
+  ol.comment-list, ul.children {
+    clear: both;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    clear: both;
+    li {
+      list-style: none;
+      height: auto;
+      overflow: hidden;
+      border-bottom: solid 1px #f2f2f2;
+      padding: 10px 0px 10px;
+      padding-left: 10px;
+      clear: both;
+      margin-top: 10px;
+      div.hd-comment-face {
+        float: left;
+        margin-right: 10px;
+        img {
+          width: 36px;
+          height: 36px;
+        }
+      }
+      div.hd-comment-content {
+        font-size: 12px;
+        color: #666;
+        width: 90%;
+        height: auto;
+        overflow: hidden;
+        display: block;
+        div.hd-author-info {
+          font-size: 12px;
+          padding-top: 5px;
+          span.hd-comment-author {
+            a {
+              font-weight: bold;
+              font-size: 12px;
+            }
+          }
+          a {
+            text-decoration: none;
+            color: #428BD1;
+            &:hover {
+              color: #3071A9;
+            }
+          }
+        }
+      }
+      div.hd-comment-reply {
+        position: relative;
+        border: 1px solid #ddd;
+        padding: 8px;
+        height: auto;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        clear: both;
+        //        display: none;
+        div.hd-reply-content {
+          float: left;
+          width: 93%;
+          textarea {
+            border: 1px solid #D9D9D9;
+            width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 20px;
+            color: #555555;
+            border-radius: 0;
+            vertical-align: middle;
+            padding: 5px 6px 3px;
+          }
+          input.comment-submit {
+            background: #357EBD;
+            color: #fff;
+            height: 30px;
+            float: right;
+            display: inline-block;
+            padding: 6px 12px 4px;
+            margin-bottom: 0;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 0;
+            border-radius: 0;
+            opacity: 0.9;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          input.comment-cancel {
+            background: #bbb;
+            margin-right: 10px;
+            color: #fff;
+            height: 30px;
+            float: right;
+            display: inline-block;
+            padding: 6px 12px 4px;
+            margin-bottom: 0;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 0;
+            border-radius: 0;
+            opacity: 0.9;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//评论弹窗提示信息
+div.comment_alter {
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background: #5F9DD6;
+  border: solid 1px #F3F3F3;
+  border-radius: 5px;
+  line-height: 40px;
+  position: absolute;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

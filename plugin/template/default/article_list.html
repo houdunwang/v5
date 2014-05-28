@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{$hdcms.catname} - {$hd.config.webname}</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <jquery/>
+    <bootstrap/>
+    <link rel="stylesheet"  type='text/css' href="__TEMPLATE__/css/article_list.css"/>
+    <!--[if lt IE 8]>
+    <link rel="stylesheet"  type='text/css' href="__TEMPLATE__/css/ie.css?ver=1.0 "/>
+    <![endif]-->
+    <hdcms/>
+</head>
+<body>
+<article class="header container">
+    <h1>网站LOGO</h1>
+    <!--导航-->
+    <nav class=".navbar-fixed-top" role="navigation">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="__ROOT__">首页</a></li>
+                <channel type="top">
+                    <li><a href='{$field.caturl}'>{$field.catname}</a></li>
+                </channel>
+            </ul>
+            <form class="navbar-form navbar-left" role="search" method="post" action="__WEB__?g=Hdcms&a=Search&c=Search&m=search">
+						<div class="form-group">
+							<input type="text" name='word' class="form-control" placeholder="输入关键字搜索" required>
+						</div>
+						<button type="submit" class="btn btn-primary">
+							搜索
+						</button>
+					</form>
+            <member/>
+        </div>
+    </nav>
+</article>
+
+<div class="location">
+	<div class="nums">
+		主题数：{$hdcms.article_num} &nbsp;&nbsp;&nbsp;回复数：{$hdcms.comment_num}
+		 <a href="__WEB__?a=Member&c=Content&m=add&mid={$hdcms.mid}&cid={$hdcms.cid}" class="publish">
+                <strong>+</strong>发表文章
+            </a>
+	</div>
+	<h3><location sep="&nbsp;/&nbsp;"/></h3>
+	<p class="description">
+		{$hdcms.cat_seo_description}
+	</p>
+</div>
+<!--内容主体-->
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            <!--内容列表-->
+            <div class="article-list">
+	                <pagelist infolen="30" titlelen="20" row="2">
+	                    <div class="article">
+	                    	<div class="icon">
+	                    		<img src="{$field['icon']|default:'__ROOT__/data/image/user/50.png'}" alt="{$field.username}" onmouseover="user.show(this,{$field.uid})"/>
+	                    	</div>
+	                    	<div class="title">
+	                          	<a href="{$field.url}" target="_blank">{$field.title}</a>
+							</div>
+							<div class="info">
+								<span class="ot-list-time pull-right">{$field.addtime|date:"Y-m-d",@@}</span>
+								<a href="/cate/site.html">{$field.catname}</a>
+								作者：<a class="ot-list-author" href="/u/3.html">{$field.nickname}</a>
+								<span>
+									浏览：{$field.click} 回复：{$field.comment_num}
+									{$field.addtime|date_before}
+								</span>
+								
+							</div>
+	                    </div>
+	                </pagelist>
+                <div class="page">
+                    <pageshow/>
+                </div>
+            </div>
+        </div>
+        <!--右侧列表-->
+        <div class="right-list col-md-4">
+           
+            <article class="channel">
+            	<header>讨论区</header>
+            	<div class="channel">
+            		<ul>
+	            		<channel type='self'>
+	            			<li>
+	            				<span class="list-circle-prefix"></span>
+	                    		<a href='{$field.caturl}'>{$field.catname}</a>
+	                    	</li>
+	                	</channel>
+                	</ul>
+            	</div>
+            </article>
+            <!--热门标签-->
+            <article class="tag">
+                <header>热门标签 </header>
+                <div>
+                    <tag row="30" type="hot">
+                        <a href="{$field.url}">{$field.tag}</a>
+                    </tag>
+                </div>
+                <!--Tag随机变色-->
+                <script>
+                    $(".tag div a ").each(function (i) {
+                        var color = ['red', '#428BCA', '#5CB85C', '#D9534F', '#567E95', '#FF8433', '#4A4A4A', '#5CB85C', '#B433FF', '#33BBBA', '#C28F5B'];
+                        var t = Math.floor(Math.random() * color.length);
+                        $(this).css({'background-color': color[t]});
+                    })
+                </script>
+            </article>
+            <!--活跃用户-->
+            <article class="reader">
+                <header>活跃用户</header>
+                <section>
+                    <user row="14">
+                        <a href="{$field.url}">
+                            <img src="{$field.icon}" title="{$field.nickname}" onmouseover="user.show(this,{$field.uid})" style="width: 50px;height: 50px;border-radius: 10%;"/>
+                        </a>
+                    </user>
+                </section>
+            </article>
+            <!--最新评论-->
+            <article class="comment">
+                <header>最新评论</header>
+                <comment row="6" contentlen="20">
+                    <section>
+                        <a href="{$field.url}">
+                            <img src="{$field.icon}" style="width: 36px;height: 36px;border-radius: 50%;" onmouseover="user.show(this,{$field.uid})"/>
+
+                            <p class="man">
+                                <span>{$field.nickname}</span> {$field.pubtime}说：
+                            </p>
+
+                            <p class="content">
+                                {$field.content}
+                            </p>
+                        </a>
+                    </section>
+                </comment>
+
+            </article>
+            <!--猜你喜欢-->
+            <article class="news">
+                <header>
+                    猜你喜欢
+                </header>
+                <arclist type="rand" row="5" titlelen="22">
+                    <section>
+                        <a href="{$field.url}" >
+                            <h3>{$field.title}</h3>
+
+                            <p>
+                                {$field.time}
+                            </p>
+                        </a>
+                    </section>
+                </arclist>
+            </article>
+        </div>
+    </div>
+</div>
+<!--copyright-->
+		<footer class="container">
+			后盾网PHP培训是国内唯一拥有开源框架与开源CMS系统的培训机构！ © 2014
+			<a href="http://www.houdunwang.com">
+				后盾网
+			</a>
+			<div class="link">
+				<strong>友情链接 | <a href="__WEB__?g=Plugin&a=Link" target="_blank">申请链接</a>:</strong>
+				<plugin plugin='Link' tag='link' type="all" tid="1">{$field.link}</plugin>
+			</div>
+		</footer>
+</body>
+</html>

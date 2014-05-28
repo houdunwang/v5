@@ -1,0 +1,20 @@
+@font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@color:#f00f00;
+@color2:#fff;
+@color3:#666;
+div#d1{
+    ul{
+        li{
+            border:solid 1px @color;
+            a{
+                display:block;
+                padding:3px 10px;
+                background:@color;
+                color:@color2; 
+                &:hover{
+                    background: @color3;
+                }
+            }
+        }
+    }
+}

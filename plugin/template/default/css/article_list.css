@@ -1,0 +1,330 @@
+body {
+  background: #F7F7F7;
+}
+article.header {
+  height: auto;
+  background: #454545;
+  padding: 0px;
+}
+article.header h1 {
+  background: url('../images/logo.jpg') no-repeat;
+  width: 230px;
+  height: 50px;
+  margin: 0px;
+  text-indent: -9999em;
+  float: left;
+}
+article.header nav .open a.dropdown-toggle {
+  background: #454545;
+}
+article.header nav a.dropdown-toggle:hover {
+  background: #454545;
+}
+article.header nav a {
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+article.header nav a:hover {
+  color: #454545;
+}
+article.header nav div a.dropdown-toggle {
+  color: #ffffff;
+}
+article.header nav div ul.dropdown-menu a {
+  color: #454545;
+}
+div.location {
+  width: 1170px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+div.location div.nums {
+  float: right;
+  font-size: 16px;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: #505050;
+  padding-right: 10x;
+}
+div.location div.nums a.publish {
+  background: #5BC8C7;
+  margin-left: 15px;
+  line-height: 2em;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  padding: 0px 15px;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+div.location div.nums a.publish:hover {
+  background: #5BCaa0;
+}
+div.location div.nums a.publish strong {
+  font-size: 25px;
+}
+div.location h3 {
+  font-size: 18px;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  color: #AAAAAA;
+}
+div.location p.description {
+  color: #505050;
+  font-size: 18px !important;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  margin: 0px;
+}
+div.content {
+  margin-top: 10px;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0px;
+}
+div.content ul {
+  padding: 0px;
+  height: auto;
+  overflow: hidden;
+}
+div.content header {
+  background: #ffffff;
+  font-size: 18px;
+  line-height: 46px;
+  padding: 0px 20px;
+  color: #626770;
+  border-bottom: solid 1px #eaeaea;
+  border-top: 5px solid #EEEEEE;
+}
+div.content article.top {
+  background: #ffffff;
+}
+div.content article.top li {
+  list-style: none;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+div.content article.top li:hover {
+  background: #F8FCFE;
+}
+div.content article.top li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+div.content article.top li a img {
+  width: 100px;
+  height: 70px;
+  float: left;
+  margin-right: 10px;
+}
+div.content article.top li a h3 {
+  font-size: 14px;
+  margin: 0px;
+  padding-bottom: 6px;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+div.content article.top li a p {
+  font-size: 12px;
+  color: #999;
+}
+div.content div.article-list {
+  border-top: 5px solid #41b6d3;
+}
+div.content div.article-list div.article {
+  margin-bottom: 1px;
+  background: #ffffff;
+  padding: 15px;
+}
+div.content div.article-list div.article:hover {
+  background: #F8FCFE;
+}
+div.content div.article-list div.article div.icon {
+  float: left;
+  margin-right: 10px;
+  padding: 1px;
+  border: solid 1px #dcdcdc;
+}
+div.content div.article-list div.article div.icon img {
+  width: 50px;
+  height: 50px;
+}
+div.content div.article-list div.article div.title {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-right: 15px;
+}
+div.content div.article-list div.article div.info {
+  color: #c2c2c2;
+}
+div.content div.article-list div.article div.info a {
+  color: #c2c2c2;
+}
+div.content div.article-list div.article div.info span.ot-list-time {
+  float: right;
+}
+div.content div.article-list div.page {
+  margin-top: 20px;
+}
+div.content div.article-list div.page span,
+div.content div.article-list div.page a,
+div.content div.article-list div.page strong,
+div.content div.article-list div.page span.close {
+  display: block;
+  float: left;
+  padding: 0px 10px;
+  line-height: 2em;
+  text-align: center;
+  margin-right: 8px;
+  border: solid 1px #dcdcdc;
+  background: #ffffff;
+  font-size: 14px;
+  color: #666;
+}
+div.content div.article-list div.page a {
+  text-decoration: none;
+}
+div.content div.article-list div.page a:hover,
+div.content div.article-list div.page strong {
+  background: #5F9DD6;
+  color: #fff;
+  border: solid 1px #EEEEEE;
+}
+div.content div.right-list article {
+  margin-top: 15px;
+  background: #ffffff;
+}
+div.content div.right-list article section {
+  background: #ffffff;
+  margin: 1px;
+  border-left: solid 4px #fff;
+}
+div.content div.right-list article section:hover {
+  border-left: solid 4px #428BCA;
+  background: #F8FCFE;
+}
+div.content div.right-list article div {
+  padding: 10px;
+  height: auto;
+  overflow: hidden;
+}
+div.content div.right-list article.channel {
+  margin-top: 0px;
+}
+div.content div.right-list article.channel ul li {
+  border-bottom: 1px dashed #e9e9e9;
+  padding: 10px 0;
+}
+div.content div.right-list article.channel ul li span.list-circle-prefix {
+  color: #626770;
+  font-size: 14px;
+  display: inline-block;
+  border-radius: 5px;
+  width: 5px;
+  height: 5px;
+  background: #CCC;
+  vertical-align: top;
+  margin-right: 8px;
+  margin-top: 9px;
+}
+div.content div.right-list article.channel ul li a {
+  font-size: 16px;
+  line-height: 22px;
+  color: #2E7BB4;
+}
+div.content div.right-list article.channel ul li a:hover {
+  color: #6EAF3A;
+}
+div.content div.right-list article.tag div a {
+  font-size: 12px;
+  float: left;
+  display: block;
+  margin-right: 5px;
+  padding: 3px;
+  background: #D9534F;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+div.content div.right-list article.tag div a:hover {
+  opacity: 1;
+}
+div.content div.right-list article.comment {
+  background: none;
+}
+div.content div.right-list article.comment section {
+  margin-bottom: 1px;
+}
+div.content div.right-list article.comment section a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+div.content div.right-list article.comment section a img {
+  float: left;
+  margin-right: 6px;
+}
+div.content div.right-list article.comment section a p {
+  margin: 0px;
+}
+div.content div.right-list article.comment section a p.content {
+  margin: 0px;
+  color: #666;
+}
+div.content div.right-list article.reader section {
+  height: auto;
+  overflow: hidden;
+  padding: 8px;
+}
+div.content div.right-list article.reader section img {
+  display: block;
+  float: left;
+  margin-right: 8px;
+  margin-top: 5px;
+}
+div.content div.right-list article.news {
+  background: none;
+}
+div.content div.right-list article.news section a {
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+  padding: 3px 10px;
+}
+div.content div.right-list article.news section a h3 {
+  font-size: 14px;
+  color: #428BCA;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 6px;
+  margin-bottom: 5px;
+}
+div.content div.right-list article.news section a p {
+  color: #999;
+}
+footer {
+  background: #454545;
+  color: #aaa;
+  padding: 10px;
+  font-size: 12px;
+  border-left: solid 8px #428BCA;
+  margin-top: 20px;
+}
+footer div.link {
+  margin-top: 10px;
+}
+footer div.link strong {
+  margin-right: 10px;
+}
+footer div.link a {
+  color: #aaa;
+  padding-right: 5px;
+  text-decoration: none;
+}
+footer div.link a:hover {
+  color: #DDDDDD;
+}
+/*# sourceMappingURL=article_list.css.map */

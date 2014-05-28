@@ -1,0 +1,259 @@
+@charset "utf-8";
+.g-bdc:after, .m-hd3:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    content: '.';
+}
+
+.g-bdc, .m-hd3 {
+    zoom: 1;
+}
+
+.g-bdc {
+    width: 930px;
+    float: left;
+    margin: 28px 0;
+    border: 1px solid #e0e0e0;
+    padding: 16px 24px 30px;
+}
+
+.m-hd3 {
+    border-bottom: 2px solid #aec930;
+    margin-bottom: 25px;
+}
+
+.m-hd3 .tit {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #666;
+    text-indent: 16px;
+    padding-bottom: 7px;
+    float: left;
+}
+
+.m-hd3 .more {
+    float: right;
+    padding-left: 25px;
+    color: #0a8cd2;
+    margin-top: 10px;
+}
+
+.g-warp-box {
+}
+
+.m-about-hd {
+    width: 100%;
+    border-left: 2px solid #ff9a23;
+    line-height: 15px;
+    height: 15px;
+    overflow: hidden;
+    padding-left: 7px;
+    font-weight: bold;
+    color: #ff9a23;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.g-about {
+    color: #333;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.g-contact-box {
+    width: 540px;
+    float: left;
+    padding-left: 29px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+.job-juooo {
+    padding-left: 126px;
+    color: #333;
+    font-size: 14px;
+    padding-top: 30px;
+}
+
+.job-web {
+}
+
+.job-web ul li {
+    width: 160px;
+    text-align: center;
+    float: left;
+    padding-right: 200px;
+}
+
+.job-web ul li p {
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.g-terms-service {
+    line-height: 22px;
+}
+
+.m-ts-hd {
+    font-size: 14px;
+    color: #ff9a23;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.g-partner-box {
+    padding-top: 70px;
+    font-size: 14px;
+}
+
+.g-partner-box ul li {
+    width: 301px;
+    height: 167px;
+    float: left;
+    text-align: center;
+}
+
+.g-partner-box ul li p {
+    padding-top: 10px;
+}
+
+.g-links-box {
+}
+
+.g-links-box .m-links-bd {
+    background: #fbf9f9;
+    border: 1px solid #e4e4e4;
+    font-family: "宋体";
+    color: #aec930;
+    padding: 13px 21px;
+    line-height: 30px;
+}
+
+.m-links-bd li {
+    width: 145px;
+    float: left;
+}
+
+.g-links-box .m-about-hd {
+    margin: 25px 0;
+}
+
+
+.g-apply {
+    border: 1px solid #ece8e8;
+    width: 978px;
+    margin-bottom: 28px;
+}
+
+.m-apply-hd {
+    background: #fbf9fa;
+    border: 1px solid #fff;
+    border-bottom: 1px solid #ece8e8;
+    line-height: 33px;
+}
+
+.m-apply-hd .tit {
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 15px;
+    background-position: 0 center;
+    color: #aec930;
+}
+
+.g-apply .box {
+    padding: 25px 15px 25px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.m-apply-tip {
+    width: 390px;
+    padding-right: 50px;
+}
+
+.m-apply-form {
+    width: 390px;
+    height: 295px;
+    padding-left: 50px;
+    border-left: 1px solid #eaeaea;
+}
+
+.m-apply-form ul {
+}
+
+.m-apply-form ul li {
+    padding-top: 16px;
+    width: 100%;
+    float: left;
+}
+
+.m-apply-form ul li a {
+    font-size: 12px;
+}
+
+.m-apply-form .txt {
+    width: 86px;
+    height: 28px;
+    line-height: 28px;
+    float: left;
+    font-size: 12px;
+    color: #666;
+}
+
+.m-apply-form .div-input {
+    float: left;
+}
+
+.m-apply-form .div-input input {
+    width: 294px;
+}
+
+
+.cases .time h2 {
+    line-height: 44px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    color: #7d7d7d;
+    margin-left: 12px;
+}
+
+.cases .nr {
+    padding-bottom: 15px;
+}
+
+.cases .nr h3 {
+    font-size: 14px;
+    color: #707070;
+    font-family: "微软雅黑";
+    margin-left: 69px;
+    float: left;
+    width: 32px;
+    line-height: 33px;
+    text-align: right;
+    _margin-left: 34px;
+}
+
+
+.cases .nr .achieve {
+    font-size: 12px;
+    color: #707070;
+    line-height: 20px;
+    float: left;
+}
+
+.cases .nr .achieve ul {
+    border: 1px dotted #d2d2d2;
+    padding: 6px 0px;
+    width: 462px;
+    border-radius: 5px;
+}
+
+
+.c_clear {
+    clear: both;
+}

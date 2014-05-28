@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>HDPHP框架提示</title>
+    <style type="text/css">
+
+        div.main {
+            font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+            padding: 10px;
+            margin-left: 30px;
+        }
+
+        div.pic {
+            font-size: 105px;
+            padding-bottom: 10px;
+            font-family: "微软雅黑";
+            font-size: 128px;
+        }
+
+        div.msg {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        div.info {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        div.info div.title, div.trace div.title {
+            font-size: 18px;
+            font-weight: bold;;
+        }
+
+        div.info div.path {
+            font-size: 16px;
+        }
+        div.copyright{
+            padding: 10px 45px;color:#aaaaaa;
+            text-align: left;
+        }
+        div.copyright a{
+            color:#000;
+            text-decoration: none;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="pic">:(</div>
+    <div class="msg"><?php echo $e['message'];?></div>
+    <?php if(DEBUG && isset($e['file'])):?>
+    <div class="info">
+        <div class="title">错误位置:</div>
+        <div class="path">
+            <?php echo 'File:'.$e['file'].'  Line:'.$e['line'];?>
+        </div>
+    </div>
+    <?php endif;?>
+    <?php if(isset($e['trace'])){?>
+    <div class="info">
+        <div class="title">Trace</div>
+        <div class="path">
+            <?php echo nl2br($e['trace']);?>
+        </div>
+    </div>
+    <?php }?>
+</div>
+<div class="copyright">
+    <a href="http://www.hdphp.com" title="官方网站"><b>HDPHP开源框架</b></a>
+    (<?php echo HDPHP_VERSION;?>)
+    [ 后盾网 人人做后盾 ]
+</div>
+</body>
+</html>

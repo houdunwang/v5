@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{$hd.config.webname}</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<jquery/>
+		<bootstrap/>
+		<link rel="stylesheet"  type='text/css' href="__TEMPLATE__/css/index.css"/>
+		<!--[if lt IE 8]>
+		<link rel="stylesheet"  type='text/css' href="__TEMPLATE__/css/ie.css?ver=1.0 "/>
+		<![endif]-->
+		<hdcms/>
+	</head>
+	<body>
+		<article class="header container">
+			<h1>网站LOGO</h1>
+			<!--导航-->
+			<nav class=".navbar-fixed-top" role="navigation">
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="__ROOT__">
+								首页
+							</a>
+						</li>
+						<channel type="top">
+							<li>
+								<a href='{$field.caturl}'>
+									{$field.catname}
+								</a>
+							</li>
+						</channel>
+					</ul>
+					<form class="navbar-form navbar-left" role="search" method="get" action="__WEB__">
+						<input type="hidden" name="a" value="Index" />
+						<input type="hidden" name="c" value="Search" />
+						<input type="hidden" name="m" value="search" />
+						<div class="form-group">
+							<input type="text" name='word' class="form-control" placeholder="输入关键字搜索" required>
+						</div>
+						<button type="submit" class="btn btn-primary">
+							搜索
+						</button>
+					</form>
+					<member/>
+				</div>
+			</nav>
+		</article>
+		<!--最新消息-->
+		<div class="message container">
+			<span>最新消息：</span>
+			<arclist cid="5" row="1" titlelen=20>
+				<a href='{$field.url}'>
+					{$field.title}
+				</a>
+			</arclist>
+		</div>
+		<!--内容主体-->
+		<div class="content container">
+			<div class="row">
+				<div class="col-md-8">
+					<!--置顶推荐-->
+					<article class="top">
+						<header>
+							置顶推荐
+						</header>
+						<ul>
+							<arclist row="2" flag="2,4" titlelen="15" infolen="30" type="rand">
+								<li class="col-md-6">
+									<a href="{$field.url}">
+										<img src="{$field.thumb}" class="img-rounded sticky"/>
+
+										<h3 class="title">{$field.title}</h3>
+
+										<p>
+											{$field.description}
+										</p>
+									</a>
+								</li>
+							</arclist>
+						</ul>
+					</article>
+					<!--内容列表-->
+					<div class="article-list">
+						<header>
+							图片主题
+						</header>
+						<pagelist infolen="30" titlelen="20"  row="10" flag="4">
+							<article>
+								<div class="pic">
+									<a href="{$field.url}">
+										<img src="{$field.thumb}"/>
+									</a>
+								</div>
+								<header>
+									<span class="cat"> {$field.catname} <i class="glyphicon glyphicon-play"></i> </span>
+									<a href="{$field.url}">
+										{$field.title}
+									</a>
+								</header>
+								<div class="author">
+									<a href="{$field.member}" onmouseover="user.show(this,{$field.uid})">
+										{$field.username}
+									</a>
+									发表于 {$field.date_before} -
+									Tag：{$field.tag}
+								</div>
+								<p>
+									{$field.description}
+								</p>
+							</article>
+						</pagelist>
+						<div class="page">
+							<pageshow/>
+						</div>
+					</div>
+				</div>
+				<!--右侧列表-->
+				<div class="right-list col-md-4">
+					<!--产品下载-->
+					<article class="soft">
+						<header>
+							产品下载
+						</header>
+						<div>
+							<a href="https://git.oschina.net/houdunwang/hdphp/repository/archive?ref=master">
+								HDPHP框架 <span>版本: 2014-05-22</span>
+							</a>
+							<a href="http://www.hdphp.com/index.php?a=Index&c=Index&m=content&mid=1&cid=15&aid=8" class="hdcms" target="_blank">
+								HDCMS系统<span>版本: 2014-05-22</span>
+							</a>
+						</div>
+						<div class="notice">
+							<span class="glyphicon glyphicon-comment"></span> 后盾网产品可以免费使用在任何网站，包括任何商业网站，不用支付任何费用，真正的100%开源，100%免费！
+						</div>
+					</article>
+					<!--热门标签-->
+					<article class="tag">
+						<header>
+							热门标签
+						</header>
+						<div>
+							<tag row="30" type="hot">
+								<a href="{$field.url}">
+									{$field.tag}
+								</a>
+							</tag>
+						</div>
+						<!--Tag随机变色-->
+						<script>
+							$(".tag div a ").each(function(i) {
+								var color = ['red', '#428BCA', '#5CB85C', '#D9534F', '#567E95', '#FF8433', '#4A4A4A', '#5CB85C', '#B433FF', '#33BBBA', '#C28F5B'];
+								var t = Math.floor(Math.random() * color.length);
+								$(this).css({
+									'background-color' : color[t]
+								});
+							})
+						</script>
+					</article>
+					<!--精英-->
+					<article class="reader">
+						<header>
+							活跃用户
+						</header>
+						<section>
+							<user row="14">
+								<a href="{$field.url}">
+									<img src="{$field.icon}" title="{$field.nickname}"
+									onmouseover="user.show(this,{$field.uid})" style="width: 50px;height: 50px;border-radius: 10%;"/>
+								</a>
+							</user>
+						</section>
+					</article>
+					<!--最新评论-->
+					<article class="comment">
+						<header>
+							最新评论
+						</header>
+						<comment row="6" contentlen="20">
+							<section>
+								<a href="{$field.url}">
+									<img src="{$field.icon}" style="width: 36px;height: 36px;border-radius: 50%;"
+									onmouseover="user.show(this,{$field.uid})"/>
+
+									<p class="man">
+										<span>{$field.nickname}</span> {$field.pubtime}说：
+									</p>
+
+									<p class="content">
+										{$field.content}
+									</p>
+								</a>
+							</section>
+						</comment>
+
+					</article>
+					<!--猜你喜欢-->
+					<article class="news">
+						<header>
+							猜你喜欢
+						</header>
+						<arclist noflag="1" row="5" titlelen="22">
+							<section>
+								<a href="{$field.url}">
+									<h3>{$field.title}</h3>
+
+									<p>
+										{$field.time}
+									</p>
+								</a>
+							</section>
+						</arclist>
+					</article>
+				</div>
+			</div>
+		</div>
+		<!--copyright-->
+		<footer class="container">
+			后盾网PHP培训是国内唯一拥有开源框架与开源CMS系统的培训机构！ © 2014
+			<a href="http://www.houdunwang.com">
+				后盾网
+			</a>
+			<div class="link">
+				<strong>友情链接 | <a href="__WEB__?g=Plugin&a=Link" target="_blank">申请链接</a>:</strong>
+				<plugin plugin='Link' tag='link' type="all" tid="1">{$field.link}</plugin>
+			</div>
+		</footer>
+	</body>
+</html>

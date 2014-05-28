@@ -1,0 +1,91 @@
+//------------------------变量
+//灰色
+@gray: #666;
+//白色
+@white: #ffffff;
+//蓝色
+@blue: #428BCA; 
+//绿色
+@green: #56AF45;
+//红色
+@red: #D9534F;
+//背景灰色
+@bgcolor: #EEEEEE;
+//背景灰色
+@bgcolor-gray: #454545;
+//背景浅蓝色
+@bgcolor-blue: #F8FCFE;
+@font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+body {
+  background: @bgcolor;
+}
+
+div.header {
+  margin-top: 50px;
+  width: 960px;
+  background: @white;
+  padding: 20px 0px 10px;
+  background: url("../../../../../../template/default/images/reg-logo.png") no-repeat;
+  a{
+    display: block;
+    height: 30px;
+    text-indent: -9999em;
+  }
+}
+
+div.content {
+  width: 960px;
+  vertical-align: middle;
+  background: @white;
+  padding-top: 20px;
+  header {
+    padding: 10px 30px 0px;
+    background: @white;
+    margin-bottom: 1px;
+    height: auto;
+    overflow: hidden;
+    span {
+      margin-right: 17px;
+      display: inline;
+      font-size: 18px;
+      font-family: Microsoft Yahei;
+      color: #25ae5e;
+      float: left;
+    }
+    p {
+      float: left;
+      font-size: 12px;
+      color: @gray;
+      vertical-align: middle;
+      line-height: 25px;
+    }
+    strong {
+      font-size: 12px;
+      font-weight: normal;
+      color: @gray;
+      float: right;
+      line-height: 25px;
+    }
+  }
+  span.validate{
+    color:#f00f00;
+    text-align: center;
+    display: block;
+    padding:6px 10px;
+    font-size:14px;
+  }
+  article.row {
+    margin: 0px;
+    height: auto;
+    overflow: hidden;
+    background: @white;
+    padding: 20px 0px;
+    font-family: @font-family;
+    div.field {
+      border-right: solid 1px #dcdcdc;
+      input {
+        border-radius: 0;
+      }
+    }
+  }
+}

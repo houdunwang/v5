@@ -1,0 +1,14 @@
+b.file {
+	display: block;
+	width:30px;
+	height:22px;
+	text-indent: -9999px;
+	background: url(../img/icon.gif) no-repeat -160px -80px;;
+}
+b.dir {
+	display: block;
+	width:30px;
+	height:22px;
+	text-indent: -9999px;
+	background: url(../img/icon.gif) no-repeat;
+}

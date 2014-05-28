@@ -1,0 +1,27 @@
+div span{
+    height: 22px;
+    width: 26px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #f99;
+    text-indent: -9999px;
+}
+
+div span.dir {
+    background: url("../img/icon.gif") no-repeat 0px 0px;
+}
+
+div span.file {
+    background: url("../img/icon.gif") no-repeat -416px -80px;
+}
+
+div a {
+    vertical-align: middle;
+}
+
+/*返回*/
+a.back {
+    font-size: 12px;
+    display: inline-block;
+    padding: 10px 5px;
+}

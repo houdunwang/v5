@@ -1,0 +1,337 @@
+
+html {
+    overflow: hidden;
+}
+
+body {
+    background: #EBECE6;
+}
+iframe{
+    border:none;
+
+}
+div.nav {
+    background: #03565E;
+    height: 40px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    right: 0px;
+}
+
+div.nav div.top_menu {
+    padding-left: 140px;
+    background: url(../img/logo.png) no-repeat 10px 5px;
+    height: 40px;
+    float: left;
+}
+
+div.nav div.top_menu a {
+    display: block;
+    float: left;
+    color: #CCDFCB;
+    display: block;
+    height: 40px;
+    font-size: 14px;
+    text-align: center;
+    padding:0px 20px;
+    line-height: 40px;
+}
+
+div.nav div.top_menu a.action, div.nav div.top_menu a:hover {
+    font-size: 14px;
+    color: #03565E;
+    background: #CCDFCB;
+}
+
+div.nav div.r_menu {
+    font-size: 12px;
+    color: #CCDFCB;
+    float: right;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+div.nav div.r_menu span {
+    display: inline-block;
+    padding: 0px 4px;
+    font-size: 12px;
+}
+
+div.nav div.r_menu a {
+    color: #CCDFCB;
+    font-weight: normal;
+}
+
+div.nav div.r_menu a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/*左侧导航*/
+div.main {
+    position: absolute;
+    top: 40px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+div.main div.left_menu {
+    border-right: 1px solid #DADADA;
+    width: 140px;
+    position: fixed;
+    top: 40px;
+    left: 0px;
+    bottom: 0px;
+    overflow-y: auto;
+}
+
+div.main div.left_menu dl {
+    margin-top: 10px;
+}
+
+div.main div.left_menu dl dt {
+    border-bottom: 1px solid #CCCCCC;
+    color: #03565E;
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding: 5px 15px 6px;
+}
+
+div.main div.left_menu dl dd {
+    padding-left: 10px;
+    margin:0px;
+}
+
+div.main div.left_menu dl dd a {
+    color: #666;
+    display: block;
+    font-size: 12px;
+    padding: 5px 15px;
+}
+
+div.main div.left_menu dl dd a:hover {
+    background: #e0e1d9;
+}
+
+div.main div.left_menu dl dd a.action {
+    background: #03565E;
+    color: #CCDFCB;
+}
+
+/*导航缓存*/
+div.main div.menu_nav {
+    height: 29px;
+    background: #fafafa;
+    border-bottom: solid 1px #ccc;
+    position: absolute;
+    top: 0px;
+    left: 141px;
+    right: 0px;
+}
+
+div.main div.menu_nav div.favorite_menu {
+    position: absolute;
+    background: url("../img/quick_menu_bg.png") repeat scroll 0 0 rgba(242, 242, 242, 0.98);
+    border-bottom: 1px solid #D8D8D8;
+    left: 18px;
+    top: 0px;
+    right: 18px;
+    overflow: hidden;
+    height: 29px;
+}
+
+div.main div.menu_nav ul {
+    position: absolute;
+}
+
+div.main div.menu_nav ul li {
+    padding: 0px 15px;
+    float: left;
+}
+
+div.main div.menu_nav ul li.action {
+    background: #fafafa;
+}
+
+div.main div.menu_nav ul li a {
+    font-size: 12px;
+    line-height: 2.5em;
+    color: #aaa;
+}
+
+div.main div.menu_nav ul li.action a {
+    color: #03565E;
+}
+
+div.main div.menu_nav div.direction a.left {
+    text-indent: -9999px;
+    display: block;
+    width: 18px;
+    height: 29px;
+    background: url("../img/pic_s.png") no-repeat 5px 10px;
+}
+
+div.main div.menu_nav div.direction a.left:hover {
+    background: url("../img/pic_s.png") no-repeat 5px 10px #dfdfdf;
+}
+
+div.main div.menu_nav div.direction a.right {
+    text-indent: -9999px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: block;
+    width: 18px;
+    height: 29px;
+    background: url("../img/pic_s.png") no-repeat 5px -25px;
+}
+
+div.main div.menu_nav div.direction a.right:hover {
+    background: url("../img/pic_s.png") no-repeat 5px -25px #dfdfdf;
+}
+
+div.main div.menu_nav ul li {
+    position: relative;
+    border-right: solid 1px #dcdcdc;
+}
+
+div.main div.menu_nav ul li a {
+    display: block;
+    padding: 0px 10px;
+    float: left;
+}
+
+div.main div.menu_nav ul li a.close {
+    font-size: 14px;
+    cursor: pointer;
+    background: #efefef;
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    margin-left: 5px;
+    border-radius: 2px;
+    line-height: 12px;
+    padding: 0px;
+    display: block;
+    float: left;
+    margin-top: 9px;
+    color: #68767B;
+    font-family: Helvetica, STHeiti;
+    right: 4px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+    top: 4px;
+}
+
+div.main div.menu_nav ul li a.close:hover {
+    background: #03565E;
+}
+
+div.main div.top_content {
+    position: fixed;
+    top: 70px;
+    right: 0px;
+    left: 141px;
+    bottom: 37px;
+    background: #F3F3F3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

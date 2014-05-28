@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{$hdcms.title} - {$hd.config.webname}</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <jquery/>
+    <bootstrap/>
+    <link rel="stylesheet"  type='text/css' href="__TEMPLATE__/css/article.css"/>
+    <!--[if lt IE 8]>
+    <link rel="stylesheet"  type='text/css' href="__TEMPLATE__/css/ie.css?ver=1.0 "/>
+    <![endif]-->
+    <hdcms/>
+</head>
+<body>
+<article class="header container">
+    <h1>{$hd.config.webname}</h1>
+    <!--导航-->
+    <nav class=".navbar-fixed-top" role="navigation">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="__ROOT__">首页</a></li>
+                <channel type="top">
+                    <li><a href='{$field.caturl}'>{$field.catname}</a></li>
+                </channel>
+            </ul>
+            <form class="navbar-form navbar-left" role="search" method="post" action="__WEB__?g=Hdcms&a=Search&c=Search&m=search">
+						<div class="form-group">
+							<input type="text" name='word' class="form-control" placeholder="输入关键字搜索" required>
+						</div>
+						<button type="submit" class="btn btn-primary">
+							搜索
+						</button>
+					</form>
+            <member/>
+        </div>
+    </nav>
+</article>
+<!--最新消息-->
+<div class="top-message container">
+    <span>最新消息：</span>
+    <arclist cid="5" row="1" titlelen=20>
+        <a href='{$field.url}'>{$field.title}</a>
+    </arclist>
+</div>
+<!--内容主体-->
+<div class="content container">
+<div class="row">
+<div class="col-md-8">
+    <!--内容主体-->
+    <div id="main">
+        <header>你的位置：
+
+            <location sep="&nbsp;&gt;&nbsp;"/>
+        </header>
+        <div class="title">
+            <h2>{$hdcms.title}</h2>
+
+            <p>
+                <div class="icon">
+                <a href="__WEB__?{$hdcms.domain}">
+                    <img src="{$hdcms.icon}" onmouseover="user.show(this,{$hdcms.uid})"/>
+                </a>
+        </div>
+                <a href="__WEB__?{$hdcms.domain}">
+                    {$hdcms.nickname}
+                </a> 发表于 {$hdcms.date_before} ({$hdcms.time}) -
+                {$hdcms.comment_num}
+                	条评论
+                 {$hdcms.click}次点击
+                	所属分类：<a href="{$hdcms.caturl}">{$hdcms.catname}</a>
+                <a href="javascript:content.add_favorite({$hdcms.mid},{$hdcms.cid},{$hdcms.aid})">加入收藏</a>
+            </p>
+        </div>
+        <div class="content">
+        	<style type="text/css">
+        		h4{
+        			font-family: "微软雅黑";
+        			font-size:18px;
+        			color:#5F9DD6;
+        		}
+        		table{
+        			width:100%;
+        		}
+        		table,td{
+        			border:solid 1px #f3f3f3;padding:5px 10px;
+        		}
+        		div.tplPic{   			
+        			margin-bottom: 20px;
+        		}
+        		div#main div.content img{
+        			border:solid 1px #f3f3f3;padding:5px;
+        			max-width: 600px;
+        			max-height:1000px;
+        		}
+        	</style>
+        	<h4>作者信息：</h4>
+        	<table>
+        		<tr>
+        			<td style="width:100px;">QQ号：</td>
+        			<td>{$hdcms.qq|default:'保密'}</td>
+        		</tr>
+        		<tr>
+        			<td>邮箱：</td>
+        			<td>{$hdcms.email|default:'保密'}</td>
+        		</tr>
+        		<tr>
+        			<td>电话：</td>
+        			<td>{$hdcms.tel|default:'保密'}</td>
+        		</tr>
+        		<tr>
+        			<td>作者介绍：</td>
+        			<td>{$hdcms.about|default:'这家伙很懒，没有写介绍'}</td>
+        		</tr>
+        	</table>
+        	<hr />
+        	<h4>模板预览：</h4>
+        		<list from="$hdcms.pics.path" name="pic">
+        			<div class="tplPic">
+        			<img src="__ROOT__/{$pic}" />
+        			</div>
+        		</list>
+        	<h4>文件下载：</h4>
+        	<foreach from="$hdcms.tplfile.path" key="$key" value="$value">
+        		文件<?php echo $key+1;?>: <a href="__ROOT__/{$value}"><?php echo $hdcms['tplfile']['alt'][$key];?></a>
+        	</foreach>
+        </div>
+        <div class="tag">
+            <if value="$hdcms.tag">
+                继续浏览有关 {$hdcms.tag} 的文章
+            </if>
+        </div>
+        <!--下一篇与下一篇-->
+        <div class="next-article row">
+            <p class="col-md-6">
+                上一篇：
+                <pagenext pre="" type="pre" titlelen="18"/>
+            </p>
+
+            <p class="col-md-6">
+                下一篇：
+                <pagenext next="" type="next" titlelen="18"/>
+            </p>
+        </div>
+        <!--与本文相关文章-->
+        <div class="related">
+            <header>与本文相关的文章</header>
+            <ul>
+                <arclist type="relative" titlelen="25" row="6">
+                    <li>
+                        <a href="{$field.url}">{$field.title}</a>
+                    </li>
+                </arclist>
+            </ul>
+        </div>
+    </div>
+    <!--发表评论-->
+    <script type="text/javascript" id="comment" src="__WEB__?a=Index&c=Comment&m=show&mid={$hdcms.mid}&cid={$hdcms.cid}&aid={$hdcms.aid}&comment_id={$hd.get.comment_id}"></script>
+</div>
+<!--右侧列表-->
+<div class="right-list col-md-4">
+   <a href="__WEB__?a=Member&c=Content&m=add&mid={$hdcms.mid}&cid={$hdcms.cid}" class="publish">
+                <strong>+</strong>发表文章
+            </a>
+    <!--讨论区-->
+    <article class="channel">
+            	<header>讨论区</header>
+            	<div class="channel">
+            		<ul>
+	            		<channel type='self'>
+	            			<li>
+	            				<span class="list-circle-prefix"></span>
+	                    		<a href='{$field.caturl}'>{$field.catname}</a>
+	                    	</li>
+	                	</channel>
+                	</ul>
+            	</div>
+    </article>
+    <!--猜你喜欢-->
+    <article class="news">
+        <header>
+            猜你喜欢
+        </header>
+        <arclist type="rand" row="5" titlelen="22">
+            <section>
+                <a href="{$field.url}">
+                    <h3>{$field.title}</h3>
+                    <p>
+                        {$field.time}
+                    </p>
+                </a>
+            </section>
+        </arclist>
+    </article>
+</div>
+</div>
+</div>
+<!--copyright-->
+		<footer class="container">
+			后盾网PHP培训是国内唯一拥有开源框架与开源CMS系统的培训机构！ © 2014
+			<a href="http://www.houdunwang.com">
+				后盾网
+			</a>
+			<div class="link">
+				<strong>友情链接 | <a href="__WEB__?g=Plugin&a=Link" target="_blank">申请链接</a>:</strong>
+				<plugin plugin='Link' tag='link' type="all" tid="1">{$field.link}</plugin>
+			</div>
+		</footer>
+</body>
+</html>

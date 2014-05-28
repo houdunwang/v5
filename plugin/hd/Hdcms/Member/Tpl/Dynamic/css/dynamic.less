@@ -1,0 +1,79 @@
+@import "../../Public/css/member-common.less"; 
+//文章列表  
+article.main {  
+  section.article {
+    float: left;
+    width: 750px;  
+    padding: 25px;
+    header {
+      border-bottom: 1px solid #dadada;
+      padding-bottom: 4px; 
+      width: 100%;
+      h2 { 
+        margin-right:15px;
+        border-bottom: 3px solid #40b50e;
+        padding-bottom: 3px;
+        color: #333;
+        display: inline;
+        font-family: 'Microsoft YaHei';
+        font-size: 16px;
+        &.disab {
+          border:none;
+          a {
+            color: #37A508;
+            font-size:14px; 
+            text-decoration: none;
+            &:hover{
+              color:#666;
+            }
+          }
+        }
+      }
+    }
+    ul {
+      clear: both;
+      padding: 0px;
+      li {
+        height: auto;
+        overflow: hidden;
+        list-style: none;
+        margin: 0px;
+        padding: 10px;
+        border-bottom: 1px solid #f6f6f6;
+        font-family: @font-family !important;
+        &:hover {
+          background: @bgcolor-blue;
+        }
+        div.article {
+          float: left;
+          width: 550px;
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 2px;
+            margin-right: 5px;
+          }
+          a {
+            text-decoration: none;
+            color: #37A508;
+            display: inline-block;
+          }
+          a.title {
+            color: #4f8e48;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+
+          }
+          span.time {
+            color: #999;
+            font-size: 12px;
+          }
+        }
+        div.right-action {
+          float: right;
+        }
+      }
+    }
+  }
+}

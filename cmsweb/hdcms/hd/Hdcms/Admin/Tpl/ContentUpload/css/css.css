@@ -1,0 +1,53 @@
+body {
+    background: #fff;
+}
+
+div.wrap {
+    background: #fff;
+    overflow: hidden;
+}
+
+div.uploadify_upload_files {
+    padding: 10px;
+    border: solid 1px #ccc;
+    margin-top: 10px;
+    height: 225px;
+}
+
+li.upload_thumb img {
+    width: 90px;
+    height: 78px;
+}
+
+/*图片列表*/
+div.site_pic {
+    height: auto;
+    padding: 10px 0px;
+    overflow: hidden;
+}
+
+div.site_pic ul li.upload_thumb {
+    border: 2px solid #dcdcdc;
+    float: left;
+    margin: 2px 5px;
+    overflow: hidden;
+    position: relative;
+    width: 90px;
+    overflow: hidden;
+
+}
+
+img {
+    cursor: pointer !important;
+}
+
+input[type=text] {
+    border: none;
+    width: 90px;
+}
+
+input:focus {
+    border: none !important;
+    outline: 0px solid #51B4FF;
+    color: #666;
+}

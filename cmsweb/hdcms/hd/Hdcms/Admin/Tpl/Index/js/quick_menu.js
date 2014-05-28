@@ -1,0 +1,39 @@
+function quick_menu_hide() {
+    //改变内容块
+    $("div.top_content").stop().animate({
+        bottom:'0px'
+    },500);
+    //隐藏底部导航
+    $("div#quick_menu").stop().animate({
+        bottom:'-41px'
+    },500);;
+    $("div#show_quick_menu").show();
+}
+//显示底部菜单
+function show_quick_menu(){
+    $("div.top_content").stop().animate({
+        bottom:'37px'
+    },500);
+    $("div#show_quick_menu").hide();
+    $("div#quick_menu").stop().animate({
+        bottom:'0px'
+    },500);
+}
+$(function(){
+    $("div#show_quick_menu").mouseover(function(){
+        $(this).stop().animate({
+            right:'0'
+        },500);
+    })
+    $("div#show_quick_menu").mouseout(function(){
+        $(this).stop().animate({
+            right:'-15px'
+        },1000);
+    })
+})
+//点击菜单按钮后改变背景颜色
+$(function(){
+    $("div.bottom-menu a").click(function(){
+        $(this).siblings().removeClass('action');
+    })
+})

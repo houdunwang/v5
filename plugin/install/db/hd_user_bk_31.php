@@ -1,0 +1,2 @@
+<?php if(!defined('HDPHP_PATH'))EXIT;
+$db->exe("REPLACE INTO ".$db_prefix."user (`uid`,`nickname`,`username`,`password`,`code`,`email`,`regtime`,`logintime`,`regip`,`lastip`,`user_state`,`lock_end_time`,`qq`,`sex`,`favicon`,`credits`,`rid`,`allow_user_set_credits`,`signature`,`domain`,`spec_num`,`icon`) VALUES('1','admin','admin','a108675cee7ad44cd9d08c0abfe8d744','3093594356','houdunwang@gmail.com','0','1399566513','','0.0.0.0','1','0','','1','','10027','1','1','','admin','3','upload/user/2014/05/08/u1_250.jpg')");

@@ -1,0 +1,43 @@
+/*列表页flag样式*/
+tr td span.flag {
+    color: #E32428;
+    margin-left: 3px;
+}
+
+input#title {
+    background: url("../img/ruler.gif") #ffffff repeat-x 0px 13px;
+}
+
+/*搜索框*/
+div.search {
+    border: 1px solid #FFBE7A;
+    background: none repeat scroll 0 0 #FFFCED;
+    line-height: 20px;
+    padding: 8px 10px;
+}
+
+
+/*发表文章*/
+
+div.content_left {
+    border: 1px solid #C2D1D8;
+    overflow: hidden;
+}
+
+div.content_right {
+    border: 1px solid #C2D1D8;
+    width: 200px;
+    float: right;
+    margin-left: 6px;
+    overflow: hidden;
+    padding-bottom: 6px;
+}
+
+#thumb {
+    margin-bottom: 5px;
+}
+
+/*编辑器底部（关于编辑器属性的设置）*/
+div.editor_set{
+    margin-top:5px;
+}

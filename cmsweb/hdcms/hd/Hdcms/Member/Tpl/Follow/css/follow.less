@@ -1,0 +1,44 @@
+@import "../../Public/css/member-common.less"; 
+
+//文章列表
+article.main {
+  section.article { 
+    ul {
+      clear: both; 
+      padding: 0px;
+      li {
+        width: 330px;
+        border: 1px solid #dcdcdc;
+        background: #FBFBFB;
+        height: 125px;
+        overflow: hidden;
+        list-style: none;
+        padding: 10px;
+        float: left;
+        font-family: @font-family !important;
+        margin:10px !important;
+        &:hover {
+          background: @bgcolor-blue;
+        }
+        div.icon {
+          float: left;
+          padding: 2px;
+          border: solid 1px #dcdcdc;
+        }
+        div.info {
+          float: right;
+          width: 180px;
+          p {
+            padding: 0px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            &.nickname {
+              font-size: 16px;
+              color:#37A508;
+            }
+          }
+        }
+      }
+    }
+  }
+}

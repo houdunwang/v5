@@ -1,0 +1,12 @@
+div.help {
+    border: solid 1px #E6E6E6;
+    padding: 15px;
+}
+
+p {
+    font-size: 12px;
+    color: #666;
+    line-height: 2em;
+    text-indent: 2em;
+    margin-top: 8px;
+}

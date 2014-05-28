@@ -1,0 +1,325 @@
+//------------------------变量
+//灰色
+@gray: #666;
+//白色
+@white: #ffffff;
+//蓝色
+@blue: #428BCA; 
+//绿色
+@green: #56AF45;
+//红色
+@red: #D9534F;
+//背景灰色
+@bgcolor: #EEEEEE;
+//背景灰色
+@bgcolor-gray: #454545;
+//背景浅蓝色
+@bgcolor-blue: #F8FCFE;
+@font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+body {
+  background: @bgcolor;
+}
+/*搜索框*/
+div.search {
+    border: 1px solid #FFBE7A;
+    background: none repeat scroll 0 0 #FFFCED;
+    line-height: 20px;
+    padding: 8px 10px;
+}
+//头部
+article.header {
+  height: auto;
+  background: @bgcolor-gray;
+  padding: 0px;
+  h1 {
+    background: url('../images/logo.jpg') no-repeat;
+    width: 230px;
+    height: 50px;
+    margin: 0px;
+    text-indent: -9999em;
+    float: left;
+  }
+  nav {
+    //点击后背景颜色修改
+    .open {
+      a.dropdown-toggle {
+        background: @bgcolor-gray;
+      }
+    }
+    a.dropdown-toggle {
+      &:hover {
+        background: @bgcolor-gray;
+      }
+    }
+    a {
+      font-family: @font-family;
+      color: @white;
+      &:hover {
+        color: @bgcolor-gray;
+      }
+    }
+    div a.dropdown-toggle {
+      color: @white;
+
+    }
+    div ul.dropdown-menu a {
+      color: @bgcolor-gray;
+    }
+  }
+}
+
+//紧新消息
+div.message {
+  height: 30px;
+  background: #F7F7F7;
+  font-family: @font-family;
+  line-height: 2.5em;
+  color: @green;
+  font-weight: bold;
+  font-size: 12px;
+  a {
+    font-weight: normal;
+  }
+}
+
+//主体内容
+div.content {
+  margin-top: 10px;
+  font-family: @font-family;
+  padding: 0px;
+  ul {
+    padding: 0px;
+    height: auto;
+    overflow: hidden;
+  }
+  header {
+    background: #F7F7F7;
+    padding: 6px 20px;
+    border-bottom: solid 1px #eaeaea;
+  }
+  //置顶推荐
+  article.top {
+    background: @white;
+    li {
+      list-style: none;
+      font-family: @font-family;
+      &:hover {
+        background: @bgcolor-blue;
+      }
+      a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        img {
+          width: 100px;
+          height: 70px;
+          float: left;
+          margin-right: 10px;
+        }
+        h3 {
+          font-size: 14px;
+          margin: 0px;
+          padding-bottom: 6px;
+          font-family: @font-family;
+        }
+        p {
+          font-size: 12px;
+          color: #999;
+        }
+      }
+    }
+  }
+  //文章列表
+  div.article-list {
+    div.article {
+      margin-bottom: 1px; 
+      background: @white;
+      padding: 10px;
+      height:auto;
+      overflow: hidden;
+      border-left: solid 4px @white;
+      &:hover {
+        background: @bgcolor-blue;
+        border-left: solid 4px @blue;
+      }
+      //文章图片
+      div.pic {
+        width: 220px;
+        height: 150px;
+        float: left;
+        margin-right: 8px;
+      }
+      //标题
+      h3 {
+        font-size: 20px;
+        line-height: 25px;
+        background: none;
+        padding: 6px 0px;
+        border-bottom: solid 1px #eaeaea;
+        font-family: @font-family;
+       margin:0px;
+        span {
+          font-size: 12px;
+          background: @red;
+          position: relative;
+          margin-right: 10px;
+          color: @white;
+          padding: 1px 3px;
+          i {
+            color: @red;
+            top: 3px;
+            right: -8px;
+            font-size: 7px;
+            position: absolute;
+          }
+        }
+      }
+      //作者
+      div.author {
+        font-size: 12px;
+        margin-top: 6px;
+        color: #999;
+      }
+      //内容
+      p {
+        margin-top: 6px;
+        color: #666;
+      }
+    }
+    div.page {
+      margin-top:20px;
+      span, a, strong,span.close {
+        display: block;
+        float: left;
+        padding: 3px 15px;
+        line-height: 2em;
+        text-align: center;
+        margin-right: 8px;
+        border: solid 1px #dcdcdc;
+        background: #ffffff;
+        font-size: 14px;
+        color:#666;
+      }
+      a{
+        text-decoration: none;
+      }
+      a:hover,strong{
+        background: #7AC143;
+        color:#fff;
+        border:solid 1px #EEEEEE;
+      }
+    }
+  }
+  //--------------------右侧列表-----------------
+  div.right-list {
+    article {
+      margin-top: 15px;
+      background: @white;
+      section {
+        background: @white;
+        margin: 1px;
+        border-left: solid 4px #fff;
+        &:hover {
+          border-left: solid 4px @blue;
+          background: @bgcolor-blue;
+        }
+      }
+      div {
+        padding: 10px;
+        height: auto;
+        overflow: hidden;
+      }
+    }
+    article.tag {
+      margin-top: 0px;
+      div {
+        a {
+          font-size: 12px;
+          float: left;
+          display: block;
+          margin-right: 5px;
+          padding: 3px;
+          background: @red;
+          color: #fff;
+          text-decoration: none;
+          opacity: 0.8;
+          margin-top: 5px;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    //评论
+    article.comment {
+      background: none;
+      section {
+        margin-bottom: 1px;
+        a {
+          padding: 10px;
+          display: block;
+          text-decoration: none;
+          img {
+            float: left;
+            margin-right: 6px;
+          }
+          p {
+            margin: 0px;
+          }
+          p.content {
+            margin: 0px;
+            color: @gray;
+          }
+        }
+      }
+    }
+    //活跃读者
+    article.reader {
+      section {
+        height: auto;
+        overflow: hidden;
+        padding: 8px;
+        img {
+          display: block;
+          float: left;
+          margin-right: 8px;
+          margin-top: 5px;
+        }
+      }
+    }
+    //猜你喜欢
+    article.news {
+      background: none;
+      section {
+        a {
+          font-size: 12px;
+          text-decoration: none;
+          display: block;
+          padding: 3px 10px;
+          h3 {
+            font-size: 14px;
+            color: @blue;
+            margin: 0px;
+            padding: 0px;
+            margin-top: 6px;
+            margin-bottom: 5px;
+          }
+          p {
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+}
+
+//底部版权
+footer {
+  background: @bgcolor-gray;
+  color: #aaa;
+  padding: 20px 10px;
+  font-size: 12px;
+  border-left: solid 8px @blue;
+  margin-top: 20px;
+}
+

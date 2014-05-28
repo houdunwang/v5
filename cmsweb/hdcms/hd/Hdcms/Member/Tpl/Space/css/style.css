@@ -1,0 +1,252 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: arial, '微软雅黑';
+}
+img,
+input {
+  border: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+body {
+  background: #F4F4F4;
+}
+/*头部*/
+#head_out {
+  width: 100%;
+  height: 340px;
+  background: #19A5F0;
+}
+#head_out .head {
+  background: url(../images/literature.png) no-repeat 0 2px;
+  width: 980px;
+  height: 340px;
+  margin: 0 auto;
+  /*background: red;*/
+  position: relative;
+}
+#head_out .head .menu{
+    padding-top:10px;
+}
+#head_out .head .menu a{
+    font-size:14px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+#head_out .head .menu a:hover{
+    text-decoration: underline;
+}
+#head_out .head .face {
+  position: absolute;
+  border-radius: 50%;
+  top: 175px;
+  left: 0;
+  width: 90px;
+  height: 90px;
+}
+#head_out .head .name {
+  font-size: 36px;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 105px;
+  top: 175px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding-right: 60px;
+  height: 50px;
+  line-height: 50px;
+}
+/*border: 1px solid blue;*/
+/*position: relative;*/
+#head_out .head .name .attention {
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #CF5877;
+  color: white;
+  border-radius: 3px;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  font-size: 14px;
+}
+#head_out .head .page {
+  line-height: 30px;
+  font-size: 13px;
+  height: 30px;
+  position: absolute;
+  top: 230px;
+  left: 105px;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+#head_out .head .page a {
+  color: white;
+}
+/*头部结束*/
+/*主体*/
+#main {
+  width: 980px;
+  overflow: hidden;
+  margin: 0 auto;
+  /*border-bottom: 5px solid orange;*/
+  margin-top: 10px;
+}
+/*左侧*/
+#main .left {
+  width: 680px;
+  overflow: hidden;
+  float: left;
+}
+#main .left .title {
+  font-size: 20px;
+  color: #333;
+  line-height: 35px;
+  height: 35px;
+  font-weight: 700;
+}
+#main .left .arc_list {
+  line-height: 30px;
+}
+/*padding-left: 10px;*/
+#main .left .arc_list li{
+    height:35px;
+}
+#main .left .arc_list li a {
+  color: #333;
+  font-size: 14px;
+
+}
+#main .left .arc_list li a:hover{
+    color:#03565E;;
+}
+#main .left .arc_list li a span {
+  color: #999;
+  padding-right: 5px;
+}
+/*左侧结束*/
+/*右侧*/
+#main .right {
+  width: 280px;
+  float: right;
+  overflow: hidden;
+} /*右侧结束*/
+#main .right .share {
+  height: 35px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+#main .right .title {
+  font-size: 14px;
+  line-height: 25px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+#main .right .visitor_list {
+  position: relative;
+  width: 300px;
+}
+#main .right .visitor_list li {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+#main .right .visitor_list li a.face {
+  border-radius: 50%;
+  display: block;
+  width: 44px;
+  height: 44px;
+  /*border: 1px solid blue;*/
+  overflow: hidden;
+}
+#main .right .visitor_list li .name {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  line-height: 25px;
+  text-align: center;
+}
+/*主体结束*/
+/*底部*/
+#footer_out {
+  width: 100%;
+  /*height: 70px;*/
+  background: white;
+  border-top: 1px solid #E6E6E6;
+  margin-top: 30px;
+  padding: 10px 0;
+} /*底部结束*/
+#footer_out p {
+  width: 980px;
+  line-height: 25px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 13px;
+  color: #333;
+}
+#footer_out p a {
+  color: #333;
+}
+
+div.page {
+    padding: 10px;
+    color: #666;
+    height: 50px;
+}
+div.page a,
+div.page strong,
+div.page span {
+    padding: 3px 10px;
+    display: block;
+    float: left;
+    border: solid 1px #dcdcdc;
+    margin-right: 5px;
+    font-size: 12px;
+    text-decoration: none;
+}
+div.page span.count {
+    font-size: 12px;
+    float: left;
+    display: block;
+    margin-right: 5px;
+    padding: 3px 10px;
+}
+div.page span.close {
+    padding: 3px 10px !important;
+    display: block;
+    float: left;
+    font-size: 12px;
+    border: solid 1px #dcdcdc !important;
+    margin-right: 5px;
+    color: #666;
+    cursor: no-drop;
+}
+div.page strong {
+    display: block;
+    font-size: 12px;
+    float: left;
+    background: none repeat scroll 0 0 #488FCF !important;
+    border-color: #2470B5 #488FCF #488FCF;
+    color: #FFFFFF !important;
+}
+div.page a {
+    color: #333;
+    float: left;
+    display: block;
+}
+div.page a:hover {
+    background: none repeat scroll 0 0 #488FCF !important;
+    border-color: #2470B5 #488FCF #488FCF;
+    color: #FFFFFF !important;
+}

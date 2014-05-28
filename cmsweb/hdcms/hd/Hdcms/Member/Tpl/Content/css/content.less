@@ -1,0 +1,88 @@
+@import "../../Public/css/member-common.less"; 
+
+div.main {
+  width: 960px;
+  height: auto;
+  overflow: hidden;  
+  margin-top: 10px;
+  div.form {
+    width: 750px;
+    float: left;
+    border: solid 1px #aaaaaa;
+    background: #F3F3F3;   
+    
+    table {
+      width: 100%;
+      th {
+        text-align: left;
+background-color: #F8F8F8;
+border-right: 1px solid #E5E3E3;
+font-weight: bold;
+color: #666;
+line-height: 24px;
+padding: 7px 10px 9px;
+vertical-align: middle;
+      }
+      td {
+        padding: 6px;
+        vertical-align: top;
+        border-bottom: solid 1px #F2F2F2;
+        font-size: 14px;
+        input {
+          border: solid 1px @border-gray;
+          width: 100%;
+          height: 30px;
+          padding: 0px 3px;
+          color:#666;
+          &.btn{
+              color:#fff;
+          }
+        }
+        textarea {
+          border: solid 1px @border-gray;
+          width: 100%;
+          height: 100px;
+          padding: 3px 0px 3px 3px;
+          color: #666;
+          font-size:12px;
+          line-height: 1.8em;
+        }
+        .btn {
+          width: 100px;
+          border-radius: 0;
+        }
+      }
+
+    }
+  }
+  div.help {
+    border: solid 1px #aaaaaa;
+    margin-left: 10px;
+    background: #f3f3f3;
+    float: right;
+    padding:0px;
+    width: 200px;
+    h1 {
+      padding: 0px;
+      margin: 0px;
+      font-size: 14px;
+      font-weight: bold;
+      border-left: solid 6px #88D1B4;
+      text-indent: 10px;
+    }
+    ul {
+      padding: 8px;
+      margin: 0px;
+      li {
+        list-style: none;
+        font-size: 12px;
+        height: auto;
+        overflow: hidden;
+        color: #666;
+        margin-top: 15px;
+        border-bottom: solid 1px #dcdcdc;
+        padding-bottom: 8px;
+      }
+    }
+  }
+}
